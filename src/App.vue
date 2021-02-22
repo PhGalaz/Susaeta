@@ -92,7 +92,7 @@
           style="position:absolute;top:120vh"
         >
           <v-row
-            style="width:15%"
+
           >
           </v-row>
           <v-row
@@ -102,7 +102,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </h2>
             <v-row
-              style="height:20vh;width:100vw"
+              style="height:20vh"
             >
 
             </v-row>
@@ -117,7 +117,7 @@
               >CASOS DE ESTUDIO</p>
             </v-row>
             <v-row
-              style="height:5vh;width:100vw"
+              style="height:5vh"
             >
 
             </v-row>
@@ -125,23 +125,23 @@
           </v-row>
           <v-row
             class="ma-0 pa-0"
-            style="width:15%"
+
           >
           </v-row>
           <v-row
-            style="height:100; width:100"
+            style="height:100vh; width:100vw"
             eager
             class="ma-0 pa-0"
             no-gutters
           >
 
             <v-col
-              cols="sm-6"
+              cols="md-6"
             >
               <v-img src="prueba1.jpeg"  eager/>
             </v-col>
             <v-col
-              cols="sm-6"
+              cols="md-6"
             >
               <v-img src="prueba2.jpeg"  eager/>
             </v-col>
