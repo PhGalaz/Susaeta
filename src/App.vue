@@ -88,73 +88,10 @@
             </v-carousel-item>
 
         </v-carousel>
-        <v-row
-          style="position:absolute;top:120vh"
-        >
-          <v-row
-
-          >
-          </v-row>
-          <v-row
-            style="width:70%"
-          >
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </h2>
-            <v-row
-              style="height:20vh"
-            >
-
-            </v-row>
-            <v-row
-              class="ma-0 pa-0"
-              style="height:20vh"
-              align="center"
-            >
-              <p
-                class="casos"
-                style="width:372px"
-              >CASOS DE ESTUDIO</p>
-            </v-row>
-            <v-row
-              style="height:5vh"
-            >
-
-            </v-row>
-
-          </v-row>
-          <v-row
-            class="ma-0 pa-0"
-
-          >
-          </v-row>
-          <v-row
-            style="height:100vh; width:100vw"
-            eager
-            class="ma-0 pa-0"
-            no-gutters
-          >
-
-            <v-col
-              cols="md-6"
-            >
-              <v-img src="prueba1.jpeg"  eager/>
-            </v-col>
-            <v-col
-              cols="md-6"
-            >
-              <v-img src="prueba2.jpeg"  eager/>
-            </v-col>
-          </v-row>
-
-
-
-
-        </v-row>
-
-
-
-    </v-row>
+      </v-row>
+      <v-row class="body">
+        <h1>HOLA</h1>
+      </v-row>
 
 
     <v-row
@@ -258,7 +195,7 @@ export default {
 
   h2
     text-align: left
-    font: normal normal normal 60px Hoefler Text
+    font: normal normal normal 20px/60px Hoefler Text
     letter-spacing: 3px
     color: #707070
 
