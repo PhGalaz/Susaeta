@@ -12,24 +12,24 @@
         style="background-color:transparent"
       >
         <p
-          class="instagram text-right"
-        >Instagram</p>
+          class="menu-item text-right"
+        ><span>Instagram</span></p>
       </v-col>
       <v-col
         cols="2"
         style="background-color:transparent"
       >
         <p
-          class="instagram text-center"
-        >Work</p>
+          class="menu-item text-center"
+        ><span>Work</span></p>
       </v-col>
       <v-col
         cols="5"
         style="background-color:transparent"
       >
         <p
-          class="instagram text-left"
-        >Whatsapp</p>
+          class="menu-item text-left"
+        ><span>Whatsapp</span></p>
       </v-col>
 
     </v-row>
@@ -65,22 +65,10 @@
 
         </v-carousel>
       </v-row>
-      <v-row class="body">
-        <h1>HOLA</h1>
-      </v-row>
 
 
-    <v-row
-      justify="center"
-    >
 
-      <p
-        class="titulo text-center title-text"
-        :class="{'title-text-mobile': $vuetify.breakpoint.xs}"
-        justify="center"
-      >Eladio Susaeta
-      </p>
-    </v-row>
+
 
 
   </v-app>
@@ -207,10 +195,17 @@ export default {
   .title-text-mobile
     font-size: 20px
 
-  .instagram
+  .menu-item
     font-family: Montserrat
     letter-spacing: 0px
     color: #707070
-    font-size:20px
+    font-size: 20px
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+  .menu-item span:hover
+    cursor: pointer
 
 </style>
