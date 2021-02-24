@@ -62,7 +62,12 @@
 
       </v-carousel>
     </v-row>
-
+    <v-row
+      class="ma-0 pa-0 body"
+      style="position:absolute;background-color:red;height:1000px;width:100vw;top:100%"
+    >
+      Hola
+    </v-row>
     <v-row
       justify="center"
       style="width:100vw"
@@ -152,6 +157,7 @@ export default {
     position: absolute
     top: 15vh
     height: 150px
+    font-family: Hoefler
     font: normal normal normal Hoefler Text
     letter-spacing: 10px
     color: #707070
@@ -196,9 +202,9 @@ export default {
     color: #707070
 
   .title-text
-    font-size: 60px
+    font-size: 120px
   .title-text-mobile
-    font-size: 20px
+    font-size: 60px
 
   .menu-item
     font-family: Montserrat
