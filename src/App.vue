@@ -38,37 +38,41 @@
       style="z-index:0"
       class="ma-0 pa-0"
     >
+      <v-carousel
+        style="height:100vh; width:100vw; position: absolute"
+        hide-delimiters
+        height="100vh"
+        cycle
+        show-arrows-on-hover
+        continuos="false"
+        interval=7000
 
-        <v-carousel
-          style="height:100vh; width:100vw; position: absolute"
-          hide-delimiters
-          height="100vh"
-          cycle
-          show-arrows-on-hover
-          continuos="false"
-          interval=7000
+      >
+        <v-carousel-item
+          style="height:100vh; width:100vw"
+          eager
+          transition="my-carousel"
+
+          v-for="(item,i) in items"
+          :key="i"
 
         >
+          <v-img :src="item.src" height="100%" eager/>
+        </v-carousel-item>
 
+      </v-carousel>
+    </v-row>
 
-            <v-carousel-item
-              style="height:100vh; width:100vw"
-              eager
-              transition="my-carousel"
-
-              v-for="(item,i) in items"
-              :key="i"
-
-            >
-              <v-img :src="item.src" height="100%" eager/>
-            </v-carousel-item>
-
-        </v-carousel>
-      </v-row>
-
-
-
-
+    <v-row
+      justify="center"
+    >
+      <p
+        class="titulo text-center title-text"
+        :class="{'title-text-mobile': $vuetify.breakpoint.xs}"
+        justify="center"
+      >Eladio Susaeta
+      </p>
+    </v-row>
 
 
   </v-app>
