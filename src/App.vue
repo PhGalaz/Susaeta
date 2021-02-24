@@ -3,7 +3,7 @@
     style="background-color:transparent"
   >
     <v-row
-      class="ma-0 pa-0"
+      class="ma-0 pa-0 d-none d-sm-flex"
       style="position:fixed;z-index:1;width:100vw"
       justify="center"
     >
@@ -16,12 +16,22 @@
         ><span>Instagram</span></p>
       </v-col>
       <v-col
+        class=""
         cols="2"
         style="background-color:transparent"
       >
         <p
           class="menu-item text-center"
         ><span>Work</span></p>
+      </v-col>
+      <v-col
+        class="d-none"
+        cols="2"
+        style="background-color:transparent"
+      >
+        <p
+          class="menu-item text-center"
+        ><span>Inicio</span></p>
       </v-col>
       <v-col
         cols="5"
@@ -39,7 +49,7 @@
       class="ma-0 pa-0"
     >
       <v-carousel
-        style="height:100vh; width:100vw; position: absolute"
+        style="height:100vh;width:100vw;position:absolute"
         hide-delimiters
         height="100vh"
         cycle
@@ -64,9 +74,17 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 body"
-      style="position:absolute;background-color:red;height:1000px;width:100vw;top:100%"
+      style="position:absolute;height:1000px;width:100vw;top:100%"
     >
-      Hola
+      <v-row
+        class="ma-0 pa-0"
+        style="height:200px;background-color:red"
+      >
+        <p
+          class="ma-0 pa-15"
+          style="background-color:yellow"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </v-row>
     </v-row>
     <v-row
       class="ma-0 pa-0 justify-center"
@@ -78,6 +96,11 @@
         :class="{'title-text-mobile': $vuetify.breakpoint.xs || $vuetify.breakpoint.sm}"
 
       >Eladio Susaeta
+      </p>
+      <p
+        class="titulo text-lg-h1 text-h5"
+      >
+        Eladio Susaeta
       </p>
     </v-row>
 
@@ -129,6 +152,14 @@ export default {
   body::-webkit-scrollbar
     display: none
 
+  $h1-font-family: Hoefler
+
+  .h1
+    font-size: 420px
+    letter-spacing: 10px
+
+
+
   .v-carousel .v-window-item
     position: absolute
     top: 0
@@ -159,7 +190,7 @@ export default {
     top: 15vh
     height: 150px
     font-family: Hoefler
-    font-size: 120px
+
     font: normal normal normal Hoefler Text
     letter-spacing: 10px
     color: #707070
@@ -182,11 +213,6 @@ export default {
     letter-spacing: 0px
     color: #707070
 
-  h2
-    text-align: left
-    font: normal normal normal 60px Hoefler Text
-    letter-spacing: 3px
-    color: #707070
 
   .casos
     text-align: left
