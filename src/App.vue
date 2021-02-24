@@ -74,8 +74,8 @@
       justify="center"
     >
       <p
-        class="titulo"
-        :class="{'title-text-mobile': $vuetify.breakpoint.xs}"
+        class="titulo text-center"
+        :class="{'title-text-mobile': $vuetify.breakpoint.xs || $vuetify.breakpoint.sm}"
 
       >Eladio Susaeta
       </p>
@@ -159,6 +159,7 @@ export default {
     top: 15vh
     height: 150px
     font-family: Hoefler
+    font-size: 120px
     font: normal normal normal Hoefler Text
     letter-spacing: 10px
     color: #707070
@@ -206,7 +207,7 @@ export default {
     font-size: 120px
     font-family: Hoefler
   .title-text-mobile
-    font-size: 60px
+    font-size: 80px
     font-family: Hoefler
 
   .menu-item
