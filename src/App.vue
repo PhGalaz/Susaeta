@@ -71,9 +71,10 @@
     <v-row
       class="ma-0 pa-0 justify-center"
       style="width:100vw"
+      justify="center"
     >
       <p
-        class="titulo title-text"
+        class="titulo"
         :class="{'title-text-mobile': $vuetify.breakpoint.xs}"
 
       >Eladio Susaeta
