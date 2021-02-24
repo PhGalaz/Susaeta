@@ -63,16 +63,6 @@
       </v-carousel>
     </v-row>
 
-    <v-row
-      justify="center"
-    >
-      <p
-        class="titulo text-center title-text"
-        :class="{'title-text-mobile': $vuetify.breakpoint.xs}"
-        justify="center"
-      >Eladio Susaeta
-      </p>
-    </v-row>
 
 
   </v-app>
