@@ -203,8 +203,10 @@ export default {
 
   .title-text
     font-size: 120px
+    font-family: Hoefler
   .title-text-mobile
     font-size: 60px
+    font-family: Hoefler
 
   .menu-item
     font-family: Montserrat
