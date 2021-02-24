@@ -2,61 +2,37 @@
   <v-app
     style="background-color:transparent"
   >
-      <v-row
-        style="z-index:1"
-        class="header"
+    <v-row
+      class="ma-0 pa-0"
+      style="position:fixed;z-index:1;width:100vw"
+      justify="center"
+    >
+      <v-col
+        cols="5"
+        style="background-color:transparent"
       >
-        <v-col
-          style="width:200px"
-        >
-          <v-row
-            justify="center"
-            align="center"
-          >
-            <v-btn
-              style="text-transform: none;font-size:20px"
-              text
-              color="#707070"
-            >
-              Instagram
-            </v-btn>
-          </v-row>
-        </v-col>
-        <v-col
-          style="width:200px"
-        >
-          <v-row
-            justify="center"
-            align="center"
-          >
-            <v-btn
-              style="text-transform: none;font-size:20px"
-              text
-              color="#707070"
-            >
-              Work
-            </v-btn>
-          </v-row>
-        </v-col>
-        <v-col
-          style="width:200px"
-        >
-          <v-row
-            justify="center"
-            align="center"
-          >
-            <v-btn
-              style="text-transform: none;font-size:20px"
-              text
-              color="#707070"
-            >
-              Contact
-            </v-btn>
-          </v-row>
-        </v-col>
+        <p
+          class="instagram text-right"
+        >Instagram</p>
+      </v-col>
+      <v-col
+        cols="2"
+        style="background-color:transparent"
+      >
+        <p
+          class="instagram text-center"
+        >Work</p>
+      </v-col>
+      <v-col
+        cols="5"
+        style="background-color:transparent"
+      >
+        <p
+          class="instagram text-left"
+        >Whatsapp</p>
+      </v-col>
 
-
-      </v-row>
+    </v-row>
 
     <v-row
       style="z-index:0"
@@ -99,12 +75,12 @@
     >
 
       <p
-        class="titulo text-center"
+        class="titulo text-center title-text"
+        :class="{'title-text-mobile': $vuetify.breakpoint.xs}"
         justify="center"
       >Eladio Susaeta
       </p>
     </v-row>
-
 
 
   </v-app>
@@ -130,8 +106,20 @@ export default {
       {
         src: 'prueba4.jpeg',
       },
-    ],
+    ]
   }),
+  computed: {
+      height () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return 220
+          case 'sm': return 400
+          case 'md': return 500
+          case 'lg': return 600
+          case 'xl': return 800
+        }
+        return 1
+      },
+    }
 };
 </script>
 
@@ -171,7 +159,7 @@ export default {
     position: absolute
     top: 15vh
     height: 150px
-    font: normal normal normal 120px Hoefler Text
+    font: normal normal normal Hoefler Text
     letter-spacing: 10px
     color: #707070
     -webkit-touch-callout: none
@@ -195,7 +183,7 @@ export default {
 
   h2
     text-align: left
-    font: normal normal normal 20px/60px Hoefler Text
+    font: normal normal normal 60px Hoefler Text
     letter-spacing: 3px
     color: #707070
 
@@ -214,6 +202,15 @@ export default {
     font-size: 30px
     color: #707070
 
+  .title-text
+    font-size: 60px
+  .title-text-mobile
+    font-size: 20px
 
+  .instagram
+    font-family: Montserrat
+    letter-spacing: 0px
+    color: #707070
+    font-size:20px
 
 </style>
