@@ -88,7 +88,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 justify-center"
-      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler"
+      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler Text"
       justify="center"
     >
       Eladio Susaeta
