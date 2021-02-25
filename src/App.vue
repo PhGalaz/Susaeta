@@ -88,20 +88,10 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 justify-center"
-      style="width:100vw"
+      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler"
       justify="center"
     >
-      <p
-        class="titulo text-center"
-        :class="{'title-text-mobile': $vuetify.breakpoint.xs || $vuetify.breakpoint.sm}"
-
-      >Eladio Susaeta
-      </p>
-      <p
-        class="titulo text-lg-h1 text-h5"
-      >
-        Eladio Susaeta
-      </p>
+      Eladio Susaeta
     </v-row>
 
 
