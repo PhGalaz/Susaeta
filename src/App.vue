@@ -88,7 +88,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center"
-      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler Text;font-size:130px;color:#707070;letter-spacing:7px"
+      style="position:absolute;width:100vw;top:15vh;font-family:Montserrat;font-size:130px;color:#707070;letter-spacing:7px"
       justify="center"
     >
       Text
