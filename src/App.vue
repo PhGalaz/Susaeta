@@ -140,7 +140,7 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
   @font-face
     font-family: "Hoefler Text"
-    src: local("Hoefler Text"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("truetype")
+    src: local("Hoefler Text"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("truetype"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("embedded-opentype"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("woff2"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("woff"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("svg")
 
   body::-webkit-scrollbar
     display: none
