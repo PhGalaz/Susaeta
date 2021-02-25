@@ -179,11 +179,11 @@ export default {
     width: 100vw
     top: 15vh
     height: 150px
-    font-family: Hoefler Text,Baskerville Old Face,Garamond,Times New Roman,serif
+    font-family: 'Hoefler Text',Baskerville Old Face,Garamond,Times New Roman,serif
     font-size: 130px
     font: normal normal normal Hoefler Text
     letter-spacing: 7px
-    color: #707070
+    color: red
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
