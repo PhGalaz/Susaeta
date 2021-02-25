@@ -137,13 +137,8 @@ export default {
 
 <style lang="sass" scope>
 
-  @font-face
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
-
-  @font-face
-    font-family: 'Hoefler Text'
-    src: url('http://fonts.cdnfonts.com/css/hoefler-text')
-    src: url('http://fonts.cdnfonts.com/css/hoefler-text') format('embedded-opentype')
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
+  @import url(//db.onlinewebfonts.com/c/d1121dcd467c7fc7d35816d76e0089af?family=Hoefler+Text)
 
 
   body::-webkit-scrollbar
