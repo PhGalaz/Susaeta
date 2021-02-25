@@ -134,12 +134,13 @@ export default {
 };
 </script>
 
-<style lang="sass" scope>
+<style lang="sass">
 
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
   @font-face
     font-family: "Hoefler Text"
     src: local("Hoefler Text")
+    src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff')
     src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("truetype")
     src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("embedded-opentype")
     src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff2') format("woff2")
@@ -178,7 +179,7 @@ export default {
     width: 100vw
     top: 15vh
     height: 150px
-    font-family: Hoefler Text
+    font-family: Hoefler Text,Baskerville Old Face,Garamond,Times New Roman,serif
     font-size: 130px
     font: normal normal normal Hoefler Text
     letter-spacing: 7px
