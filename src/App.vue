@@ -87,8 +87,7 @@
       </v-row>
     </v-row>
     <v-row
-      class="ma-0 pa-0 text-center"
-      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler Text;font-size:130px;color#707070;letter-spacing:7px"
+      class="ma-0 pa-0 text-center titulo"
       justify="center"
     >
       Text
@@ -140,7 +139,12 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
   @font-face
     font-family: "Hoefler Text"
-    src: local("Hoefler Text"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("truetype"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("embedded-opentype"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("woff2"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("woff"), url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("svg")
+    src: local("Hoefler Text")
+    src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("truetype")
+    src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("embedded-opentype")
+    src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff2') format("woff2")
+    src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff') format("woff")
+    src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("svg")
 
   body::-webkit-scrollbar
     display: none
@@ -169,16 +173,16 @@ export default {
     top: 0
     transform: translate(-100%, 0)
 
-
   .titulo
     position: absolute
+    width: 100vw
     top: 15vh
     height: 150px
-    font-family: Hoefler
-
+    font-family: Hoefler Text
+    font-size: 130px
     font: normal normal normal Hoefler Text
-    letter-spacing: 10px
-    color: #707070
+    letter-spacing: 7px
+    color: red
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
