@@ -183,7 +183,7 @@ export default {
     font-size: 130px
     font: normal normal normal Hoefler Text
     letter-spacing: 7px
-    color: red
+    color: #707070
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
