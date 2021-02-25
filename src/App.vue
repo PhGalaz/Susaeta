@@ -87,11 +87,11 @@
       </v-row>
     </v-row>
     <v-row
-      class="ma-0 pa-0 justify-center"
-      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler Text;font-size:120px;color:#707070"
+      class="ma-0 pa-0 text-center"
+      style="position:absolute;width:100vw;top:15vh;font-family:Hoefler Text;font-size:130px;color:#707070;letter-spacing:7px"
       justify="center"
     >
-      Eladio Susaeta
+      Text
     </v-row>
 
 
@@ -137,8 +137,14 @@ export default {
 
 <style lang="sass" scope>
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
-  @import url('http://fonts.cdnfonts.com/css/hoefler-text')
+  @font-face
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
+
+  @font-face
+    font-family: 'Hoefler Text'
+    src: url('http://fonts.cdnfonts.com/css/hoefler-text')
+    src: url('http://fonts.cdnfonts.com/css/hoefler-text') format('embedded-opentype')
+
 
   body::-webkit-scrollbar
     display: none
