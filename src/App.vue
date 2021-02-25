@@ -87,11 +87,11 @@
       </v-row>
     </v-row>
     <v-row
-      class="ma-0 pa-0 text-center"
+      class="ma-0 pa-0 text-center font-weight-bold"
       style="position:absolute;width:100vw;top:15vh;font-family:Montserrat;font-size:130px;color:#707070;letter-spacing:7px"
       justify="center"
     >
-      Text
+      Eladio Susaeta
     </v-row>
 
 
