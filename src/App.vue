@@ -74,7 +74,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 body"
-      style="position:absolute;background-color:#EDEDED;width:100vw;top:100%"
+      style="position:absolute;background-color:#EAEAEA;width:100vw;top:100%"
     >
       <v-row
         class="ma-0 pa-0"
@@ -103,7 +103,7 @@
           <v-col
             class="ma-0 pa-0"
             cols="12"
-            sm="6"
+            md="6"
             style="background-color:red"
           >
             <v-img
@@ -116,7 +116,7 @@
           <v-col
             class="ma-0 pa-0"
             cols="12"
-            sm="6"
+            md="6"
             style="background-color:red"
           >
             <v-img
@@ -131,10 +131,18 @@
 
     </v-row>
     <v-row
-      class="ma-0 pa-0 text-center titulo"
+      class="ma-0 pa-0 text-center titulo d-none d-md-flex"
+      style="font-size:130px"
       justify="center"
     >
-      Text
+      Eladio Susaeta
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 text-center titulo d-md-none"
+      style="font-size:60px"
+      justify="center"
+    >
+      Eladio Susaeta
     </v-row>
 
 
@@ -224,10 +232,9 @@ export default {
     top: 15vh
     height: 150px
     font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font-size: 130px
     font: normal normal normal Hoefler Text
     letter-spacing: 7px
-    color: #707070
+    color: #EDEDED
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
@@ -258,11 +265,6 @@ export default {
     left: 50%
     transform: translate(-50%, 0)
 
-  .v-btn
-    font-family: Montserrat
-    letter-spacing: 0px
-    color: #707070
-
 
   .casos
     text-align: left
@@ -289,13 +291,15 @@ export default {
   .menu-item
     font-family: Montserrat
     letter-spacing: 0px
-    color: #707070
     font-size: 20px
+    font-weight: bold
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
     -moz-user-select: none
     -ms-user-select: none
+    color: #EDEDED
+    text-shadow: 0px 3px 6px #00000029
   .menu-item span:hover
     cursor: pointer
 
