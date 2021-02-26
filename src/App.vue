@@ -74,17 +74,25 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 body"
-      style="position:absolute;height:1000px;width:100vw;top:100%"
+      style="position:absolute;background-color:#EDEDED;width:100vw;top:100%"
     >
       <v-row
         class="ma-0 pa-0"
-        style="height:200px;background-color:red"
+        style="width:100vw;top:100px"
       >
+        <v-row
+          class="ma-0 pa-0"
+          style="height:25vh"
+        ></v-row>
         <p
-          class="ma-0 pa-15"
-          style="background-color:yellow"
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          class="mb-0 pa-0 parr"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <v-row
+          class="ma-0 pa-0"
+          style="height:25vh"
+        ></v-row>
       </v-row>
+
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo"
@@ -179,17 +187,34 @@ export default {
     width: 100vw
     top: 15vh
     height: 150px
-    font-family: 'Hoefler Text',Baskerville Old Face,Garamond,Times New Roman,serif
+    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
     font-size: 130px
     font: normal normal normal Hoefler Text
     letter-spacing: 7px
-    color: red
+    color: #707070
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
+
+  .parr
+    margin-left: 15%
+    margin-right: 15%
+    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
+    font-size: 60px
+    font: normal normal normal Hoefler Text
+    color: #707070
+    line-height: 110%
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+
 
   .header
 
