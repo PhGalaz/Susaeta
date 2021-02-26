@@ -9,29 +9,34 @@
     >
       <v-col
         cols="5"
-        style="background-color:transparent"
+        class="menu-item text-right"
       >
-        <p
-          class="menu-item text-right"
-        ><span>Instagram</span></p>
+        <a
+          class="text-decoration-none"
+          href="https://www.instagram.com/eladio_susaeta/?hl=en"
+        >Instagram</a>
       </v-col>
       <v-col
-        class=""
         cols="2"
         style="background-color:transparent"
       >
         <p
           class="menu-item text-center"
-        ><span>Work</span></p>
+        >
+          <router-link
+            to="/Work"
+            class="text-decoration-none"
+          >Work</router-link></p>
       </v-col>
       <v-col
         class="d-none"
         cols="2"
         style="background-color:transparent"
       >
-        <p
+        <router-link
+          to="/"
           class="menu-item text-center"
-        ><span>Inicio</span></p>
+        ><span>Home</span></router-link>
       </v-col>
       <v-col
         cols="5"
@@ -44,106 +49,7 @@
 
     </v-row>
 
-    <v-row
-      style="z-index:0"
-      class="ma-0 pa-0"
-    >
-      <v-carousel
-        style="height:100vh;width:100vw;position:absolute"
-        hide-delimiters
-        height="100vh"
-        cycle
-        show-arrows-on-hover
-        continuos="false"
-        interval=7000
-
-      >
-        <v-carousel-item
-          style="height:100vh; width:100vw"
-          eager
-          transition="my-carousel"
-
-          v-for="(item,i) in items"
-          :key="i"
-
-        >
-          <v-img :src="item.src" height="100%" eager/>
-        </v-carousel-item>
-
-      </v-carousel>
-    </v-row>
-    <v-row
-      class="ma-0 pa-0 body"
-      style="position:absolute;background-color:#EAEAEA;width:100vw;top:100%"
-    >
-      <v-row
-        class="ma-0 pa-0"
-        style="width:100vw;top:100px"
-      >
-        <v-row
-          class="ma-0 pa-0"
-          style="height:25vh"
-        ></v-row>
-        <p
-          class="mb-0 pa-0 parr d-none d-sm-flex"
-          style="font-size:60px"
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p
-          class="mb-0 pa-0 parr d-sm-none"
-          style="font-size:25px"
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <v-row
-          class="ma-0 pa-0"
-          style="width:100vw;height:25vh"
-        ></v-row>
-        <v-row
-          class="ma-0 pa-0"
-          style="width:100vw"
-        >
-          <v-col
-            class="ma-0 pa-0"
-            cols="12"
-            md="6"
-            style="background-color:red"
-          >
-            <v-img
-              style="max-height:50vh;min-height:50vh"
-              src="prueba1.jpeg" eager/>
-            <v-img
-              style="max-height:50vh;min-height:50vh"
-              src="prueba2.jpeg" eager/>
-          </v-col>
-          <v-col
-            class="ma-0 pa-0"
-            cols="12"
-            md="6"
-            style="background-color:red"
-          >
-            <v-img
-              style="max-height:50vh;min-height:50vh"
-              src="prueba3.jpeg" eager/>
-            <v-img
-              style="max-height:50vh;min-height:50vh"
-              src="prueba4.jpeg" eager/>
-          </v-col>
-        </v-row>
-      </v-row>
-
-    </v-row>
-    <v-row
-      class="ma-0 pa-0 text-center titulo d-none d-md-flex"
-      style="font-size:130px"
-      justify="center"
-    >
-      Eladio Susaeta
-    </v-row>
-    <v-row
-      class="ma-0 pa-0 text-center titulo d-md-none"
-      style="font-size:60px"
-      justify="center"
-    >
-      Eladio Susaeta
-    </v-row>
+    <router-view></router-view>
 
 
   </v-app>
@@ -201,6 +107,10 @@ export default {
 
   body::-webkit-scrollbar
     display: none
+
+  .v-application a
+    color: #EDEDED !important
+
 
   .v-carousel .v-window-item
     position: absolute
