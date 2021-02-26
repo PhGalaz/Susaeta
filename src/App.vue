@@ -85,7 +85,12 @@
           style="height:25vh"
         ></v-row>
         <p
-          class="mb-0 pa-0 parr"
+          class="mb-0 pa-0 parr d-none d-sm-flex"
+          style="font-size:60px"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p
+          class="mb-0 pa-0 parr d-sm-none"
+          style="font-size:45px"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <v-row
           class="ma-0 pa-0"
@@ -203,7 +208,6 @@ export default {
     margin-left: 15%
     margin-right: 15%
     font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font-size: 60px
     font: normal normal normal Hoefler Text
     color: #707070
     line-height: 110%
