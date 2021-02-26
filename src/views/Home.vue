@@ -1,9 +1,11 @@
 <template>
-  <v-row>
-    Susaeta
-  </v-row>
+
 </template>
 
 <script>
 
 </script>
+
+<style lang="sass" scope>
+
+</style>
