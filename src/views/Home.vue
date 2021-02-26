@@ -63,7 +63,6 @@
             class="ma-0 pa-0"
             cols="12"
             md="6"
-            style="background-color:red"
           >
             <v-img
               style="max-height:50vh;min-height:50vh"
@@ -76,7 +75,6 @@
             class="ma-0 pa-0"
             cols="12"
             md="6"
-            style="background-color:red"
           >
             <v-img
               style="max-height:50vh;min-height:50vh"

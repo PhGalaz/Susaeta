@@ -17,8 +17,8 @@
         >Instagram</a>
       </v-col>
       <v-col
+        :class="{ 'd-none': !isActive }"
         cols="2"
-        style="background-color:transparent"
       >
         <p
           class="menu-item text-center"
@@ -26,18 +26,22 @@
           <router-link
             to="/Work"
             class="text-decoration-none"
-          >Work</router-link></p>
+          ><span @click="isActive = !isActive">Work</span></router-link></p>
       </v-col>
       <v-col
-        class="d-none"
+        :class="{ 'd-none': isActive }"
         cols="2"
-        style="background-color:transparent"
       >
-        <router-link
-          to="/"
+        <p
           class="menu-item text-center"
-        ><span>Home</span></router-link>
+        >
+          <router-link
+            to="/"
+            class="text-decoration-none"
+
+          ><span @click="isActive = !isActive">Home</span></router-link></p>
       </v-col>
+
       <v-col
         cols="5"
         style="background-color:transparent"
@@ -62,6 +66,7 @@ export default {
 
   name: 'App',
   data: () => ({
+    isActive: true,
     items: [
       {
         src: 'prueba1.jpeg',
@@ -77,6 +82,12 @@ export default {
       },
     ]
   }),
+  methods: {
+    suitch: function() {
+      this.isActive = !this.isActive;
+      console.log('hola')
+    }
+  },
   computed: {
       height () {
         switch (this.$vuetify.breakpoint.name) {
