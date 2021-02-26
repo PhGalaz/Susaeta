@@ -102,26 +102,28 @@
         >
           <v-col
             class="ma-0 pa-0"
-            cols="6"
+            cols="12"
+            sm="6"
             style="background-color:red"
           >
             <v-img
-              style="max-height:380px;min-height:380px"
+              style="max-height:50vh;min-height:50vh"
               src="prueba1.jpeg" eager/>
             <v-img
-              style="max-height:380px;min-height:380px"
+              style="max-height:50vh;min-height:50vh"
               src="prueba2.jpeg" eager/>
           </v-col>
           <v-col
             class="ma-0 pa-0"
-            cols="6"
+            cols="12"
+            sm="6"
             style="background-color:red"
           >
             <v-img
-              style="max-height:380px;min-height:380px"
+              style="max-height:50vh;min-height:50vh"
               src="prueba3.jpeg" eager/>
             <v-img
-              style="max-height:380px;min-height:380px"
+              style="max-height:50vh;min-height:50vh"
               src="prueba4.jpeg" eager/>
           </v-col>
         </v-row>
