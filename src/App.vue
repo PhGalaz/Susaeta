@@ -194,7 +194,7 @@ export default {
     src: local("Hoefler Text")
     src: url('/fonts/FontsFree-Net-Hoefler-Text.tff')
     src: url('/fonts/FontsFree-Net-Hoefler-Text.tff') format("truetype")
-    src: url('/fonts/FontsFree-Net-Hoefler-Text.tiff') format("embedded-opentype")
+    src: url('/fonts/fontsfree-net-hoefler-text-webfont.eot') format("embedded-opentype")
     src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff2') format("woff2")
     src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff') format("woff")
     src: url('/fonts/fontsfree-net-hoefler-text-webfont.svg') format("svg")
