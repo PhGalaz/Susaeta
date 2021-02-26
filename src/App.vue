@@ -90,12 +90,41 @@
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p
           class="mb-0 pa-0 parr d-sm-none"
-          style="font-size:45px"
+          style="font-size:35px"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <v-row
           class="ma-0 pa-0"
-          style="height:25vh"
+          style="width:100vw;height:25vh"
         ></v-row>
+        <v-row
+          class="ma-0 pa-0"
+          style="width:100vw"
+        >
+          <v-col
+            class="ma-0 pa-0"
+            cols="6"
+            style="background-color:red"
+          >
+            <v-img
+              style="max-height:380px"
+              src="prueba1.jpeg" eager/>
+            <v-img
+              style="max-height:380px"
+              src="prueba2.jpeg" eager/>
+          </v-col>
+          <v-col
+            class="ma-0 pa-0"
+            cols="6"
+            style="background-color:red"
+          >
+            <v-img
+              style="max-height:380px;min-height:380px"
+              src="prueba3.jpeg" eager/>
+            <v-img
+              style="max-height:380px;min-height:380px"
+              src="prueba4.jpeg" eager/>
+          </v-col>
+        </v-row>
       </v-row>
 
     </v-row>
