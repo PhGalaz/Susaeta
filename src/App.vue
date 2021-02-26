@@ -106,10 +106,10 @@
             style="background-color:red"
           >
             <v-img
-              style="max-height:380px"
+              style="max-height:380px;min-height:380px"
               src="prueba1.jpeg" eager/>
             <v-img
-              style="max-height:380px"
+              style="max-height:380px;min-height:380px"
               src="prueba2.jpeg" eager/>
           </v-col>
           <v-col
