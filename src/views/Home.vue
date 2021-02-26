@@ -115,16 +115,13 @@ export default {
   data: () => ({
     items: [
       {
-        src: 'prueba1.jpeg',
+        src: 'casabosquina.jpg',
       },
       {
-        src: 'prueba2.jpeg',
+        src: 'casaplayina.jpg',
       },
       {
-        src: 'prueba3.jpeg',
-      },
-      {
-        src: 'prueba4.jpeg',
+        src: 'casamarina.jpg',
       },
     ]
   }),
