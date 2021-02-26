@@ -12,7 +12,7 @@
         hide-delimiters
         height="100vh"
         cycle
-    
+        :show-arrows="false"
         continuos="false"
         interval=7000
 
