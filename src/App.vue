@@ -162,6 +162,7 @@ export default {
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
+    cursor: default
 
   .parr
     margin-left: 15%
