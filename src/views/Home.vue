@@ -87,14 +87,14 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-none d-md-flex"
-      style="font-size:130px"
+      style="font-size:110px"
       justify="center"
     >
       Eladio Susaeta
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-md-none"
-      style="font-size:60px"
+      style="font-size:80px"
       justify="center"
     >
       Eladio Susaeta
@@ -130,7 +130,7 @@ export default {
   .titulo
     position: absolute
     width: 100vw
-    top: 15vh
+    top: 10vh
     height: 150px
     font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
     font: normal normal normal Hoefler Text
