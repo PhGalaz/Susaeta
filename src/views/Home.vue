@@ -15,7 +15,7 @@
         :show-arrows="false"
         continuos="false"
         interval=7000
-
+        eager
       >
         <v-carousel-item
           style="height:100vh; width:100vw"
@@ -24,7 +24,6 @@
 
           v-for="(item,i) in items"
           :key="i"
-
         >
           <v-img :src="item.src" height="100%" eager/>
         </v-carousel-item>
@@ -69,7 +68,7 @@
               src="prueba1.jpeg" eager/>
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="prueba2.jpeg" eager/>
+              src="casaplayina.jpg" eager/>
           </v-col>
           <v-col
             class="ma-0 pa-0"
@@ -78,10 +77,10 @@
           >
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="prueba3.jpeg" eager/>
+              src="casamarina.jpg" eager/>
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="prueba4.jpeg" eager/>
+              src="casabosquina.jpg" eager/>
           </v-col>
         </v-row>
       </v-row>
@@ -124,18 +123,63 @@ export default {
         src: 'casamarina.jpg',
       },
     ]
-  }),
-  computed: {
-      height () {
-        switch (this.$vuetify.breakpoint.name) {
-          case 'xs': return 220
-          case 'sm': return 400
-          case 'md': return 500
-          case 'lg': return 600
-          case 'xl': return 800
-        }
-        return 1
-      },
-    }
+  })
 };
 </script>
+
+<style lang="sass">
+  .titulo
+    position: absolute
+    width: 100vw
+    top: 15vh
+    height: 150px
+    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
+    font: normal normal normal Hoefler Text
+    letter-spacing: 7px
+    color: #EDEDED
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    cursor: default
+
+  .parr
+    margin-left: 15%
+    margin-right: 15%
+    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
+    font: normal normal normal Hoefler Text
+    color: #707070
+    line-height: 110%
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+  .v-carousel .v-window-item
+    position: absolute
+    top: 0
+    width: 100%
+
+  .my-carousel-enter-active
+
+    transition: 2s ease
+  .my-carousel-leave-active
+
+    transition: 2s ease
+  .my-carousel-move
+
+    transition: transform 6s
+  .my-carousel-enter
+
+    transform: translate(100%, 0)
+  .my-carousel-leave
+
+  .my-carousel-leave-to
+    position: absolute
+    top: 0
+    transform: translate(-100%, 0)
+</style>

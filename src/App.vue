@@ -66,40 +66,8 @@ export default {
 
   name: 'App',
   data: () => ({
-    isActive: true,
-    items: [
-      {
-        src: 'prueba1.jpeg',
-      },
-      {
-        src: 'prueba2.jpeg',
-      },
-      {
-        src: 'prueba3.jpeg',
-      },
-      {
-        src: 'prueba4.jpeg',
-      },
-    ]
-  }),
-  methods: {
-    suitch: function() {
-      this.isActive = !this.isActive;
-      console.log('hola')
-    }
-  },
-  computed: {
-      height () {
-        switch (this.$vuetify.breakpoint.name) {
-          case 'xs': return 220
-          case 'sm': return 400
-          case 'md': return 500
-          case 'lg': return 600
-          case 'xl': return 800
-        }
-        return 1
-      },
-    }
+    isActive: true
+  })
 };
 </script>
 
@@ -122,64 +90,6 @@ export default {
   .v-application a
     color: #EDEDED !important
 
-
-  .v-carousel .v-window-item
-    position: absolute
-    top: 0
-    width: 100%
-
-  .my-carousel-enter-active
-
-    transition: 2s ease
-  .my-carousel-leave-active
-
-    transition: 2s ease
-  .my-carousel-move
-
-    transition: transform 6s
-  .my-carousel-enter
-
-    transform: translate(100%, 0)
-  .my-carousel-leave
-
-  .my-carousel-leave-to
-    position: absolute
-    top: 0
-    transform: translate(-100%, 0)
-
-  .titulo
-    position: absolute
-    width: 100vw
-    top: 15vh
-    height: 150px
-    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font: normal normal normal Hoefler Text
-    letter-spacing: 7px
-    color: #EDEDED
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
-    cursor: default
-
-  .parr
-    margin-left: 15%
-    margin-right: 15%
-    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font: normal normal normal Hoefler Text
-    color: #707070
-    line-height: 110%
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
-
-
-
   .header
 
     top: 5%
@@ -195,20 +105,6 @@ export default {
     font-size: 40px
     color: #707070
 
-  .casa
-    background-color: transparent
-    text-align: left
-    font: normal normal medium Montserrat
-    letter-spacing: 0px
-    font-size: 30px
-    color: #707070
-
-  .title-text
-    font-size: 120px
-    font-family: Hoefler
-  .title-text-mobile
-    font-size: 80px
-    font-family: Hoefler
 
   .menu-item
     font-family: Montserrat
