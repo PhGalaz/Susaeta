@@ -15,7 +15,6 @@
         :show-arrows="false"
         continuos="false"
         interval=7000
-        eager
       >
         <v-carousel-item
           style="height:100vh; width:100vw"

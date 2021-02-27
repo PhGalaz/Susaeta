@@ -67,7 +67,7 @@ export default {
   name: 'App',
   data: () => ({
     isActive: true
-  })
+  }),
 };
 </script>
 

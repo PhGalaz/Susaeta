@@ -32,9 +32,8 @@
     </v-row>
 
     <v-row
-      class="ma-0 pa-0 text-center titulo d-none d-md-flex"
-      style="font-size:130px"
-      justify="center"
+      class="ma-0 ml-16 pl-16 pa-0 text-left nombre d-none d-md-flex"
+      style="font-size:60px"
     >
       Casa Riscos
     </v-row>
@@ -52,16 +51,10 @@ export default {
   data: () => ({
     items: [
       {
-        src: 'casariscos/casariscos3.jpg',
+        src: 'casabosquina.jpg',
       },
       {
-        src: 'casariscos/casariscos6.jpg',
-      },
-      {
-        src: 'casariscos/casariscos7.jpg',
-      },
-      {
-        src: 'casariscos/casariscos9.jpg',
+        src: 'casariscos3.jpg',
       },
     ]
   })
@@ -70,13 +63,12 @@ export default {
 
 <style lang="sass" scope>
 
-  .titulo
+  .nombre
     position: absolute
     width: 100vw
-    top: 15vh
-    height: 150px
-    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font: normal normal normal Hoefler Text
+    top: 75vh
+    height: 100px
+    font-family: Montserrat
     letter-spacing: 7px
     color: #EDEDED
     -webkit-touch-callout: none
