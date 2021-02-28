@@ -1,14 +1,18 @@
 <template>
   <v-app
     style="background-color:transparent"
-  >
 
+  >
+  <v-row
+    class="ma-0 pa-0"
+    align="center"
+  >
     <v-row
       style="z-index:0"
       class="ma-0 pa-0"
     >
       <v-carousel
-        style="height:100vh;width:100vw;position:absolute"
+        style="height:100vh;width:100vw"
         hide-delimiters
         height="100vh"
         cycle
@@ -30,13 +34,185 @@
 
       </v-carousel>
     </v-row>
+  </v-row>
+  <v-row
+    class="ma-0 pa-0"
+    style="heigth:100px;background-color:blue"
+  >
+  <table class="logo">
+        <tr>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+        </tr>
+        <tr>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+        </tr>
+        <tr>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td></td>
+          <td class="negro"></td>
+          <td class="negro"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+  </v-row>
 
-    <v-row
-      class="ma-0 ml-16 pl-16 pa-0 text-left nombre d-none d-md-flex"
-      style="font-size:60px"
-    >
-      Casa Riscos
-    </v-row>
+
+
 
 
   </v-app>
@@ -72,13 +248,58 @@ export default {
 
 <style lang="sass" scope>
 
+  h1
+    font-size: 45px
+    font-family: Montserrat
+    letter-spacing: 2px
+    color: #EDEDED
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    cursor: default
+
+  h3
+    font-size: 300px
+    font-family: Montserrat
+    letter-spacing: 2px
+    color: #EDEDED
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    cursor: default
+
+  .negro
+    background-color: black
+
+  .ciudad
+    position: absolute
+    width: 100vw
+
+
+    font-family: Montserrat
+    letter-spacing: 2px
+    color: #EDEDED
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    cursor: default
+
   .nombre
     position: absolute
     width: 100vw
-    top: 75vh
-    height: 100px
+
+
     font-family: Montserrat
-    letter-spacing: 7px
+    letter-spacing: 2px
     color: #EDEDED
     -webkit-touch-callout: none
     -webkit-user-select: none

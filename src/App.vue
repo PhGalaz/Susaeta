@@ -26,7 +26,7 @@
           <router-link
             to="/Work"
             class="text-decoration-none"
-          ><span @click="isActive = !isActive">Work</span></router-link></p>
+          ><span transition="scale-transition" @click="isActive = !isActive">Work</span></router-link></p>
       </v-col>
       <v-col
         :class="{ 'd-none': isActive }"
