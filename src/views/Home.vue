@@ -97,7 +97,7 @@
       style="font-size:80px"
       justify="center"
     >
-      <v-img style="transform:scale(0.5)" src="arquitectosusaeta.png"/>
+      <v-img style="transform:scale(0.7)" src="arquitectosusaeta.png"/>
     </v-row>
 
 
