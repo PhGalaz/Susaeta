@@ -86,18 +86,18 @@
 
     </v-row>
     <v-row
-      class="ma-0 pa-0 text-center titulo d-none d-md-flex"
-      style="font-size:110px"
+      class="ma-0 pa-0 text-center titulo d-none d-md-block"
+      style="font-size:110px;transform:scale(0.5)"
       justify="center"
     >
-      Eladio Susaeta
+    <v-img src="arquitectosusaeta.png"/>
     </v-row>
     <v-row
-      class="ma-0 pa-0 text-center titulo d-md-none"
+      class="ma-0 pa-0 text-center titulo d-block d-md-none"
       style="font-size:80px"
       justify="center"
     >
-      Eladio Susaeta
+      <v-img style="transform:scale(0.5)" src="arquitectosusaeta.png"/>
     </v-row>
 
 
