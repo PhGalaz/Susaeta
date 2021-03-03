@@ -17,7 +17,7 @@
         >Instagram</a>
       </v-col>
       <v-col
-        :class="{ 'd-none': !isActive }"
+        :class="{ 'd-none': !$store.state.isActive }"
         cols="2"
       >
         <p
@@ -26,10 +26,11 @@
           <router-link
             to="/Work"
             class="text-decoration-none"
-          ><span transition="scale-transition" @click="isActive = !isActive">Work</span></router-link></p>
+          ><span @click="$store.commit('header', false)">Work</span></router-link></p>
+
       </v-col>
       <v-col
-        :class="{ 'd-none': isActive }"
+        :class="{ 'd-none': $store.state.isActive }"
         cols="2"
       >
         <p
@@ -39,7 +40,7 @@
             to="/"
             class="text-decoration-none"
 
-          ><span @click="isActive = !isActive">Home</span></router-link></p>
+          ><span @click="$store.commit('header', true)">Home</span></router-link></p>
       </v-col>
 
       <v-col
@@ -96,15 +97,6 @@ export default {
     position: fixed
     left: 50%
     transform: translate(-50%, 0)
-
-
-  .casos
-    text-align: left
-    font: normal normal medium Montserrat
-    letter-spacing: 0px
-    font-size: 40px
-    color: #707070
-
 
   .menu-item
     font-family: Montserrat

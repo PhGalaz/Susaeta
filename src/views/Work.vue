@@ -242,7 +242,10 @@ export default {
         src: 'casabosquina.jpg',
       },
     ]
-  })
+  }),
+  created(){
+    this.$store.commit('header', false)
+  }
 };
 </script>
 

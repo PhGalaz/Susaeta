@@ -89,15 +89,17 @@
       class="ma-0 pa-0 text-center titulo d-none d-md-block"
       style="font-size:110px;transform:scale(0.5)"
       justify="center"
+      eager
     >
-    <v-img src="arquitectosusaeta.png"/>
+    <v-img src="arquitectosusaeta.png" eager/>
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-block d-md-none"
       style="font-size:80px"
       justify="center"
+      eager
     >
-      <v-img style="transform:scale(0.7)" src="arquitectosusaeta.png"/>
+      <v-img style="transform:scale(0.7)" src="arquitectosusaeta.png" eager/>
     </v-row>
 
 
@@ -122,7 +124,10 @@ export default {
         src: 'casamarina.jpg',
       },
     ]
-  })
+  }),
+  created(){
+    this.$store.commit('header', true)
+  }
 };
 </script>
 
