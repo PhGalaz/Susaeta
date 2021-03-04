@@ -69,6 +69,8 @@ export default {
   data: () => ({
     isActive: true
   }),
+  created () {
+  }
 };
 </script>
 

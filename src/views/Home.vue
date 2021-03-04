@@ -21,10 +21,9 @@
           eager
           transition="my-carousel"
 
-          v-for="(item,i) in items"
-          :key="i"
+          v-for="project in $store.state.projects" :key="project.id"
         >
-          <v-img :src="item.src" height="100%" eager/>
+          <v-img :src="project.pictures[0]" height="100%" eager/>
         </v-carousel-item>
 
       </v-carousel>
@@ -64,10 +63,10 @@
           >
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="prueba1.jpeg" eager/>
+              :src="this.cabin0" eager/>
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="casaplayina.jpg" eager/>
+              :src="this.cabin1" eager/>
           </v-col>
           <v-col
             class="ma-0 pa-0"
@@ -76,10 +75,11 @@
           >
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="casamarina.jpg" eager/>
+              :src="this.cabin2" eager/>
             <v-img
               style="max-height:50vh;min-height:50vh"
-              src="casabosquina.jpg" eager/>
+              :src="this.cabin3" eager/>
+            {{  }}
           </v-col>
         </v-row>
       </v-row>
@@ -113,20 +113,80 @@ export default {
 
   name: 'App',
   data: () => ({
-    items: [
-      {
-        src: 'casabosquina.jpg',
-      },
-      {
-        src: 'casaplayina.jpg',
-      },
-      {
-        src: 'casamarina.jpg',
-      },
-    ]
+    cabin0: null,
+    cabin1: null,
+    cabin2: null,
+    cabin3: null,
+    random_set: [],
+    position: [1,2,3,4],
+    index: 4,
+    index2: 0
   }),
+  beforeCreate(){
+
+  },
   created(){
-    this.$store.commit('header', true)
+    this.$store.commit('header', true);
+  },
+  mounted: function () {
+    for (var i = 0; i < this.$store.state.projects.length; i++){
+      var pictures = this.$store.state.projects[i].pictures;
+      pictures = pictures.sort(function() {return 0.5 - Math.random()});
+
+      this.random_set.push(pictures)
+    }
+    this.random_set = this.random_set.sort(function() {return 0.5 - Math.random()});
+    this.display();
+  },
+  methods: {
+
+    async init() {
+      if(this.position.length){
+        console.log(this.position);
+        var r = Math.floor( Math.random() * this.position.length );
+        var photo = (this.index2) % this.random_set[this.index].length;
+        console.log(this.position.length);
+        console.log(r);
+        console.log(this.position[r]);
+        if(this.position[r] == 1){
+          this.cabin0 = this.random_set[this.index][photo];
+        } else if (this.position[r] == 2) {
+          this.cabin1 = this.random_set[this.index][photo];
+        } else if (this.position[r] == 3) {
+          this.cabin2 = this.random_set[this.index][photo];
+        } else if (this.position[r] == 4) {
+          this.cabin3 = this.random_set[this.index][photo];
+        } else {
+          console.log('Error')
+        }
+        this.position.splice(r, 1);
+        this.index = (this.index + 1) % 4;
+        await this.random_sleep();
+        this.init()
+      } else {
+        console.log('else');
+        this.index2 = this.index2 + 1;
+        this.position = [1,2,3,4];
+        this.init()
+      }
+    },
+
+    random_sleep() {
+      const seconds = [2000,3000,4000,5000,6000];
+      const randomlapse = Math.floor(Math.random() * seconds.length);
+      return new Promise((resolve) => {
+        setTimeout(resolve, seconds[randomlapse]);
+      });
+    },
+
+
+   display(){
+     this.cabin0 = this.random_set[0][0];
+     this.cabin1 = this.random_set[1][0];
+     this.cabin2 = this.random_set[2][0];
+     this.cabin3 = this.random_set[3][0];
+     this.init();
+   }
   }
 };
 </script>
