@@ -21,9 +21,9 @@
           eager
           transition="my-carousel"
 
-          v-for="project in $store.state.projects" :key="project.id"
+          v-for="photo in $store.state.cover" :key="photo"
         >
-          <v-img :src="project.pictures[0]" height="100%" eager/>
+          <v-img :src="photo" height="100%" eager/>
         </v-carousel-item>
 
       </v-carousel>
@@ -149,11 +149,7 @@ export default {
           r = Math.floor( Math.random() * this.position.length );
         }
         this.last = this.position[r];
-        console.log(this.random_set[this.index].length);
         var photo = (this.index2) % (this.random_set[this.index].length);
-        console.log('r: ',r);
-        console.log('numero: ',this.position[r]);
-        console.log('photo: ',photo)
         if(this.position[r] == 1){
           this.cabin0 = this.random_set[this.index][photo];
         } else if (this.position[r] == 2) {
@@ -173,7 +169,6 @@ export default {
         await this.random_sleep();
         this.init()
       } else {
-        console.log('else');
         this.position = [1,2,3,4];
         this.init()
       }

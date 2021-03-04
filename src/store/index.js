@@ -6,14 +6,21 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isActive: null,
-    cabin1: "casabosquina.jpg",
+    cover: [
+      "casabosquina.jpg",
+      "casariscos9.jpg",
+      "d05.jpg",
+      "d06.jpg",
+      "e04.jpg",
+
+    ],
     projects: [
       {
           id: 0,
           name: "Casa Riscos",
           location: "Puerto Varas",
           year: "2012",
-          pictures: ["casabosquina.jpg","casariscos3.jpg","casariscos6.jpg","casariscos7.jpg","casariscos9.jpg"],
+          pictures: ["casariscos3.jpg","casariscos6.jpg","casariscos7.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       },
       {
@@ -45,7 +52,7 @@ export default new Vuex.Store({
           name: "Casa Riscos",
           location: "Puerto Varas",
           year: "2012",
-          pictures: ["d05.jpg","d01.jpg","d02.jpg","d03.jpg","d04.jpg","d06.jpg","d07.jpg","d08.jpg","d09.jpg","d10.jpg"],
+          pictures: ["d01.jpg","d02.jpg","d03.jpg","d04.jpg","d07.jpg","d08.jpg","d09.jpg","d10.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       },
       {
@@ -53,7 +60,7 @@ export default new Vuex.Store({
           name: "Casa Riscos",
           location: "Puerto Varas",
           year: "2012",
-          pictures: ["e04.jpg","e01.jpg","e02.jpg","e03.jpg","e05.jpg"],
+          pictures: ["e05.jpg","e01.jpg","e02.jpg","e03.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       }
     ]
