@@ -23,6 +23,8 @@
 
           v-for="photo in $store.state.cover" :key="photo"
         >
+
+
           <v-img :src="photo" height="100%" eager/>
         </v-carousel-item>
 
@@ -52,6 +54,7 @@
           class="ma-0 pa-0"
           style="width:100vw;height:25vh"
         ></v-row>
+
         <v-row
           class="ma-0 pa-0"
           style="width:100vw"
@@ -61,9 +64,12 @@
             cols="12"
             md="6"
           >
-            <v-img
-              style="max-height:50vh;min-height:50vh"
-              :src="this.cabin0" eager/>
+
+              <v-img
+                style="max-height:50vh;min-height:50vh"
+                :src="this.cabin0" :key="this.cabin0" eager/>
+
+
             <v-img
               style="max-height:50vh;min-height:50vh"
               :src="this.cabin1" eager/>
@@ -82,6 +88,7 @@
             {{  }}
           </v-col>
         </v-row>
+
       </v-row>
 
     </v-row>
@@ -113,6 +120,7 @@ export default {
 
   name: 'App',
   data: () => ({
+    show: true,
     cabin0: null,
     cabin1: null,
     cabin2: null,
@@ -167,6 +175,7 @@ export default {
           this.index2 = this.index2 + 1;
         }
         await this.random_sleep();
+        this.show = !this.show;
         this.init()
       } else {
         this.position = [1,2,3,4];
@@ -195,6 +204,16 @@ export default {
 </script>
 
 <style lang="sass">
+
+  .fade-enter-active
+  .fade-leave-active
+    transition: opacity .5s
+
+  .fade-enter
+  .fade-leave-to
+    opacity: 0
+
+
   .titulo
     position: absolute
     width: 100vw
