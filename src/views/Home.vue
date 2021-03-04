@@ -120,7 +120,8 @@ export default {
     random_set: [],
     position: [1,2,3,4],
     index: 4,
-    index2: 0
+    index2: 0,
+    last: null
   }),
   beforeCreate(){
 
@@ -131,6 +132,7 @@ export default {
   mounted: function () {
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
+      pictures.splice(0,1);
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
 
       this.random_set.push(pictures)
@@ -142,12 +144,16 @@ export default {
 
     async init() {
       if(this.position.length){
-        console.log(this.position);
         var r = Math.floor( Math.random() * this.position.length );
-        var photo = (this.index2) % this.random_set[this.index].length;
-        console.log(this.position.length);
-        console.log(r);
-        console.log(this.position[r]);
+        while(this.last == this.position[r]){
+          r = Math.floor( Math.random() * this.position.length );
+        }
+        this.last = this.position[r];
+        console.log(this.random_set[this.index].length);
+        var photo = (this.index2) % (this.random_set[this.index].length);
+        console.log('r: ',r);
+        console.log('numero: ',this.position[r]);
+        console.log('photo: ',photo)
         if(this.position[r] == 1){
           this.cabin0 = this.random_set[this.index][photo];
         } else if (this.position[r] == 2) {
@@ -160,12 +166,14 @@ export default {
           console.log('Error')
         }
         this.position.splice(r, 1);
-        this.index = (this.index + 1) % 4;
+        this.index = (this.index + 1) % this.random_set.length;
+        if (this.index == 0){
+          this.index2 = this.index2 + 1;
+        }
         await this.random_sleep();
         this.init()
       } else {
         console.log('else');
-        this.index2 = this.index2 + 1;
         this.position = [1,2,3,4];
         this.init()
       }
