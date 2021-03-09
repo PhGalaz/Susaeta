@@ -64,15 +64,19 @@
             cols="12"
             md="6"
           >
-
+            <transition name="fade">
               <v-img
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin0" :key="this.cabin0" eager/>
+            </transition>
+            <transition name="fades">
+              <v-img
+                style="max-height:50vh;min-height:50vh"
+                :src="this.cabin1" eager/>
+            </transition>
 
 
-            <v-img
-              style="max-height:50vh;min-height:50vh"
-              :src="this.cabin1" eager/>
+
           </v-col>
           <v-col
             class="ma-0 pa-0"
@@ -98,7 +102,7 @@
       justify="center"
       eager
     >
-    <v-img src="arquitectosusaeta.png" eager/>
+    <v-img class="shadowed" src="Asset 2.png" eager/>
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-block d-md-none"
@@ -106,7 +110,7 @@
       justify="center"
       eager
     >
-      <v-img style="transform:scale(0.7)" src="arquitectosusaeta.png" eager/>
+      <v-img class="shadowed" style="transform:scale(0.7)" src="Asset 2.png" eager/>
     </v-row>
 
 
@@ -140,7 +144,6 @@ export default {
   mounted: function () {
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
-      pictures.splice(0,1);
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
 
       this.random_set.push(pictures)
@@ -184,10 +187,10 @@ export default {
     },
 
     random_sleep() {
-      const seconds = [2000,3000,4000,5000,6000];
-      const randomlapse = Math.floor(Math.random() * seconds.length);
+      const randomlapse = Math.floor(Math.random() * 2000) + 3000;
+      console.log(randomlapse);
       return new Promise((resolve) => {
-        setTimeout(resolve, seconds[randomlapse]);
+        setTimeout(resolve, randomlapse);
       });
     },
 
@@ -205,9 +208,13 @@ export default {
 
 <style lang="sass">
 
+  .shadowed
+    -webkit-filter: drop-shadow(0px 3px 6px #999)
+    filter: drop-shadow(0px 3px 6px #999)
+
   .fade-enter-active
   .fade-leave-active
-    transition: opacity .5s
+    transition: opacity 2.5s
 
   .fade-enter
   .fade-leave-to
