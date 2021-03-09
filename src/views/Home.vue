@@ -64,16 +64,16 @@
             cols="12"
             md="6"
           >
-            <transition name="fade">
+
               <v-img
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin0" :key="this.cabin0" eager/>
-            </transition>
-            <transition name="fades">
+
+
               <v-img
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin1" eager/>
-            </transition>
+        
 
 
 
