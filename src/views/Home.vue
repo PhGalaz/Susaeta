@@ -73,7 +73,7 @@
               <v-img
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin1" eager/>
-        
+
 
 
 
@@ -209,8 +209,8 @@ export default {
 <style lang="sass">
 
   .shadowed
-    -webkit-filter: drop-shadow(0px 3px 6px #999)
-    filter: drop-shadow(0px 3px 6px #999)
+    -webkit-filter: drop-shadow(5px 5px 5px #151515)
+    filter: drop-shadow(5px 5px 5px #151515)
 
   .fade-enter-active
   .fade-leave-active
