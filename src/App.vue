@@ -4,7 +4,7 @@
   >
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="position:fixed;z-index:1;width:100vw"
+      style="position:fixed;z-index:1;width:100vw;top:3vh"
       justify="center"
     >
       <v-col
@@ -111,7 +111,7 @@ export default {
     -moz-user-select: none
     -ms-user-select: none
     color: #EDEDED
-    text-shadow: 0px 3px 6px #00000029
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.2)
   .menu-item span:hover
     cursor: pointer
 

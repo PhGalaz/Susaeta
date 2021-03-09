@@ -102,7 +102,7 @@
       justify="center"
       eager
     >
-    <v-img class="shadowed" src="Asset 2.png" eager/>
+      <v-img class="shadowed" src="Asset 4.png" eager/>
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-block d-md-none"
@@ -110,7 +110,7 @@
       justify="center"
       eager
     >
-      <v-img class="shadowed" style="transform:scale(0.7)" src="Asset 2.png" eager/>
+      <v-img class="shadowed" style="transform:scale(0.7)" src="Asset 4.png" eager/>
     </v-row>
 
 
