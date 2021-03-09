@@ -64,15 +64,40 @@
             cols="12"
             md="6"
           >
-
+            <v-row
+              class="ma-0 pa-0"
+              style="max-height:50vh;min-height:50vh"
+            >
+              <v-row
+                class="ma-0 pa-0 casa"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                >
+                  {{ this.name0 }}
+                </v-row>
+              </v-row>
               <v-img
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin0" :key="this.cabin0" eager/>
-
-
+            </v-row>
+            <v-row
+              class="ma-0 pa-0"
+              style="max-height:50vh;min-height:50vh"
+            >
+              <v-row
+                class="ma-0 pa-0 casa"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                >
+                  {{ this.name1 }}
+                </v-row>
+              </v-row>
               <v-img
                 style="max-height:50vh;min-height:50vh"
-                :src="this.cabin1" eager/>
+                :src="this.cabin1" :key="this.cabin1" eager/>
+            </v-row>
 
 
 
@@ -83,13 +108,40 @@
             cols="12"
             md="6"
           >
-            <v-img
+            <v-row
+              class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
-              :src="this.cabin2" eager/>
-            <v-img
+            >
+              <v-row
+                class="ma-0 pa-0 casa"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                >
+                  {{ this.name2 }}
+                </v-row>
+              </v-row>
+              <v-img
+                style="max-height:50vh;min-height:50vh"
+                :src="this.cabin2" :key="this.cabin2" eager/>
+            </v-row>
+            <v-row
+              class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
-              :src="this.cabin3" eager/>
-            {{  }}
+            >
+              <v-row
+                class="ma-0 pa-0 casa"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                >
+                  {{ this.name3 }}
+                </v-row>
+              </v-row>
+              <v-img
+                style="max-height:50vh;min-height:50vh"
+                :src="this.cabin3" :key="this.cabin3" eager/>
+            </v-row>
           </v-col>
         </v-row>
 
@@ -129,6 +181,10 @@ export default {
     cabin1: null,
     cabin2: null,
     cabin3: null,
+    name0: null,
+    name1: null,
+    name2: null,
+    name3: null,
     random_set: [],
     position: [1,2,3,4],
     index: 4,
@@ -144,9 +200,10 @@ export default {
   mounted: function () {
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
+      var name = this.$store.state.projects[i].name;
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
 
-      this.random_set.push(pictures)
+      this.random_set.push([pictures, name])
     }
     this.random_set = this.random_set.sort(function() {return 0.5 - Math.random()});
     this.display();
@@ -161,14 +218,19 @@ export default {
         }
         this.last = this.position[r];
         var photo = (this.index2) % (this.random_set[this.index].length);
+        console.log(this.random_set[this.index][1]);
         if(this.position[r] == 1){
-          this.cabin0 = this.random_set[this.index][photo];
+          this.cabin0 = this.random_set[this.index][0][photo];
+          this.name0 = this.random_set[this.index][1];
         } else if (this.position[r] == 2) {
-          this.cabin1 = this.random_set[this.index][photo];
+          this.cabin1 = this.random_set[this.index][0][photo];
+          this.name1 = this.random_set[this.index][1];
         } else if (this.position[r] == 3) {
-          this.cabin2 = this.random_set[this.index][photo];
+          this.cabin2 = this.random_set[this.index][0][photo];
+          this.name2 = this.random_set[this.index][1];
         } else if (this.position[r] == 4) {
-          this.cabin3 = this.random_set[this.index][photo];
+          this.cabin3 = this.random_set[this.index][0][photo];
+          this.name3 = this.random_set[this.index][1];
         } else {
           console.log('Error')
         }
@@ -188,7 +250,6 @@ export default {
 
     random_sleep() {
       const randomlapse = Math.floor(Math.random() * 2000) + 3000;
-      console.log(randomlapse);
       return new Promise((resolve) => {
         setTimeout(resolve, randomlapse);
       });
@@ -207,6 +268,25 @@ export default {
 </script>
 
 <style lang="sass">
+
+  .name
+    position: absolute
+    bottom: 30px
+    left: 40px
+
+  .casa
+    width: 50%
+    height: 50vh
+    position: absolute
+    z-index: 10
+    color: #EDEDED
+    font-family: Montserrat
+    font-weight: bold
+    font-size: 25px
+    &:hover
+      cursor: pointer
+      background-color: rgba(0,0,0,.1)
+
 
   .shadowed
     -webkit-filter: drop-shadow(5px 5px 5px #151515)

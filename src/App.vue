@@ -4,7 +4,7 @@
   >
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="position:fixed;z-index:1;width:100vw;top:3vh"
+      style="position:fixed;z-index:11;width:100vw;top:3vh"
       justify="center"
     >
       <v-col
