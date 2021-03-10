@@ -8,7 +8,7 @@
       class="ma-0 pa-0"
     >
       <v-carousel
-        style="height:100vh;width:100vw;position:absolute"
+        style="height:100vh;width:100vw"
         hide-delimiters
         height="100vh"
         cycle
@@ -32,17 +32,13 @@
       </v-carousel>
     </v-row>
     <v-row
-      class="ma-0 pa-0 body"
-      style="position:absolute;background-color:#EAEAEA;width:100vw;top:100%"
+      class="ma-0 pa-0"
+      style="background-color:#EAEAEA;width:100vw;top:1000px"
     >
       <v-row
-        class="ma-0 pa-0"
-        style="width:100vw;top:100px"
+        class="ma-16 pa-16"
+        style="width:100vw"
       >
-        <v-row
-          class="ma-0 pa-0"
-          style="height:25vh"
-        ></v-row>
         <p
           class="mb-0 pa-0 parr d-none d-sm-flex"
           style="font-size:60px"
@@ -51,125 +47,120 @@
           class="mb-0 pa-0 parr d-sm-none"
           style="font-size:25px"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <v-row
-          class="ma-0 pa-0"
-          style="width:100vw;height:25vh"
-        ></v-row>
 
-        <v-row
+      </v-row>
+      <v-row
+        class="ma-0 pa-0"
+        style="width:100vw"
+      >
+        <v-col
           class="ma-0 pa-0"
-          style="width:100vw"
+          cols="12"
+          md="6"
         >
-          <v-col
+          <v-row
             class="ma-0 pa-0"
-            cols="12"
-            md="6"
+            style="max-height:50vh;min-height:50vh"
           >
-            <v-row
-              class="ma-0 pa-0"
-              style="max-height:50vh;min-height:50vh"
+            <router-link
+              :to="{ name: 'Workcase', params: {name: this.name0 } }"
             >
-              <router-link
-                :to="{ name: 'Workcase', params: {name: this.name0 } }"
+              <v-row
+                class="ma-0 pa-0 casa"
               >
                 <v-row
-                  class="ma-0 pa-0 casa"
+                  class="ma-0 pa-0 name"
                 >
-                  <v-row
-                    class="ma-0 pa-0 name"
-                  >
-                    {{ this.name0 }}
-                  </v-row>
+                  {{ this.name0 }}
                 </v-row>
-              </router-link>
+              </v-row>
+            </router-link>
 
 
-              <v-img
-                style="max-height:50vh;min-height:50vh"
-                :src="this.cabin0" :key="0" eager/>
-            </v-row>
-            <v-row
-              class="ma-0 pa-0"
+            <v-img
               style="max-height:50vh;min-height:50vh"
-            >
-              <router-link
-                :to="{ name: 'Workcase', params: {name: this.name1 } }"
-              >
-                <v-row
-                  class="ma-0 pa-0 casa"
-                >
-                  <v-row
-                    class="ma-0 pa-0 name"
-                  >
-                    {{ this.name1 }}
-                  </v-row>
-                </v-row>
-              </router-link>
-
-
-              <v-img
-                style="max-height:50vh;min-height:50vh"
-                :src="this.cabin1" :key="1" eager/>
-            </v-row>
-
-
-
-
-          </v-col>
-          <v-col
+              :src="this.cabin0" :key="0" eager/>
+          </v-row>
+          <v-row
             class="ma-0 pa-0"
-            cols="12"
-            md="6"
+            style="max-height:50vh;min-height:50vh"
           >
-            <v-row
-              class="ma-0 pa-0"
-              style="max-height:50vh;min-height:50vh"
+            <router-link
+              :to="{ name: 'Workcase', params: {name: this.name1 } }"
             >
-              <router-link
-                :to="{ name: 'Workcase', params: {name: this.name2 } }"
+              <v-row
+                class="ma-0 pa-0 casa"
               >
                 <v-row
-                  class="ma-0 pa-0 casa"
+                  class="ma-0 pa-0 name"
                 >
-                  <v-row
-                    class="ma-0 pa-0 name"
-                  >
-                    {{ this.name2 }}
-                  </v-row>
+                  {{ this.name1 }}
                 </v-row>
-              </router-link>
+              </v-row>
+            </router-link>
 
 
-              <v-img
-                style="max-height:50vh;min-height:50vh"
-                :src="this.cabin2" :key="2" eager/>
-            </v-row>
-            <v-row
-              class="ma-0 pa-0"
+            <v-img
               style="max-height:50vh;min-height:50vh"
+              :src="this.cabin1" :key="1" eager/>
+          </v-row>
+
+
+
+
+        </v-col>
+        <v-col
+          class="ma-0 pa-0"
+          cols="12"
+          md="6"
+        >
+          <v-row
+            class="ma-0 pa-0"
+            style="max-height:50vh;min-height:50vh"
+          >
+            <router-link
+              :to="{ name: 'Workcase', params: {name: this.name2 } }"
             >
-              <router-link
-                :to="{ name: 'Workcase', params: {name: this.name3 } }"
+              <v-row
+                class="ma-0 pa-0 casa"
               >
                 <v-row
-                  class="ma-0 pa-0 casa"
+                  class="ma-0 pa-0 name"
                 >
-                  <v-row
-                    class="ma-0 pa-0 name"
-                  >
-                    {{ this.name3 }}
-                  </v-row>
+                  {{ this.name2 }}
                 </v-row>
-              </router-link>
+              </v-row>
+            </router-link>
 
 
-              <v-img
-                style="max-height:50vh;min-height:50vh"
-                :src="this.cabin3" :key="3" eager/>
-            </v-row>
-          </v-col>
-        </v-row>
+            <v-img
+              style="max-height:50vh;min-height:50vh"
+              :src="this.cabin2" :key="2" eager/>
+          </v-row>
+          <v-row
+            class="ma-0 pa-0"
+            style="max-height:50vh;min-height:50vh"
+          >
+            <router-link
+              :to="{ name: 'Workcase', params: {name: this.name3 } }"
+            >
+              <v-row
+                class="ma-0 pa-0 casa"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                >
+                  {{ this.name3 }}
+                </v-row>
+              </v-row>
+            </router-link>
 
+
+            <v-img
+              style="max-height:50vh;min-height:50vh"
+              :src="this.cabin3" :key="3" eager/>
+          </v-row>
+        </v-col>
       </v-row>
 
     </v-row>
@@ -338,8 +329,6 @@ export default {
     cursor: default
 
   .parr
-    margin-left: 15%
-    margin-right: 15%
     font-family: Vollkorn
     font: normal normal normal Vollkorn
     letter-spacing: 1px

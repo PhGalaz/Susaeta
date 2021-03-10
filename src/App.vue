@@ -56,6 +56,13 @@
 
     <router-view></router-view>
 
+    <v-row
+      class="ma-0 pa-0"
+      style="background-color:red;height:100px;z-index:1000"
+    >
+
+    </v-row>
+
 
   </v-app>
 </template>
