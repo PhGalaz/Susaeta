@@ -12,7 +12,7 @@ export default new Vuex.Store({
     projects: [
       {
           id: 0,
-          name: "Casa Riscos0",
+          name: "Nombre del proyecto 0",
           location: "Puerto Varas",
           year: "2012",
           pictures: ["eladio-1.jpg","eladio-2.jpg"],
@@ -20,7 +20,7 @@ export default new Vuex.Store({
       },
       {
           id: 1,
-          name: "Casa Riscos1",
+          name: "Nombre del proyecto 1",
           location: "Puerto Varas",
           year: "2012",
           pictures: ["eladio-1.jpg","eladio-2.jpg"],
@@ -28,7 +28,7 @@ export default new Vuex.Store({
       },
       {
           id: 2,
-          name: "Casa Riscos2",
+          name: "Nombre del proyecto 2",
           location: "Puerto Varas",
           year: "2012",
           pictures: ["eladio-1.jpg","eladio-2.jpg"],
@@ -36,7 +36,7 @@ export default new Vuex.Store({
       },
       {
           id: 3,
-          name: "Casa Riscos3",
+          name: "Nombre del proyecto 3",
           location: "Puerto Varas",
           year: "2012",
           pictures: ["eladio-1.jpg","eladio-2.jpg"],
@@ -44,7 +44,7 @@ export default new Vuex.Store({
       },
       {
           id: 4,
-          name: "Casa Riscos4",
+          name: "Nombre del proyecto 4",
           location: "Puerto Varas",
           year: "2012",
           pictures: ["eladio-1.jpg","eladio-2.jpg"],
@@ -52,7 +52,7 @@ export default new Vuex.Store({
       },
       {
           id: 5,
-          name: "Casa Riscos5",
+          name: "Nombre del proyecto 5",
           location: "Puerto Varas",
           year: "2012",
           pictures: ["eladio-1.jpg","eladio-2.jpg"],

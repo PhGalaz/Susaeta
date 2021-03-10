@@ -77,15 +77,7 @@ export default {
 <style lang="sass">
 
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
-  @font-face
-    font-family: "Hoefler Text"
-    src: local("Hoefler Text")
-    src: url('/fonts/FontsFree-Net-Hoefler-Text.tff')
-    src: url('/fonts/FontsFree-Net-Hoefler-Text.tff') format("truetype")
-    src: url('/fonts/fontsfree-net-hoefler-text-webfont.eot') format("embedded-opentype")
-    src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff2') format("woff2")
-    src: url('/fonts/fontsfree-net-hoefler-text-webfont.woff') format("woff")
-    src: url('/fonts/fontsfree-net-hoefler-text-webfont.svg') format("svg")
+
 
   body::-webkit-scrollbar
     display: none
