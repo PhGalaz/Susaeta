@@ -215,6 +215,7 @@
           <v-text-field
             v-model="first"
             label="First Name"
+            color="#EDEDED"
             outlined
           ></v-text-field>
           <v-text-field
