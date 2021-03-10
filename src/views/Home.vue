@@ -197,7 +197,7 @@
         >
           <p
             class="ma-16 pl-16 pr-16 parr"
-            style="font-size:35px;font-size:80px"
+            style="font-size:35px;font-size:75px;line-height:100%"
           >
             Vamos por un buen café?
           </p>
