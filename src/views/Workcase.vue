@@ -14,12 +14,20 @@
           :src="$store.state.projects[this.index].pictures[0]" eager/>
 
       </v-row>
-      <v-row
-        class="ma-0 pa-0 name"
-        style="position:absolute;min-heigth:100vh;max-heigth:100vh;width:100vw;z-index:0"
+    </v-row>
+    <v-row
+      class="ma-0 pa-0"
+      style="min-heigth:50vh;max-heigth:50vh;width:100vw;z-index:0;background-color:red"
+    >
+      <v-col
+        class="names"
+        style="background-color:blue"
       >
-        hola
-      </v-row>
+        {{ $store.state.projects[this.index].name }}
+      </v-col>
+      <v-col>
+
+      </v-col>
     </v-row>
 
 
@@ -57,11 +65,12 @@ export default {
 }
 </script>
 
-<style lang="sass" scope>
+<style lang="sass" scoped>
 
-  .name
-    position: absolute
-    bottom: 30px
-    left: 40px
+  .names
+    height: 50vh
+    font-size: 70px
+    font-family: Vollkorn
+    color: #EDEDED
 
 </style>

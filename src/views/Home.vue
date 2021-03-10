@@ -339,8 +339,9 @@ export default {
   .parr
     margin-left: 15%
     margin-right: 15%
-    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font: normal normal normal Hoefler Text
+    font-family: Vollkorn
+    font: normal normal normal Vollkorn
+    letter-spacing: 1px
     color: #707070
     line-height: 110%
     -webkit-touch-callout: none
