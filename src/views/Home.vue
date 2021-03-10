@@ -199,13 +199,34 @@
             class="ma-16 pl-16 pr-16 parr"
             style="font-size:35px;font-size:75px;line-height:100%"
           >
-            Vamos por un buen café?
+            ¿Vamos por un buen café?
           </p>
         </v-col>
         <v-col
           class="ma-0 pa-0"
           cols="6"
         >
+          <v-text-field
+            class="ma-0 pa-0"
+            label="Email"
+            placeholder="Email"
+            solo
+          ></v-text-field>
+          <v-text-field
+            class="ma-0 pa-0"
+            label="Comentario"
+            placeholder="Comentario"
+            solo
+          ></v-text-field>
+          <v-text-field
+            ref="name"
+            v-model="name"
+            :rules="[() => !!name || 'This field is required']"
+            :error-messages="errorMessages"
+            label="Full Name"
+            placeholder="John Doe"
+            required
+          ></v-text-field>
         </v-col>
       </v-row>
 
