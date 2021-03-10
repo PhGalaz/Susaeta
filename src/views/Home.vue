@@ -162,6 +162,52 @@
           </v-row>
         </v-col>
       </v-row>
+      <v-row
+        class="ma-0 mt-16 pt-16 pa-0"
+        style="width:100vw"
+        align="center"
+      >
+        <v-col
+          class="ma-0 mt-16 pa-0"
+          cols="6"
+          style=""
+        >
+          <v-img
+            style=""
+            src="arquitecto_eladio_susaeta.png" eager/>
+        </v-col>
+        <v-col
+          class="mt-16"
+          cols="6"
+        >
+          <p
+            class="ma-5 ml-10 mr-16 pr-16 parr"
+            style="font-size:35px"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </v-col>
+      </v-row>
+      <v-row
+        class="ma-0 pa-0"
+        style="width:100vw;height:600px;background-color:#C1B7A8"
+        align="center"
+      >
+        <v-col
+          class="ma-0 pa-0"
+          cols="6"
+        >
+          <p
+            class="ml-16 pl-16 mr-16 pr-16 parr"
+            style="font-size:35px;font-size:80px"
+          >
+            Vamos por un buen café?
+          </p>
+        </v-col>
+        <v-col
+          class="ma-0 pa-0"
+          cols="6"
+        >
+        </v-col>
+      </v-row>
 
     </v-row>
     <v-row
