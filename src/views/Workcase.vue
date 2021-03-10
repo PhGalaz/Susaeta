@@ -1,5 +1,6 @@
 <template>
   <v-app
+    style="background-color:#EDEDED"
   >
     <v-row
       class="ma-0 pa-0"
@@ -22,9 +23,9 @@
     >
       <v-col
       >
-        <p class="ml-10 names text-uppercase">{{ $store.state.projects[this.index].name }}</p>
-        <p class="ml-10 locations">{{ $store.state.projects[this.index].location }}, {{ $store.state.projects[this.index].year }}</p>
-        <p class="ml-10 contractors">{{ $store.state.projects[this.index].contractor }}</p>
+        <v-row class="ml-10 names text-uppercase">{{ $store.state.projects[this.index].name }}</v-row>
+        <v-row class="ml-10 locations">{{ $store.state.projects[this.index].location }}, {{ $store.state.projects[this.index].year }}</v-row>
+        <v-row class="ml-10 contractors">{{ $store.state.projects[this.index].contractor }}</v-row>
 
       </v-col>
       <v-col
@@ -87,32 +88,24 @@ export default {
 <style lang="sass" scoped>
 
   .names
-
-    line-height: 110%
+    line-height: 90%
     font-size: 70px
     font-family: Vollkorn
     color: #707070
-    bottom: 220px
-    z-index: 100
-
 
   .locations
-
     line-height: 110%
     font-size: 30px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
-    bottom: 200px
 
   .contractors
-    position: absolute
     line-height: 110%
     font-size: 30px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
-    bottom: 370px
 
   .descripcion1
     line-height: 110%

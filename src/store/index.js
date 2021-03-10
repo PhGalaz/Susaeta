@@ -15,7 +15,7 @@ export default new Vuex.Store({
           name: "Nombre 0",
           location: "Ciudad 0",
           year: "Año 0",
-          pictures: ["eladio-1.jpg","eladio-2.jpg"],
+          pictures: ["prueba1.jpeg","prueba2.jpeg","prueba3.jpeg","prueba4.jpeg","prueba5.jpg"],
           contractor: "Constructora 0",
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       },
