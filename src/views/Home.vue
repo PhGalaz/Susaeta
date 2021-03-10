@@ -213,10 +213,9 @@
             solo
           ></v-text-field>
           <v-text-field
-            class="ma-0 pa-0"
-            label="Comentario"
-            placeholder="Comentario"
-            solo
+            v-model="first"
+            label="First Name"
+            outlined
           ></v-text-field>
           <v-text-field
             ref="name"
@@ -227,6 +226,14 @@
             placeholder="John Doe"
             required
           ></v-text-field>
+          <v-textarea
+            v-model="title"
+            label="Message"
+            counter
+            maxlength="120"
+            full-width
+            single-line
+          ></v-textarea>
         </v-col>
       </v-row>
 
