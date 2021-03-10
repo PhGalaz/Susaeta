@@ -199,7 +199,13 @@
             class="ma-16 pl-16 pr-16 parr"
             style="font-size:35px;font-size:75px;line-height:100%"
           >
-            ¿Vamos por un buen café?
+            ¿Vamos por
+          </p>
+          <p
+            class="ma-16 pl-16 pr-16 parr"
+            style="font-size:35px;font-size:75px;line-height:100%;margin-left:100px !important;margin-top: -65px !important"
+          >
+            un buen café?
           </p>
         </v-col>
         <v-col
@@ -207,33 +213,20 @@
           cols="6"
         >
           <v-text-field
-            class="ma-0 pa-0"
+            class="ma-0 mr-16 pr-16 pa-0"
+            v-model="email"
             label="Email"
-            placeholder="Email"
-            solo
-          ></v-text-field>
-          <v-text-field
-            v-model="first"
-            label="First Name"
             color="#EDEDED"
             outlined
           ></v-text-field>
-          <v-text-field
-            ref="name"
-            v-model="name"
-            :rules="[() => !!name || 'This field is required']"
-            :error-messages="errorMessages"
-            label="Full Name"
-            placeholder="John Doe"
-            required
-          ></v-text-field>
           <v-textarea
-            v-model="title"
-            label="Message"
+            class="ma-0 mr-16 pr-16 pa-0"
+            v-model="Comentario"
+            label="Comentario"
             counter
             maxlength="120"
-            full-width
-            single-line
+            outlined
+            color="#EDEDED"
           ></v-textarea>
         </v-col>
       </v-row>
