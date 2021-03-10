@@ -81,6 +81,7 @@ export default {
       }
       const items = this.$store.state.projects;
       this.index = this.indexWhere(items, item => item.name === this.nombre);
+      window.scrollTo(0,0);
     }
 }
 </script>
