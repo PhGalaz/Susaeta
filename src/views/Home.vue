@@ -188,7 +188,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;height:600px;background-color:#C1B7A8"
+        style="width:100vw;background-color:#C1B7A8"
         align="center"
       >
         <v-col
@@ -196,7 +196,7 @@
           cols="6"
         >
           <p
-            class="ml-16 pl-16 mr-16 pr-16 parr"
+            class="ma-16 pl-16 pr-16 parr"
             style="font-size:35px;font-size:80px"
           >
             Vamos por un buen café?
