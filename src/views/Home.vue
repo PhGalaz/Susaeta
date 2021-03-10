@@ -322,15 +322,11 @@ export default {
   .fade-leave-to
     opacity: 0
 
-
   .titulo
     position: absolute
     width: 100vw
     top: 10vh
     height: 150px
-    font-family: 'Hoefler Text','Baskerville Old Face',Garamond,'Times New Roman',serif
-    font: normal normal normal Hoefler Text
-    letter-spacing: 7px
     color: #EDEDED
     -webkit-touch-callout: none
     -webkit-user-select: none

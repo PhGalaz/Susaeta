@@ -10,12 +10,13 @@
         style="height:100vh !important;width:100vw;z-index:0;background-color:red"
       >
         <v-img
-          style="max-height:50vh;min-height:50vh"
-          :src="$store.state.projects[this.index].pictures[0]" :key="1" eager/>
+          style="max-height:100vh !important;min-height:100vh !important"
+          :src="$store.state.projects[this.index].pictures[0]" eager/>
+
       </v-row>
       <v-row
-        class="ma-0 pa-0"
-        style="min-heigth:100vh;max-heigth:100vh;width:100vw;z-index:0;background-color:red"
+        class="ma-0 pa-0 name"
+        style="position:absolute;min-heigth:100vh;max-heigth:100vh;width:100vw;z-index:0"
       >
         hola
       </v-row>
@@ -56,6 +57,11 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scope>
+
+  .name
+    position: absolute
+    bottom: 30px
+    left: 40px
 
 </style>

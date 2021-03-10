@@ -77,7 +77,7 @@ export default {
 <style lang="sass">
 
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
-
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap')
 
   body::-webkit-scrollbar
     display: none
