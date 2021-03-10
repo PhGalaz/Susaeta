@@ -41,7 +41,7 @@
       >
         <p
           class="mb-0 pa-0 parr d-none d-sm-flex"
-          style="font-size:60px"
+          style="font-size:50px"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p
           class="mb-0 pa-0 parr d-sm-none"

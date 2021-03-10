@@ -58,9 +58,10 @@
 
     <v-row
       class="ma-0 pa-0"
-      style="background-color:red;height:100px;z-index:1000"
+      style="background-color:red;height:100px;z-index:1000;font-family:Montserrat"
+      align="center"
     >
-
+      <p class="mx-16 px-16 pie">Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile</p>
     </v-row>
 
 
@@ -92,8 +93,11 @@ export default {
   .v-application a
     color: #EDEDED !important
 
-  .header
+  .pie
+    color: #EDEDED
+    line-height: 115%
 
+  .header
     top: 5%
     position: fixed
     left: 50%
