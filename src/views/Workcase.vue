@@ -17,13 +17,14 @@
     </v-row>
     <v-row
       class="ma-0 pa-0"
-      style="min-heigth:50vh;max-heigth:50vh;width:100vw;z-index:0;background-color:red"
+      style="width:100vw;z-index:0"
     >
       <v-col
-        class="names"
-        style="background-color:blue"
       >
-        {{ $store.state.projects[this.index].name }}
+        <p class="ml-10 names text-uppercase">nombre</p>
+        <p class="ml-10 locations">Ciudad, Año</p>
+        <p class="ml-10 contractors">Constructora</p>
+
       </v-col>
       <v-col>
 
@@ -68,9 +69,29 @@ export default {
 <style lang="sass" scoped>
 
   .names
-    height: 50vh
+    line-height: 110%
     font-size: 70px
     font-family: Vollkorn
-    color: #EDEDED
+    color: #707070
+
+
+  .locations
+    position: absolute
+    line-height: 110%
+    font-size: 30px
+    font-family: Vollkorn
+    color: #707070
+    letter-spacing: 1px
+    bottom: -10px
+
+  .contractors
+    position: absolute
+    line-height: 110%
+    font-size: 30px
+    font-family: Vollkorn
+    color: #707070
+    letter-spacing: 1px
+    bottom: -40px
+
 
 </style>
