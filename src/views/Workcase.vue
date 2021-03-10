@@ -38,6 +38,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0"
+      v-for="(item,i) in photos" :key="i"
     >
       <v-row
         height="10vh"
@@ -46,9 +47,15 @@
       >
         <v-img
           style="max-height:100vh !important;min-height:100vh !important"
-          :src="$store.state.projects[this.index].pictures[1]" eager/>
+          :src="item" eager/>
 
       </v-row>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0"
+      style="height:60vh"
+    >
+      <p class="ma-16 pa-16 descripcion2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </v-row>
 
 
@@ -64,6 +71,7 @@ export default {
     props: ["name"],
     data() {
       return {
+        photos: [],
         index: null,
         nombre: null
       }
@@ -82,6 +90,12 @@ export default {
       const items = this.$store.state.projects;
       this.index = this.indexWhere(items, item => item.name === this.nombre);
       window.scrollTo(0,0);
+
+      console.log(this.$store.state.projects[this.index].pictures);
+      for(var i = 1; i < this.$store.state.projects[this.index].pictures.length - 1; i++){
+        this.photos.push(this.$store.state.projects[this.index].pictures[i]);
+      }
+      console.log(this.photos);
     }
 }
 </script>
@@ -111,6 +125,13 @@ export default {
   .descripcion1
     line-height: 110%
     font-size: 30px
+    font-family: Vollkorn
+    color: #707070
+    letter-spacing: 1px
+
+  .descripcion2
+    line-height: 110%
+    font-size: 50px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px

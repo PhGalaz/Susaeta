@@ -292,6 +292,7 @@ export default {
 <style lang="sass">
 
   .name
+    font-size: 20px
     position: absolute
     bottom: 30px
     left: 40px
