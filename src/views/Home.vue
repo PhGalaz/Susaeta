@@ -213,20 +213,21 @@
           cols="6"
         >
           <v-text-field
-            class="ma-0 mr-16 pr-16 pa-0"
+            class="ma-0 mt-8 mr-16 pr-16 pa-0"
             v-model="email"
             label="Email"
-            color="#EDEDED"
+            color="#707070"
+            background-color="#EDEDED"
             outlined
           ></v-text-field>
           <v-textarea
             class="ma-0 mr-16 pr-16 pa-0"
             v-model="Comentario"
             label="Comentario"
-            counter
-            maxlength="120"
+            height="170px"
             outlined
-            color="#EDEDED"
+            color="#707070"
+            background-color="#EDEDED"
           ></v-textarea>
         </v-col>
       </v-row>
