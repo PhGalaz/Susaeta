@@ -58,10 +58,27 @@
 
     <v-row
       class="ma-0 pa-0"
-      style="background-color:red;height:100px;z-index:1000;font-family:Montserrat"
-      align="center"
+      style="background-color:red;height:90px;z-index:1000;font-family:Montserrat"
     >
-      <p class="mx-16 px-16 pie">Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile</p>
+      <v-row
+        class="ma-0 pa-0"
+        style="width:100%;background-color:green"
+      >
+        <p style="width:100vw" class="mx-16 px-16 my-5 pie">Eladio Susaeta, arquitecto Universidad X<br>Puerto Varas, Región de Los Lagos, Chile<br>
+        <span>
+
+        </span>
+        <v-icon
+          class="mr-1 mb-1"
+          x-small
+          color= "#EDEDED"
+        >
+          mdi-copyright
+        </v-icon>
+        <span style="font-size:15px">2021</span><br>
+        <span style="font-size:10px">developed by Salvador</span>
+      </p>
+      </v-row>
     </v-row>
 
 
