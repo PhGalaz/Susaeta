@@ -51,7 +51,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0"
-      style="height:75vh"
+      style="height:100vh"
       align="center"
     >
       <p class="mx-16 px-16 descripcion2">{{ this.case.description1 }}<br><br>{{ this.case.description2 }}</p>
@@ -147,7 +147,7 @@ export default {
 
   .descripcion2
     line-height: 110%
-    font-size: 50px
+    font-size: 60px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
