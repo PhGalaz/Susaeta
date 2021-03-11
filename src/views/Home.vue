@@ -37,7 +37,7 @@
     >
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;height:75vh"
+        style="width:100vw;height:100vh"
         align="center"
       >
         <p
