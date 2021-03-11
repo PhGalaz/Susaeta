@@ -31,7 +31,13 @@
 </template>
 
 <script>
+  export default {
+    created(){
+      this.$store.commit('header', false);
+      window.scrollTo(0,0);
 
+    }
+  }
 </script>
 
 <style lang="sass">

@@ -112,14 +112,9 @@ export default {
 
 <style lang="sass" scoped>
 
+
   .commander
     color: #707070
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
     span:hover
       cursor: pointer
 
