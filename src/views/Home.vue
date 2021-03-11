@@ -52,7 +52,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;background-color:grey"
+        style="width:100vw;background-color:#707070"
       >
         <v-col
           class="ma-0 pa-0"
@@ -439,7 +439,7 @@ export default {
     font-size: 25px
     &:hover
       cursor: pointer
-      background-color: rgba(0,0,0,.35)
+      background-color: rgba(113,113,113,.55)
       .name
         opacity: 1
 
