@@ -6,13 +6,12 @@
       class="ma-0 pa-0"
     >
       <v-row
-        height="10vh"
         class="ma-0 pa-0"
         style="height:100vh !important;width:100vw;z-index:0"
       >
         <v-img
           style="max-height:100vh !important;min-height:100vh !important"
-          :src="$store.state.projects[this.index].pictures[0]" eager/>
+          :src="$store.state.projects[this.index].pictures[$store.state.projects[this.index].pictures.length - 1]" eager/>
 
       </v-row>
     </v-row>
@@ -62,7 +61,7 @@
     >
       <v-img
         style="max-height:100vh !important;min-height:100vh !important"
-        :src="$store.state.projects[this.index].pictures[$store.state.projects[this.index].pictures.length - 1]" eager/>
+        :src="$store.state.projects[this.index].pictures[0]" eager/>
 
     </v-row>
     <v-row

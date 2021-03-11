@@ -404,7 +404,7 @@ export default {
     font-size: 25px
     &:hover
       cursor: pointer
-      background-color: rgba(255,255,255,.15)
+      background-color: rgba(0,0,0,.15)
 
 
   .shadowed

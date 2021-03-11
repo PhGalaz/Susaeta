@@ -13,7 +13,7 @@
       >
         <a
           class="text-decoration-none"
-          href="https://www.instagram.com/eladio_susaeta/?hl=en"
+          @click="myFunction()"
         >Instagram</a>
       </v-col>
       <v-col
@@ -95,6 +95,11 @@ export default {
     isActive: true
   }),
   created () {
+  },
+  methods: {
+    myFunction: function () {
+      window.open("https://www.instagram.com/eladio_susaeta/?hl=en", "_blank");
+    }
   }
 };
 </script>
