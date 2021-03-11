@@ -3,6 +3,18 @@
     style="background-color:transparent"
   >
     <v-row
+      class="ma-0 pa-0 d-sm-none"
+      justify="center"
+    >
+      <v-icon
+        class="mr-1 mb-1"
+        small
+        color= "#EDEDED"
+      >
+        mdi-hamburger-menu
+      </v-icon>
+    </v-row>
+    <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
       style="position:fixed;z-index:11;width:100vw;top:3vh"
       justify="center"
@@ -115,7 +127,7 @@ export default {
   .v-application a
     color: #EDEDED !important
 
-  .v-application 
+  .v-application
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none

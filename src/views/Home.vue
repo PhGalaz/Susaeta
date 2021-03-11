@@ -65,12 +65,17 @@
           >
             <router-link
               :to="{ name: 'Workcase', params: {index: this.index0 } }"
+
             >
               <v-row
                 class="ma-0 pa-0 casa"
+                align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
                 >
                   {{ $store.state.projects[this.index0].name }}
                 </v-row>
@@ -91,9 +96,13 @@
             >
               <v-row
                 class="ma-0 pa-0 casa"
+                align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
                 >
                   {{ $store.state.projects[this.index1].name }}
                 </v-row>
@@ -124,9 +133,13 @@
             >
               <v-row
                 class="ma-0 pa-0 casa"
+                align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
                 >
                   {{ $store.state.projects[this.index2].name }}
                 </v-row>
@@ -147,9 +160,13 @@
             >
               <v-row
                 class="ma-0 pa-0 casa"
+                align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
                 >
                   {{ $store.state.projects[this.index3].name }}
                 </v-row>
@@ -164,7 +181,20 @@
         </v-col>
       </v-row>
       <v-row
-        class="ma-0 mt-16 pt-16 pa-0"
+        class="ma-0 pa-0"
+        justify="center"
+        align="center"
+        style="width:100%;max-height:40vh"
+      >
+
+        <v-img
+          style="transform: scale(0.2);transform-origin: left top;left:40%;top:30%"
+          src="rolfeichler.jpg" eager/>
+
+
+      </v-row>
+      <v-row
+        class="ma-0 pa-0"
         style="width:100vw"
         align="center"
       >
@@ -395,8 +425,8 @@ export default {
   .name
     font-size: 20px
     position: absolute
-    bottom: 30px
-    left: 40px
+    opacity: 0
+
 
   .casa
     width: 50%
@@ -409,7 +439,9 @@ export default {
     font-size: 25px
     &:hover
       cursor: pointer
-      background-color: rgba(0,0,0,.15)
+      background-color: rgba(0,0,0,.35)
+      .name
+        opacity: 1
 
 
   .shadowed
