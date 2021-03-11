@@ -37,7 +37,8 @@
     >
       <v-row
         class="ma-16 pa-16"
-        style="width:100vw"
+        style="width:100vw;height:75vh"
+        align="center"
       >
         <p
           class="mb-0 pa-0 parr d-none d-sm-flex"
@@ -188,7 +189,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;background-color:#C1B7A8"
+        style="width:100vw;height:70vh;background-color:#C1B7A8"
         align="center"
       >
         <v-col
@@ -197,13 +198,13 @@
         >
           <p
             class="ma-16 pl-16 pr-16 parr"
-            style="font-size:35px;font-size:75px;line-height:100%"
+            style="font-size:35px;font-size:65px;line-height:100%"
           >
             ¿Vamos por
           </p>
           <p
             class="ma-16 pl-16 pr-16 parr"
-            style="font-size:35px;font-size:75px;line-height:100%;margin-left:100px !important;margin-top: -65px !important"
+            style="font-size:35px;font-size:65px;line-height:100%;margin-left:100px !important;margin-top: -65px !important"
           >
             un buen café?
           </p>
@@ -213,21 +214,24 @@
           cols="6"
         >
           <v-text-field
-            class="ma-0 mt-8 mr-16 pr-16 pa-0"
+            class="ma-0 mt-8 mr-16 pr-16 pa-0 email"
             v-model="email"
             label="Email"
             color="#707070"
-            background-color="#EDEDED"
             outlined
+            background-color="#EDEDED"
+            style="color:blue"
+            solo
           ></v-text-field>
           <v-textarea
             class="ma-0 mr-16 pr-16 pa-0"
-            v-model="Comentario"
+            v-model="comentario"
             label="Comentario"
-            height="170px"
+            no-resize
             outlined
             color="#707070"
             background-color="#EDEDED"
+            solo
           ></v-textarea>
         </v-col>
       </v-row>
@@ -351,6 +355,23 @@ export default {
 
 <style lang="sass">
 
+
+  .theme--light.v-input:not(.v-input--is-disabled) input
+    color: #707070 !important
+
+  .v-text-field--outlined fieldset
+    color: #707070 !important
+
+  .v-text-field--outlined textarea
+    color: #707070 !important
+
+
+
+
+  .v-app input.v-textfield
+    color: red
+
+
   .name
     font-size: 20px
     position: absolute
@@ -402,7 +423,7 @@ export default {
     font: normal normal normal Vollkorn
     letter-spacing: 1px
     color: #707070
-    line-height: 110%
+    line-height: 120%
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
