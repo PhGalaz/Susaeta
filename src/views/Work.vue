@@ -4,7 +4,7 @@
   >
     <v-row
       class="ma-0 pa-0"
-      style="width:100vw;height:100vh"
+      style="position:relative;width:100vw;height:100vh"
       v-for="(item, index) in $store.state.projects" :key="index"
     >
       <v-row
@@ -18,9 +18,9 @@
       </v-row>
       <v-row
         class="ma-0 ml-16 pa-0 pl-16"
-        style="position:absolute;font-family:Montserrat;font-size:80px;color:#EDEDED"
+        style="position:absolute;font-family:Montserrat;font-size:70px;color:#EDEDED;top:70vh;letter-spacing:0px;line-height:80%"
       >
-        <span style="top:75vh">{{ item.name }}</span>
+        <p>{{ item.name }}<br><span style="font-size:40px">{{ item.location }}, {{ item.year }}</span></p>
       </v-row>
     </v-row>
   </v-row>
