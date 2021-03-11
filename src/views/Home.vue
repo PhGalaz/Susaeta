@@ -222,6 +222,7 @@
             background-color="#EDEDED"
             style="color:blue"
             solo
+            flat
           ></v-text-field>
           <v-textarea
             class="ma-0 mr-16 pr-16 pa-0"
@@ -232,7 +233,24 @@
             color="#707070"
             background-color="#EDEDED"
             solo
+            rows="8"
+            row-height="15"
+            flat
           ></v-textarea>
+          <v-row
+            class="ma-0 mr-16 pa-0 pr-16"
+            justify="right"
+            width="100%"
+          >
+            <v-spacer></v-spacer>
+            <v-btn
+              text
+              color="#707070"
+            >
+              Enviar
+            </v-btn>
+          </v-row>
+
         </v-col>
       </v-row>
 
@@ -370,6 +388,8 @@ export default {
 
   .v-app input.v-textfield
     color: red
+    font-family: Times !important
+
 
 
   .name
