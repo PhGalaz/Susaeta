@@ -84,12 +84,11 @@
 <script>
 export default {
     name: 'Workcase',
-    props: ["name"],
+    props: ["index"],
     data() {
       return {
         photos: [],
-        index: null,
-        nombre: null
+        indek: null
       }
     },
     methods: {
@@ -100,14 +99,11 @@ export default {
     },
     created(){
       this.$store.commit('header', false);
-      if (this.name) {
-          this.nombre = this.name
+      if (this.index) {
+          this.indek = this.index
       }
-      const items = this.$store.state.projects;
-      this.index = this.indexWhere(items, item => item.name === this.nombre);
       window.scrollTo(0,0);
 
-      console.log(this.$store.state.projects[this.index].pictures);
       for(var i = 1; i < this.$store.state.projects[this.index].pictures.length - 1; i++){
         this.photos.push(this.$store.state.projects[this.index].pictures[i]);
       }

@@ -52,7 +52,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw"
+        style="width:100vw;background-color:grey"
       >
         <v-col
           class="ma-0 pa-0"
@@ -64,7 +64,7 @@
             style="max-height:50vh;min-height:50vh"
           >
             <router-link
-              :to="{ name: 'Workcase', params: {name: this.name0 } }"
+              :to="{ name: 'Workcase', params: {index: this.index0 } }"
             >
               <v-row
                 class="ma-0 pa-0 casa"
@@ -72,7 +72,7 @@
                 <v-row
                   class="ma-0 pa-0 name"
                 >
-                  {{ this.name0 }}
+                  {{ $store.state.projects[this.index0].name }}
                 </v-row>
               </v-row>
             </router-link>
@@ -87,7 +87,7 @@
             style="max-height:50vh;min-height:50vh"
           >
             <router-link
-              :to="{ name: 'Workcase', params: {name: this.name1 } }"
+              :to="{ name: 'Workcase', params: {index: this.index1 } }"
             >
               <v-row
                 class="ma-0 pa-0 casa"
@@ -95,7 +95,7 @@
                 <v-row
                   class="ma-0 pa-0 name"
                 >
-                  {{ this.name1 }}
+                  {{ $store.state.projects[this.index1].name }}
                 </v-row>
               </v-row>
             </router-link>
@@ -120,7 +120,7 @@
             style="max-height:50vh;min-height:50vh"
           >
             <router-link
-              :to="{ name: 'Workcase', params: {name: this.name2 } }"
+              :to="{ name: 'Workcase', params: {index: this.index2 } }"
             >
               <v-row
                 class="ma-0 pa-0 casa"
@@ -128,7 +128,7 @@
                 <v-row
                   class="ma-0 pa-0 name"
                 >
-                  {{ this.name2 }}
+                  {{ $store.state.projects[this.index2].name }}
                 </v-row>
               </v-row>
             </router-link>
@@ -143,7 +143,7 @@
             style="max-height:50vh;min-height:50vh"
           >
             <router-link
-              :to="{ name: 'Workcase', params: {name: this.name3 } }"
+              :to="{ name: 'Workcase', params: {index: this.index3 } }"
             >
               <v-row
                 class="ma-0 pa-0 casa"
@@ -151,7 +151,7 @@
                 <v-row
                   class="ma-0 pa-0 name"
                 >
-                  {{ this.name3 }}
+                  {{ $store.state.projects[this.index3].name }}
                 </v-row>
               </v-row>
             </router-link>
@@ -215,7 +215,7 @@
         >
           <v-text-field
             class="ma-0 mt-8 mr-16 pr-16 pa-0 email"
-            v-model="email"
+
             label="Email"
             color="#707070"
             outlined
@@ -226,7 +226,7 @@
           ></v-text-field>
           <v-textarea
             class="ma-0 mr-16 pr-16 pa-0"
-            v-model="comentario"
+
             label="Comentario"
             no-resize
             outlined
@@ -239,7 +239,7 @@
           ></v-textarea>
           <v-row
             class="ma-0 mr-16 pa-0 pr-16"
-            justify="right"
+
             width="100%"
           >
             <v-spacer></v-spacer>
@@ -283,19 +283,19 @@ export default {
 
   name: 'App',
   data: () => ({
-    show: true,
     cabin0: null,
     cabin1: null,
     cabin2: null,
     cabin3: null,
-    name0: null,
-    name1: null,
-    name2: null,
-    name3: null,
+    index0: 0,
+    index1: 1,
+    index2: 2,
+    index3: 3,
     random_set: [],
     position: [1,2,3,4],
     index: 4,
-    index2: 0,
+    indexX: 4,
+    indexY: 0,
     last: null
   }),
   beforeCreate(){
@@ -305,20 +305,15 @@ export default {
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
-      var name = this.$store.state.projects[i].name;
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
 
-      this.random_set.push([pictures, name])
+      this.random_set.push([pictures, i])
     }
     this.random_set = this.random_set.sort(function() {return 0.5 - Math.random()});
     this.cabin0 = this.random_set[0][0][0];
-    this.name0 = this.random_set[0][1];
     this.cabin1 = this.random_set[1][0][0];
-    this.name1 = this.random_set[1][1];
     this.cabin2 = this.random_set[2][0][0];
-    this.name2 = this.random_set[2][1];
     this.cabin3 = this.random_set[3][0][0];
-    this.name3 = this.random_set[3][1];
     this.init();
   },
 
@@ -331,29 +326,29 @@ export default {
           r = Math.floor( Math.random() * this.position.length );
         }
         this.last = this.position[r];
-        var photo = (this.index2) % (this.random_set[this.index].length);
+        var photo = (this.indexY) % (this.random_set[this.indexX][0].length);
         if(this.position[r] == 1){
-          this.cabin0 = this.random_set[this.index][0][photo];
-          this.name0 = this.random_set[this.index][1];
+          this.cabin0 = this.random_set[this.indexX][0][photo];
+          this.index0 = this.random_set[this.indexX][1];
         } else if (this.position[r] == 2) {
-          this.cabin1 = this.random_set[this.index][0][photo];
-          this.name1 = this.random_set[this.index][1];
+          this.cabin1 = this.random_set[this.indexX][0][photo];
+          this.index1 = this.random_set[this.indexX][1];
         } else if (this.position[r] == 3) {
-          this.cabin2 = this.random_set[this.index][0][photo];
-          this.name2 = this.random_set[this.index][1];
+          this.cabin2 = this.random_set[this.indexX][0][photo];
+          this.index2 = this.random_set[this.indexX][1];
         } else if (this.position[r] == 4) {
-          this.cabin3 = this.random_set[this.index][0][photo];
-          this.name3 = this.random_set[this.index][1];
+          this.cabin3 = this.random_set[this.indexX][0][photo];
+          this.index3 = this.random_set[this.indexX][1];
         } else {
           console.log('Error')
         }
         this.position.splice(r, 1);
-        this.index = (this.index + 1) % this.random_set.length;
-        if (this.index == 0){
-          this.index2 = this.index2 + 1;
+        this.index = this.index + 1;
+        this.indexX = (this.index) % this.random_set.length;
+        if ((this.index >= this.random_set.length) && (this.index) % this.random_set.length == 0){
+          this.indexY = this.indexY + 1;
         }
         await this.random_sleep();
-        this.show = !this.show;
         this.init()
       } else {
         this.position = [1,2,3,4];
@@ -409,7 +404,7 @@ export default {
     font-size: 25px
     &:hover
       cursor: pointer
-      background-color: rgba(0,0,0,.2)
+      background-color: rgba(255,255,255,.15)
 
 
   .shadowed

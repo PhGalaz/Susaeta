@@ -7,10 +7,9 @@ export default new Vuex.Store({
   state: {
     isActive: null,
     cover: [
-      "2/eladio-2.jpg",
-      "4/eladio-4.jpg",
-      "5/eladio-1.jpg",
-      "5/eladio-6.jpg"
+      "2/eladio-1.jpg",
+      "4/eladio-1.jpg",
+      "5/eladio-1.jpg"
     ],
     projects: [
       {
