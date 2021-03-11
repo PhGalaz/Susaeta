@@ -287,10 +287,10 @@ export default {
     cabin1: null,
     cabin2: null,
     cabin3: null,
-    index0: 0,
-    index1: 1,
-    index2: 2,
-    index3: 3,
+    index0: null,
+    index1: null,
+    index2: null,
+    index3: null,
     random_set: [],
     position: [1,2,3,4],
     index: 4,
@@ -302,6 +302,7 @@ export default {
 
   },
   created(){
+    window.scrollTo(0,0);
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
@@ -314,6 +315,10 @@ export default {
     this.cabin1 = this.random_set[1][0][0];
     this.cabin2 = this.random_set[2][0][0];
     this.cabin3 = this.random_set[3][0][0];
+    this.index0 = this.random_set[0][1];
+    this.index1 = this.random_set[1][1];
+    this.index2 = this.random_set[2][1];
+    this.index3 = this.random_set[3][1];
     this.init();
   },
 

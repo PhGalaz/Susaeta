@@ -69,7 +69,9 @@
       style="height:70px;font-family:Montserrat;font-size:20px"
       align="center"
     >
-      <span>ANTERIOR</span>
+
+        <span>SIGUIENTE</span>
+
       <v-spacer></v-spacer>
       <span>SIGUIENTE</span>
     </v-row>
