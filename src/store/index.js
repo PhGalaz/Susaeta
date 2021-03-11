@@ -19,7 +19,8 @@ export default new Vuex.Store({
           year: "Año 0",
           pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
           contractor: "Constructora 0",
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 1,
@@ -28,7 +29,8 @@ export default new Vuex.Store({
           year: "Año 1",
           pictures: ["2/eladio-1.jpg","2/eladio-2.jpg","2/eladio-3.jpg","2/eladio-4.jpg"],
           contractor: "Constructora 1",
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 2,
@@ -37,7 +39,8 @@ export default new Vuex.Store({
           year: "Año 2",
           pictures: ["3/eladio-1.jpg","3/eladio-2.jpg","3/eladio-3.jpg","3/eladio-4.jpg","3/eladio-5.jpg"],
           contractor: "Constructora 2",
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 3,
@@ -46,7 +49,8 @@ export default new Vuex.Store({
           year: "Año 3",
           pictures: ["4/eladio-1.jpg","4/eladio-2.jpg","4/eladio-3.jpg","4/eladio-4.jpg","4/eladio-5.jpg","4/eladio-6.jpg","4/eladio-7.jpg","4/eladio-8.jpg"],
           contractor: "Constructora 3",
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 4,
@@ -55,7 +59,8 @@ export default new Vuex.Store({
           year: "Año 4",
           pictures: ["5/eladio-1.jpg","5/eladio-2.jpg","5/eladio-3.jpg","5/eladio-4.jpg","5/eladio-5.jpg","5/eladio-6.jpg"],
           contractor: "Constructora 4",
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 5,
@@ -64,7 +69,8 @@ export default new Vuex.Store({
           year: "Año 5",
           pictures: ["6/eladio-1.jpg","6/eladio-2.jpg","6/eladio-3.jpg","6/eladio-4.jpg","6/eladio-5.jpg"],
           contractor: "Constructora 5",
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
     ]
   },
