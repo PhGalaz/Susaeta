@@ -36,12 +36,12 @@
       style="background-color:#EAEAEA;width:100vw;top:1000px"
     >
       <v-row
-        class="ma-16 pa-16"
+        class="ma-0 pa-0"
         style="width:100vw;height:75vh"
         align="center"
       >
         <p
-          class="mb-0 pa-0 parr d-none d-sm-flex"
+          class="ma-0 mx-16 pa-0 px-16 parr d-none d-sm-flex"
           style="font-size:50px"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p
@@ -443,7 +443,7 @@ export default {
     font: normal normal normal Vollkorn
     letter-spacing: 1px
     color: #707070
-    line-height: 120%
+    line-height: 110%
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
