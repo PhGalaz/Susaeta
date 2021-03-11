@@ -17,21 +17,21 @@
     </v-row>
     <v-row
       class="ma-0 pa-0"
-      style="height:50vh;width:100vw;z-index:0"
+      style="height:75vh;width:100vw;z-index:0"
       align="center"
     >
       <v-col
       >
-        <v-row class="ml-10 names text-uppercase">{{ this.case.name }}</v-row>
-        <v-row class="ml-10 locations">{{ this.case.location }}, {{ this.case.year }}</v-row>
-        <v-row class="ml-10 contractors">{{ this.case.contractor }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 pl-16 names text-uppercase">{{ this.case.name }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.case.location }}, {{ this.case.year }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 pl-16 contractors">{{ this.case.contractor }}</v-row>
 
       </v-col>
       <v-col
-
+        class="ma-0 pa-0"
       >
-        <p class="mr-10 mt-3 descripcion1">{{ this.case.description1 }}</p>
-        <p class="mr-10 descripcion1">{{ this.case.description2 }}</p>
+        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.case.description1 }}</p><br>
+        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.case.description2 }}</p>
 
       </v-col>
     </v-row>
@@ -51,9 +51,11 @@
     </v-row>
     <v-row
       class="ma-0 pa-0"
+      style="height:75vh"
+      align="center"
     >
-      <p class="ma-16 mb-0 pb-10 pa-16 descripcion2">{{ this.case.description1 }}</p>
-      <p class="mx-16 mt-0 mb-16 px-16 pb-16 descripcion2">{{ this.case.description2 }}</p>
+      <p class="mx-16 px-16 descripcion2">{{ this.case.description1 }}<br><br>{{ this.case.description2 }}</p>
+
     </v-row>
     <v-row
       class="ma-0 pa-0"
@@ -143,7 +145,7 @@ export default {
 
   .descripcion1
     line-height: 110%
-    font-size: 30px
+    font-size: 40px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
