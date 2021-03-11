@@ -51,7 +51,7 @@ export default new Vuex.Store({
       },
       {
           id: 4,
-          name: "Nombre 4",
+          name: "Casa Riscos",
           location: "Ciudad 4",
           year: "Año 4",
           pictures: ["5/eladio-1.jpg","5/eladio-2.jpg","5/eladio-3.jpg","5/eladio-4.jpg","5/eladio-5.jpg","5/eladio-6.jpg"],
