@@ -69,13 +69,13 @@
     <v-row
       id="app"
       class="ma-0 mx-16 pa-0 commander"
-      style="height:70px;font-family:Montserrat;font-size:20px;color:#707070"
+      style="height:70px;font-family:Montserrat;font-size:20px;color:#707070;font-weight:bold"
       align="center"
     >
 
-      <span @click="anterior()">ANTERIOR</span>
+      <span @click="anterior()">Anterior</span>
       <v-spacer></v-spacer>
-      <span @click="siguiente()">SIGUIENTE</span>
+      <span @click="siguiente()">Siguiente</span>
 
     </v-row>
 

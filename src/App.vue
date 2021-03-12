@@ -187,11 +187,6 @@ export default {
     letter-spacing: 0px
     font-size: 20px
     font-weight: bold
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
     color: #EDEDED
     text-shadow: 3px 3px 3px rgba(0,0,0,0.2)
   .menu-item span:hover
