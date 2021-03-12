@@ -235,31 +235,31 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        justify="center"
-        align="center"
-        style="width:100%;min-height:130px;max-height:130px"
+        style="width:100%;min-height:15vh;max-height:15vh"
       >
 
 
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;min-height:100vh - 130px;max-height:100vh - 130px"
+        style="width:100vw;min-height:85vh;max-height:85vh"
         align="center"
       >
         <v-col
           class="ma-0 pa-0"
           cols="12" sm="6"
+          style="min-height:85vh;max-height:85vh"
         >
           <v-img
-            src="arquitecto_eladio_susaeta.png" height="100vh - 130px" eager/>
+            src="arquitecto_eladio_susaeta.png" height="85vh" eager/>
         </v-col>
         <v-col
           class="ma-0 pa-0"
           cols="12" sm="6"
+          style="min-height:85vh;max-height:85vh"
         >
           <p
-            class="ma-0 ml-16 mr-16 pa-0 pr-16 parr d-none d-sm-flex"
+            class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
             style="font-size:40px"
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           <p
@@ -515,7 +515,7 @@ export default {
     font-size: 25px
     &:hover
       cursor: pointer
-      background-color: rgba(113,113,113,.55)
+      background-color: rgba(113,113,113,.4)
       .name
         opacity: 1
       .mobile
@@ -556,12 +556,12 @@ export default {
     line-height: 120%
 
   .mobileText
-    font-size: 33px
+    font-size: 30px
     font-family: Vollkorn
     font: normal normal normal Vollkorn
     letter-spacing: 1px
     color: #707070
-    line-height: 110%
+    line-height: 100%
 
 
   .v-carousel .v-window-item
