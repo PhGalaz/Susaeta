@@ -237,18 +237,14 @@
         class="ma-0 pa-0"
         justify="center"
         align="center"
-        style="width:100%;max-height:40vh"
+        style="width:100%;min-height:5vh;max-heigh:5vh"
       >
-
-        <v-img
-          style="transform: scale(0.2);transform-origin: left top;left:40%;top:30%"
-          src="rolfeichler.jpg" eager/>
 
 
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw"
+        style="width:100vw;min-height:95vh;max-heigh:95vh"
         align="center"
       >
         <v-col
@@ -467,9 +463,11 @@ export default {
 
   .v-text-field--outlined fieldset
     color: #707070 !important
+    border-radius: 0px !important
 
   .v-text-field--outlined textarea
     color: #707070 !important
+    border-radius: 0px !important
 
 
 
