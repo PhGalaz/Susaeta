@@ -1,0 +1,60 @@
+<template>
+  <v-row
+    class="ma-0 pa-0"
+    style="width:100%;height:70%"
+    align="center"
+  >
+    <v-row
+      class="ma-0 pa-0"
+      style="width:100%"
+    >
+      <v-text-field
+        class="email"
+        label="Email"
+        color="#707070"
+        outlined
+        background-color="#EDEDED"
+        width="100%"
+        solo
+        flat
+      ></v-text-field>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0"
+      style="width:100%"
+    >
+      <v-textarea
+        label="Comentario"
+        no-resize
+        outlined
+        color="#707070"
+        background-color="#EDEDED"
+        solo
+        rows="8"
+        row-height="15"
+        flat
+      ></v-textarea>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0"
+      style="width:100%"
+    >
+      <v-spacer></v-spacer>
+      <v-btn
+        style="text-transform:none;font-size:20px;font-family:Montserrat;letter-spacing:1px"
+        text
+        color="#707070"
+      >
+        Enviar
+      </v-btn>
+    </v-row>
+  </v-row>
+</template>
+
+<script>
+
+</script>
+
+<style lang="sass">
+
+</style>

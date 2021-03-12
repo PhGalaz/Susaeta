@@ -285,72 +285,50 @@
 
       </v-row>
       <v-row
-        class="ma-0 pa-0"
+        class="ma-0 pa-0 d-none d-sm-flex"
         style="width:100vw;height:70vh;background-color:#C1B7A8"
+      >
+        <v-row
+          class="ma-0 pa-0 parr"
+          style="width:50vw;font-size:70px;line-height:100%"
+          align="center"
+        >
+          <p class="ma-0 ml-16 pa-0 pl-16">¿Vamos por<br><span class="cafe">un buen café?</span></p>
+        </v-row>
+        <v-row
+          class="ma-0 pa-0 parr"
+          style="width:50vw;font-size:70px;line-height:100%"
+          align="center"
+        >
+          <Form
+            class="ma-0 mr-16 pa-0 pr-16"
+          ></Form>
+        </v-row>
+      </v-row>
+      <v-row
+        class="ma-0 pa-0 d-sm-none"
+        style="width:100vw;height:100vh;background-color:#C1B7A8"
         align="center"
       >
-        <v-col
+        <v-row
           class="ma-0 pa-0"
-          cols="12" sm="6"
+          style="width:100%;height:50%"
+          justify="center"
+          align="center"
         >
-          <p
-            class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
-            style="font-size:70px;line-height:100%"
-          >
-            ¿Vamos por
-          </p>
-          <p
-            class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
-            style="font-size:70px;line-height:100%;margin-left:100px !important;margin-top: -50px !important"
-          >
-            un buen café?
-          </p>
-        </v-col>
-        <v-col
+          <p class="ma-0 pa-0 parr" style="font-size:50px">¿Vamos por<br><span class="cafe">un buen café?</span></p>
+        </v-row>
+        <v-row
           class="ma-0 pa-0"
-          cols="12" sm="6"
+          style="width:100%;height:50%"
         >
-          <v-text-field
-            class="ma-0 mt-8 mr-16 pr-16 pa-0 email"
+          <Form
+            class="ma-0 mx-16 pa-0"
+          ></Form>
+        </v-row>
 
-            label="Email"
-            color="#707070"
-            outlined
-            background-color="#EDEDED"
-            style="color:blue"
-            solo
-            flat
-          ></v-text-field>
-          <v-textarea
-            class="ma-0 mr-16 pr-16 pa-0"
-
-            label="Comentario"
-            no-resize
-            outlined
-            color="#707070"
-            background-color="#EDEDED"
-            solo
-            rows="8"
-            row-height="15"
-            flat
-          ></v-textarea>
-          <v-row
-            class="ma-0 mr-16 pa-0 pr-16"
-
-            width="100%"
-          >
-            <v-spacer></v-spacer>
-            <v-btn
-              text
-              color="#707070"
-            >
-              Enviar
-            </v-btn>
-          </v-row>
-
-        </v-col>
+        </v-row>
       </v-row>
-
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-none d-md-block"
@@ -395,6 +373,9 @@ export default {
     indexY: 0,
     last: null
   }),
+  components: {
+    'Form': require('@/components/Form.vue').default
+  },
   beforeCreate(){
 
   },
@@ -470,29 +451,45 @@ export default {
 
 <style lang="sass">
 
-  textarea::placeholder
-    color: #fff
-
-  .theme--light.v-input:not(.v-input--is-disabled) input
+  #input-53
     color: #707070 !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
+  #input-50
+    color: #707070 !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
+  #input-58
+    color: #707070 !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
+  .v-input
+    color: red !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
 
   .v-text-field--outlined fieldset
     color: #707070 !important
     border-radius: 0px !important
+    opacity: .6 !important
 
   .v-text-field--outlined textarea
     color: #707070 !important
     border-radius: 0px !important
 
 
+  .cafe
+    margin-left: 40px
 
 
-
-
-
-  .v-app input.v-textfield
-    color: red
-    font-family: Times !important
+  .v-label
+    color: #707070 !important
+    font-family: Montserrat !important
+    opacity: .6 !important
 
   .fotoEladio
     height: 200vh !important
