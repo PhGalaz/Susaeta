@@ -544,12 +544,12 @@ export default {
     line-height: 120%
 
   .mobileText
-    font-size: 40px
+    font-size: 30px
     font-family: Vollkorn
     font: normal normal normal Vollkorn
     letter-spacing: 1px
     color: #707070
-    line-height: 120%
+    line-height: 100%
 
 
   .v-carousel .v-window-item
