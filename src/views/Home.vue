@@ -235,38 +235,43 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100%;min-height:15vh;max-height:15vh"
-      >
-
-
-      </v-row>
-      <v-row
-        class="ma-0 pa-0"
-        style="width:100vw;min-height:85vh;max-height:85vh"
+        style="width:100vw;min-height:100vh;max-height:100vh"
         align="center"
       >
-        <v-col
+        <v-row
           class="ma-0 pa-0"
-          cols="12" sm="6"
-          style="min-height:85vh;max-height:85vh"
+          style="width:100%;min-height:15%;max-height:15%"
         >
-          <v-img
-            src="arquitecto_eladio_susaeta.png" height="85vh" eager/>
-        </v-col>
-        <v-col
-          class="ma-0 pa-0"
-          cols="12" sm="6"
-          style="min-height:85vh;max-height:85vh"
-        >
-          <p
-            class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
-            style="font-size:40px"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <p
-            class="ma-0 mx-15 pa-0 mobileText d-sm-none"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        </v-col>
+
+        </v-row>
+        <v-row
+          class="ma-0 pa-0"
+          style="width:100%;min-height:85%;max-height:85%"
+          align="center"
+        >
+          <v-col
+            class="ma-0 pa-0"
+            cols="12" sm="6"
+          >
+            <v-img
+              src="arquitecto_eladio_susaeta.png" height="85vh" eager/>
+          </v-col>
+          <v-col
+            class="ma-0 pa-0"
+            cols="12" sm="6"
+          >
+            <p
+              class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
+              style="font-size:40px !important"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p
+              class="ma-0 mx-15 pa-0 mobileText d-sm-none"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          </v-col>
+        </v-row>
+
       </v-row>
       <v-row
         class="ma-0 pa-0"
