@@ -237,37 +237,34 @@
         class="ma-0 pa-0"
         justify="center"
         align="center"
-        style="width:100%;min-height:5vh;max-heigh:5vh"
+        style="width:100%;min-height:130px;max-height:130px"
       >
 
 
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;min-height:95vh;max-heigh:95vh"
+        style="width:100vw;min-height:100vh - 130px;max-height:100vh - 130px"
         align="center"
       >
         <v-col
-          class="ma-0 mt-16 pa-0"
+          class="ma-0 pa-0"
           cols="12" sm="6"
-          style=""
         >
           <v-img
-            style=""
-            src="arquitecto_eladio_susaeta.png" eager/>
+            src="arquitecto_eladio_susaeta.png" height="100vh - 130px" eager/>
         </v-col>
         <v-col
-          class="mt-16"
+          class="ma-0 pa-0"
           cols="12" sm="6"
         >
           <p
-            class="ma-0 ml-10 mr-16 pa-0 pr-16 parr d-none d-sm-flex"
-            style="font-size:35px"
+            class="ma-0 ml-16 mr-16 pa-0 pr-16 parr d-none d-sm-flex"
+            style="font-size:40px"
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           <p
-            class="ma-0 mx-16 pa-0 mobileText d-sm-none"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
+            class="ma-0 mx-15 pa-0 mobileText d-sm-none"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
         </v-col>
       </v-row>
@@ -281,14 +278,26 @@
           cols="12" sm="6"
         >
           <p
-            class="ma-16 pl-16 pr-16 parr"
+            class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
             style="font-size:35px;font-size:65px;line-height:100%"
           >
             ¿Vamos por
           </p>
           <p
-            class="ma-16 pl-16 pr-16 parr"
-            style="font-size:35px;font-size:65px;line-height:100%;margin-left:100px !important;margin-top: -65px !important"
+            class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
+            style="font-size:35px;font-size:65px;line-height:100%;margin-left:100px !important;margin-top: 0px !important"
+          >
+            un buen café?
+          </p>
+          <p
+            class="ma-16 mb-0 pa-16 parr d-sm-none"
+            style="font-size:15px;font-size:65px;line-height:100%"
+          >
+            ¿Vamos por
+          </p>
+          <p
+            class="ma-16 mt-0 pa-16 parr d-sm-none"
+            style="font-size:25px;font-size:65px;line-height:100%;margin-left:100px !important;margin-top: -100px !important"
           >
             un buen café?
           </p>
