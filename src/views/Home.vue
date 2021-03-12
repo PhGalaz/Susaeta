@@ -260,7 +260,7 @@
           <v-col
             class="ma-0 pa-0"
             cols="12" sm="6"
-            style="width:100vw"
+            style="width:100vw;min-height:100vh;max-height:100vh"
           >
             <p
               class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
