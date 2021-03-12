@@ -4,10 +4,11 @@
   >
     <v-row
       class="ma-0 pa-0 d-sm-none"
+      style="width:100vh"
     >
       <v-app-bar
         class="ma-0 pa-0"
-        style="position:fixed;background-color:transparent;z-index:100"
+        style="position:fixed;background-color:transparent;z-index:1;width:100vh"
         flat
 
       >
