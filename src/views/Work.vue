@@ -21,9 +21,9 @@
         </v-row>
         <v-row
           class="ma-0 ml-16 pa-0 pl-16"
-          style="position:absolute;font-family:Montserrat;font-size:70px;color:#EDEDED;top:70vh;letter-spacing:0px;line-height:80%"
+          style="position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:80vh;letter-spacing:0px;line-height:90%;font-weight:bold"
         >
-          <p>{{ item.name }}<br><span style="font-size:40px">{{ item.location }}, {{ item.year }}</span></p>
+          <p>{{ item.name }}<br><span style="font-size:20px">{{ item.location }}, {{ item.year }}</span></p>
         </v-row>
       </router-link>
     </v-row>
