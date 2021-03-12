@@ -4,15 +4,46 @@
   >
     <v-row
       class="ma-0 pa-0 d-sm-none"
-      justify="center"
     >
-      <v-icon
-        class="mr-1 mb-1"
-        small
-        color= "#EDEDED"
+      <v-app-bar
+        class="ma-0 pa-0"
+        style="position:fixed;background-color:transparent;z-index:100"
+        flat
       >
-        mdi-hamburger-menu
-      </v-icon>
+        <v-spacer></v-spacer>
+        <v-app-bar-nav-icon class="mt-5" color="#EDEDED" @click="drawer = true"></v-app-bar-nav-icon>
+        <v-spacer></v-spacer>
+
+      </v-app-bar>
+        <v-navigation-drawer
+          v-model="drawer"
+          absolute
+          temporary
+        >
+          <v-list
+            nav
+            dense
+          >
+            <v-list-item-group
+              v-model="group"
+              active-class="deep-purple--text text--accent-4"
+            >
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-home</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Home</v-list-item-title>
+              </v-list-item>
+
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Account</v-list-item-title>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-navigation-drawer>
     </v-row>
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
@@ -104,7 +135,9 @@ export default {
 
   name: 'App',
   data: () => ({
-    isActive: true
+    isActive: true,
+    drawer: false,
+    group: null
   }),
   created () {
   },
