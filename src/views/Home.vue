@@ -265,7 +265,7 @@
             style="font-size:35px"
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           <p
-            class="ma-16 pa-0 mobileText d-sm-none"
+            class="ma-0 mx-16 pa-0 mobileText d-sm-none"
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
 
@@ -547,12 +547,12 @@ export default {
     line-height: 120%
 
   .mobileText
-    font-size: 30px
+    font-size: 33px
     font-family: Vollkorn
     font: normal normal normal Vollkorn
     letter-spacing: 1px
     color: #707070
-    line-height: 100%
+    line-height: 110%
 
 
   .v-carousel .v-window-item
