@@ -45,7 +45,6 @@
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p
           class="ma-0 mx-16 pa-0 mobileText d-sm-none"
-          style="font-size:30px;line-height:90%"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
       </v-row>
@@ -254,7 +253,7 @@
       >
         <v-col
           class="ma-0 mt-16 pa-0"
-          cols="6"
+          cols="12" sm="6"
           style=""
         >
           <v-img
@@ -263,12 +262,17 @@
         </v-col>
         <v-col
           class="mt-16"
-          cols="6"
+          cols="12" sm="6"
         >
           <p
             class="ma-5 ml-10 mr-16 pr-16 parr d-none d-sm-flex"
             style="font-size:35px"
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p
+            class="ma-5 ml-10 mr-16 pr-16 mobileText d-sm-none"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+
         </v-col>
       </v-row>
       <v-row
@@ -278,7 +282,7 @@
       >
         <v-col
           class="ma-0 pa-0"
-          cols="6"
+          cols="12" sm="6"
         >
           <p
             class="ma-16 pl-16 pr-16 parr"
@@ -295,7 +299,7 @@
         </v-col>
         <v-col
           class="ma-0 pa-0"
-          cols="6"
+          cols="12" sm="6"
         >
           <v-text-field
             class="ma-0 mt-8 mr-16 pr-16 pa-0 email"
