@@ -235,19 +235,19 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="width:100vw;min-height:100vh"
+        style="width:100vw"
         align="center"
       >
         <v-row
           class="ma-0 pa-0"
           style="width:100%;min-height:15vh;max-height:15vh"
         >
-
-
         </v-row>
         <v-row
           class="ma-0 pa-0"
-          style="width:100%;min-height:85vh"
+          :class="{'fotoEladio': $vuetify.breakpoint.xs,
+                    'fotoEladioSm': $vuetify.breakpoint.sm}"
+          style="width:100%"
           align="center"
         >
           <v-col
@@ -255,12 +255,17 @@
             cols="12" sm="6"
           >
             <v-img
-              src="arquitecto_eladio_susaeta.png" height="85vh" eager/>
+              class="ma-0 pa-0"
+              :class="{'foto': $vuetify.breakpoint.xs,
+                        'fotoSm': $vuetify.breakpoint.sm}"
+              src="arquitecto_eladio_susaeta.png" eager/>
           </v-col>
           <v-col
             class="ma-0 pa-0"
+            :class="{'foto': $vuetify.breakpoint.xs,
+                      'fotoSm': $vuetify.breakpoint.sm}"
             cols="12" sm="6"
-            style="width:100vw;min-height:100vh;max-height:100vh"
+            style="width:100vw"
           >
             <p
               class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
@@ -291,18 +296,6 @@
           <p
             class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
             style="font-size:80px;line-height:100%;margin-left:100px !important;margin-top: -50px !important"
-          >
-            un buen café?
-          </p>
-          <p
-            class="ma-16 mb-0 pa-16 parr d-sm-none"
-            style="font-size:15px;font-size:65px;line-height:100%"
-          >
-            ¿Vamos por
-          </p>
-          <p
-            class="ma-16 mt-0 pa-16 parr d-sm-none"
-            style="font-size:25px;font-size:65px;line-height:100%;margin-left:100px !important;margin-top: -100px !important"
           >
             un buen café?
           </p>
@@ -495,6 +488,19 @@ export default {
     color: red
     font-family: Times !important
 
+  .fotoEladio
+    height: 200vh !important
+
+  .fotoEladioSm
+    height: 85vh !important
+
+  .foto
+    min-height: 100vh !important
+    max-height: 100vh !important
+
+  .fotoSm
+    min-height: 85vh !important
+    max-height: 85vh !important
 
 
   .name
