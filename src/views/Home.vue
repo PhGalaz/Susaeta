@@ -67,7 +67,7 @@
 
             >
               <v-row
-                class="ma-0 pa-0 casa"
+                class="ma-0 pa-0 casa d-none d-sm-flex"
                 align="center"
               >
                 <v-row
@@ -79,11 +79,24 @@
                   {{ $store.state.projects[this.index0].name }}
                 </v-row>
               </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index0].name }}
+                </v-row>
+              </v-row>
             </router-link>
 
 
             <v-img
-              style="max-height:50vh;min-height:50vh"
               :src="this.cabin0" :key="0" eager/>
           </v-row>
           <v-row
@@ -94,11 +107,25 @@
               :to="{ name: 'Workcase', params: {index: this.index1 } }"
             >
               <v-row
-                class="ma-0 pa-0 casa"
+                class="ma-0 pa-0 casa d-none d-sm-flex"
                 align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index1].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
                   style="width:100%"
                   justify="center"
                   align="center"
@@ -131,11 +158,25 @@
               :to="{ name: 'Workcase', params: {index: this.index2 } }"
             >
               <v-row
-                class="ma-0 pa-0 casa"
+                class="ma-0 pa-0 casa d-none d-sm-flex"
                 align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index2].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
                   style="width:100%"
                   justify="center"
                   align="center"
@@ -158,11 +199,25 @@
               :to="{ name: 'Workcase', params: {index: this.index3 } }"
             >
               <v-row
-                class="ma-0 pa-0 casa"
+                class="ma-0 pa-0 casa d-none d-sm-flex"
                 align="center"
               >
                 <v-row
                   class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index3].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
                   style="width:100%"
                   justify="center"
                   align="center"
@@ -426,6 +481,12 @@ export default {
     position: absolute
     opacity: 0
 
+  .nameMobile
+    font-size: 30px
+    position: absolute
+
+
+
 
   .casa
     width: 50%
@@ -441,7 +502,8 @@ export default {
       background-color: rgba(113,113,113,.55)
       .name
         opacity: 1
-
+      .mobile
+        color: red
 
   .shadowed
     -webkit-filter: drop-shadow(5px 5px 5px #151515)
