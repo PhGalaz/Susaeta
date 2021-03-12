@@ -295,13 +295,13 @@
         >
           <p
             class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
-            style="font-size:80px;line-height:100%"
+            style="font-size:75px;line-height:100%"
           >
             ¿Vamos por
           </p>
           <p
             class="ma-16 pl-16 pr-16 parr d-none d-sm-flex"
-            style="font-size:80px;line-height:100%;margin-left:100px !important;margin-top: -50px !important"
+            style="font-size:75px;line-height:100%;margin-left:100px !important;margin-top: -50px !important"
           >
             un buen café?
           </p>
