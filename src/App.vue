@@ -9,6 +9,7 @@
         class="ma-0 pa-0"
         style="position:fixed;background-color:transparent;z-index:100"
         flat
+
       >
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon class="mt-5" color="#EDEDED" @click="drawer = true"></v-app-bar-nav-icon>
@@ -19,6 +20,7 @@
           v-model="drawer"
           absolute
           temporary
+          bottom
         >
           <v-list
             nav
