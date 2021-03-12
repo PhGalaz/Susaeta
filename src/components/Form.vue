@@ -57,4 +57,39 @@
 
 <style lang="sass">
 
+  #input-53
+    color: #707070 !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
+  #input-50
+    color: #707070 !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
+  .v-input
+    color: red !important
+    font-family: Montserrat !important
+    font-size: 20px !important
+
+
+  .v-text-field--outlined fieldset
+    color: #707070 !important
+    border-radius: 0px !important
+    opacity: .6 !important
+
+  .v-text-field--outlined textarea
+    color: #707070 !important
+    border-radius: 0px !important
+
+
+  .cafe
+    margin-left: 40px
+
+
+  .v-label
+    color: #707070 !important
+    font-family: Montserrat !important
+    opacity: .6 !important
+
 </style>

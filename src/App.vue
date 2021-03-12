@@ -8,7 +8,7 @@
     >
       <v-app-bar
         class="ma-0 pa-0"
-        style="position:fixed;background-color:transparent;z-index:1;width:100vh"
+        style="position:fixed;background-color:transparent;z-index:1000;width:100vh"
         flat
 
       >
@@ -102,30 +102,19 @@
     </v-row>
 
     <router-view></router-view>
-
     <v-row
-      class="ma-0 pa-0"
-      style="z-index:1000;font-family:Montserrat"
+      class="ma-0 pa-0 d-none d-sm-flex"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
     >
-      <v-row
-        class="ma-0 pa-0"
-        style="width:100%;background-color:#91816A"
-      >
-        <p style="width:100vw" class="mx-16 px-16 my-5 pie">Eladio Susaeta, arquitecto Universidad X<br>Puerto Varas, Región de Los Lagos, Chile<br>
-        <span>
-
-        </span>
-        <v-icon
-          class="mr-1 mb-1"
-          x-small
-          color= "#EDEDED"
-        >
-          mdi-copyright
-        </v-icon>
-        <span style="font-size:15px">{{ new Date().getFullYear() }}</span><br>
-        <span style="font-size:10px">developed by Salvador</span>
-      </p>
-      </v-row>
+      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-sm-none"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
     </v-row>
 
 
@@ -143,6 +132,9 @@ export default {
     drawer: false,
     group: null
   }),
+  components: {
+    'Footer': require('@/components/Footer.vue').default
+  },
   created () {
   },
   methods: {
