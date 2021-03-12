@@ -44,8 +44,8 @@
           class="ma-0 mx-16 pa-0 px-16 parr d-none d-sm-flex"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p
-          class="mb-0 pa-0 parr d-sm-none"
-          style="font-size:25px"
+          class="ma-0 mx-16 pa-0 parr d-sm-none"
+          style="font-size:35px"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
       </v-row>
