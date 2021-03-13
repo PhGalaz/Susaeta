@@ -57,16 +57,6 @@
 
 <style lang="sass">
 
-  #input-53
-    color: #707070 !important
-    font-family: Montserrat !important
-    font-size: 20px !important
-
-  #input-50
-    color: #707070 !important
-    font-family: Montserrat !important
-    font-size: 20px !important
-
   .v-input
     color: red !important
     font-family: Montserrat !important
