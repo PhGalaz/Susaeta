@@ -40,56 +40,66 @@
             v-model="group"
             active-class=""
           >
-            <v-list-item
+            <v-row
               class="ma-0 pa-0 menu-item"
+              :class="{ 'd-none': !$store.state.isActive }"
               style="height:8vh"
+              align="center"
             >
-              <v-spacer></v-spacer>
-              <p
-                class="mt-4 menu-item text-center"
-                :class="{ 'd-none': !$store.state.isActive }"
+              <router-link
+                to="/Work"
+                class="ma-0 pa-0 menu-item text-center text-decoration-none"
+                style="width:100vw;height:8vh"
+                align="center"
+                @click="$store.commit('header', false)"
               >
-                <router-link
-                  to="/Work"
-                  class="text-decoration-none"
-                ><span @click="$store.commit('header', false)">Work</span></router-link>
-              </p>
-              <p
-                class="mt-4 menu-item text-center"
-                :class="{ 'd-none': $store.state.isActive }"
-              >
-                <router-link
-                  to="/"
-                  class="text-decoration-none"
-                ><span @click="$store.commit('header', true)">Home</span></router-link>
-              </p>
-              <v-spacer></v-spacer>
-            </v-list-item>
-
-            <v-list-item
+                <p class="ma-0 mt-5 pa-0"><span>Work</span></p>
+              </router-link>
+            </v-row>
+            <v-row
               class="ma-0 pa-0 menu-item"
+              :class="{ 'd-none': $store.state.isActive }"
               style="height:8vh"
+              align="center"
+            >
+              <router-link
+                to="/"
+                class="ma-0 pa-0 menu-item text-center text-decoration-none"
+                style="width:100vw;height:8vh"
+                align="center"
+                @click="$store.commit('header', true)"
+              >
+                <p class="ma-0 mt-5 pa-0"><span>Home</span></p>
+              </router-link>
+            </v-row>
+
+
+            <v-row
+              class="ma-0 pa-0 menu-item mobile"
+              style="height:8vh"
+              @click="myFunction()"
             >
               <v-spacer></v-spacer>
               <a
+                class="ma-0 mt-5 pa-0"
                 style="font-size:20px;color:#EDEDED !important"
-                @click="myFunction()"
               >Instagram</a>
               <v-spacer></v-spacer>
 
-            </v-list-item>
+            </v-row>
 
-            <v-list-item
-              class="ma-0 pa-0 menu-item"
+            <v-row
+              class="ma-0 pa-0 menu-item mobile"
               style="height:8vh"
+              @click="myFunction()"
             >
               <v-spacer></v-spacer>
               <a
+                class="ma-0 mt-5 pa-0"
                 style="font-size:20px;color:#EDEDED !important"
-                @click="myFunction()"
               >Whatsapp</a>
               <v-spacer></v-spacer>
-            </v-list-item>
+            </v-row>
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
@@ -228,6 +238,11 @@ export default {
     color: #EDEDED
     text-shadow: 3px 3px 3px rgba(0,0,0,0.2)
   .menu-item span:hover
+    cursor: pointer
+  .menu-item .mobile :hover
+    cursor: pointer
+
+  .mobile :hover
     cursor: pointer
 
 </style>
