@@ -53,7 +53,7 @@
                 align="center"
                 @click="$store.commit('header', false)"
               >
-                <p class="ma-0 mt-5 pa-0"><span>Work</span></p>
+                <p class="ma-0 mt-6 pa-0"><span>Work</span></p>
               </router-link>
             </v-row>
             <v-row
@@ -69,7 +69,7 @@
                 align="center"
                 @click="$store.commit('header', true)"
               >
-                <p class="ma-0 mt-5 pa-0"><span>Home</span></p>
+                <p class="ma-0 mt-6 pa-0"><span>Home</span></p>
               </router-link>
             </v-row>
 
