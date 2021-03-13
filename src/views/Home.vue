@@ -451,12 +451,7 @@ export default {
 
 <style lang="sass">
 
-  #input-58
-    color: #707070 !important
-    font-family: Montserrat !important
-    font-size: 20px !important
-
-  #input-56
+  input
     color: #707070 !important
     font-family: Montserrat !important
     font-size: 20px !important

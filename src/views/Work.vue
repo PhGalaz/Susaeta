@@ -16,19 +16,15 @@
           :src="item.pictures[0]" eager/>
 
       </v-row>
-      <v-row
-        class="ma-0 ml-16 pa-0 pl-16 d-none d-sm-flex"
-        style="position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:45vh;letter-spacing:0px;line-height:90%;font-weight:bold"
-      >
-        <p>{{ item.name }}<br><span style="font-size:20px">{{ item.location }}, {{ item.year }}</span></p>
-      </v-row>
+
+
 
 
 
 
 
       <v-row
-        class="ma-0 pa-0 d-sm-none"
+        class="ma-0 pa-0"
         style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:45vh;letter-spacing:0px;line-height:90%;font-weight:bold"
       >
         <v-spacer></v-spacer>

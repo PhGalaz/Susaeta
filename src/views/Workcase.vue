@@ -126,8 +126,8 @@
     </v-row>
     <v-row
       id="app"
-      class="ma-0 mx-16 pa-0 commander menu-item"
-      style="height:70px;font-family:Montserrat;color:#707070;font-weight:bold"
+      class="ma-0 mx-16 pa-0 commander"
+      style="height:70px;font-family:Montserrat;font-size:20px;color:#707070;font-weight:bold"
       align="center"
     >
 
