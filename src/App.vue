@@ -16,53 +16,83 @@
         <v-spacer></v-spacer>
 
       </v-app-bar>
-        <v-navigation-drawer
-          v-model="drawer"
-          style="z-index:1000;height:24vh;background-color:#EDEDED"
-          fixed
-          temporary
-          bottom
+      <v-navigation-drawer
+        v-model="drawer"
+        style="z-index:1000;height:24vh;background-color:transparent"
+        fixed
+        temporary
+        bottom
+        flat
+      >
+        <v-row
+          class="ma-0 pa-0"
+          style="background-color:#707070;width:100vw;height:24vh;position:absolute;opacity:0.3"
         >
-          <v-list
+
+        </v-row>
+        <v-list
+          class="ma-0 pa-0"
+          nav
+          dense
+        >
+          <v-list-item-group
             class="ma-0 pa-0"
-            nav
-            dense
+            v-model="group"
+            active-class=""
           >
-            <v-list-item-group
-              class="ma-0 pa-0"
-              v-model="group"
-              active-class=""
+            <v-list-item
+              class="ma-0 pa-0 menu-item"
+              style="height:8vh"
             >
-
-              <v-list-item
-                class="ma-0 pa-0"
-                style="height:8vh"
+              <v-spacer></v-spacer>
+              <p
+                class="mt-4 menu-item text-center"
+                :class="{ 'd-none': !$store.state.isActive }"
               >
-                <v-list-item-title>Work</v-list-item-title>
-              </v-list-item>
-
-              <v-list-item
-                class="ma-0 pa-0 menu-item"
-                style="height:8vh"
+                <router-link
+                  to="/Work"
+                  class="text-decoration-none"
+                ><span @click="$store.commit('header', false)">Work</span></router-link>
+              </p>
+              <p
+                class="mt-4 menu-item text-center"
+                :class="{ 'd-none': $store.state.isActive }"
               >
-                <v-spacer></v-spacer>
-                <a
-                  style="font-size:30px;color:#707070 !important"
-                  @click="myFunction()"
-                >Instagram</a>
-                <v-spacer></v-spacer>
+                <router-link
+                  to="/"
+                  class="text-decoration-none"
+                ><span @click="$store.commit('header', true)">Home</span></router-link>
+              </p>
+              <v-spacer></v-spacer>
+            </v-list-item>
 
-              </v-list-item>
+            <v-list-item
+              class="ma-0 pa-0 menu-item"
+              style="height:8vh"
+            >
+              <v-spacer></v-spacer>
+              <a
+                style="font-size:20px;color:#EDEDED !important"
+                @click="myFunction()"
+              >Instagram</a>
+              <v-spacer></v-spacer>
 
-              <v-list-item
-                class="ma-0 pa-0"
-                style="height:8vh"
-              >
-                <v-list-item-title>Account</v-list-item-title>
-              </v-list-item>
-            </v-list-item-group>
-          </v-list>
-        </v-navigation-drawer>
+            </v-list-item>
+
+            <v-list-item
+              class="ma-0 pa-0 menu-item"
+              style="height:8vh"
+            >
+              <v-spacer></v-spacer>
+              <a
+                style="font-size:20px;color:#EDEDED !important"
+                @click="myFunction()"
+              >Whatsapp</a>
+              <v-spacer></v-spacer>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
     </v-row>
 
     <v-row
