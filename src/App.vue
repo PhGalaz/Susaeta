@@ -1,6 +1,5 @@
 <template>
   <v-app
-    style="background-color:transparent"
   >
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -19,29 +18,46 @@
       </v-app-bar>
         <v-navigation-drawer
           v-model="drawer"
-          absolute
+          style="z-index:1000;height:24vh;background-color:#EDEDED"
+          fixed
           temporary
           bottom
         >
           <v-list
+            class="ma-0 pa-0"
             nav
             dense
           >
             <v-list-item-group
+              class="ma-0 pa-0"
               v-model="group"
-              active-class="deep-purple--text text--accent-4"
+              active-class=""
             >
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon>mdi-home</v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>Home</v-list-item-title>
+
+              <v-list-item
+                class="ma-0 pa-0"
+                style="height:8vh"
+              >
+                <v-list-item-title>Work</v-list-item-title>
               </v-list-item>
 
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon>mdi-account</v-icon>
-                </v-list-item-icon>
+              <v-list-item
+                class="ma-0 pa-0 menu-item"
+                style="height:8vh"
+              >
+                <v-spacer></v-spacer>
+                <a
+                  style="font-size:30px;color:#707070 !important"
+                  @click="myFunction()"
+                >Instagram</a>
+                <v-spacer></v-spacer>
+
+              </v-list-item>
+
+              <v-list-item
+                class="ma-0 pa-0"
+                style="height:8vh"
+              >
                 <v-list-item-title>Account</v-list-item-title>
               </v-list-item>
             </v-list-item-group>
