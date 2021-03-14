@@ -306,7 +306,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0 d-sm-none"
-        style="width:100vw;height:110vh;background-color:#C1B7A8"
+        style="width:100vw;height:100vh;background-color:#C1B7A8"
         align="center"
       >
         <v-row
@@ -315,7 +315,7 @@
           justify="center"
           align="center"
         >
-          <p class="ma-0 mx-16 pa-0 parr text-center" style="font-size:50px;line-height:90%">¿Vamos por<br><span>un buen café?</span></p>
+          <p class="ma-0 mt-4 mx-16 pa-0 parr text-center" style="font-size:50px;line-height:90%">¿Vamos por<br><span>un buen café?</span></p>
         </v-row>
         <v-row
           class="ma-0 pa-0"
