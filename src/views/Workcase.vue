@@ -1,9 +1,10 @@
 <template>
   <v-app
-    style="background-color:#EDEDED"
+    style="background-color:#707070;max-height:100vh;overflow-y:auto"
   >
     <v-row
       class="ma-0 pa-0"
+      style="background-color:#EDEDED"
     >
       <v-row
         class="ma-0 pa-0 d-none d-sm-flex"
@@ -42,7 +43,7 @@
 
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="height:75vh;width:100vw;z-index:0"
+      style="height:75vh;width:100vw;z-index:0;background-color:#EDEDED"
       align="center"
     >
       <v-col
@@ -62,7 +63,7 @@
     </v-row>
     <v-row
       class="ma-0 mb-16 pa-0 d-sm-none"
-      style="width:100vw;z-index:0"
+      style="width:100vw;z-index:0;background-color:#EDEDED"
       align="center"
     >
       <v-row
@@ -100,7 +101,7 @@
 
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="height:100vh"
+      style="height:100vh;background-color:#EDEDED"
       align="center"
     >
       <p class="mx-16 px-16 descripcion2">{{ this.case.description1 }}<br><br>{{ this.case.description2 }}</p>
@@ -108,6 +109,7 @@
     </v-row>
     <v-row
       class="ma-16 pa-0 py-16 d-sm-none"
+      style="height:100vh;background-color:#EDEDED"
       align="center"
     >
       <p class="descripcion1">{{ this.case.description1 }}<br><br>{{ this.case.description2 }}</p>
@@ -126,14 +128,14 @@
     </v-row>
     <v-row
       id="app"
-      class="ma-0 mx-16 pa-0 commander"
-      style="height:70px;font-family:Montserrat;font-size:20px;color:#707070;font-weight:bold"
+      class="ma-0 pa-0 commander"
+      style="height:70px;font-family:Montserrat;font-size:20px;color:#707070;font-weight:bold;background-color:#EDEDED"
       align="center"
     >
 
-      <span @click="anterior()">Anterior</span>
+      <span class="ma-0 ml-16 pa-0" @click="anterior()">Anterior</span>
       <v-spacer></v-spacer>
-      <span @click="siguiente()">Siguiente</span>
+      <span class="ma-0 mr-16 pa-0" @click="siguiente()">Siguiente</span>
 
     </v-row>
     <v-row

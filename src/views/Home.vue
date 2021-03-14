@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="background-color:transparent;position:absolute"
+    style="background-color:#707070;position:absolute"
   >
 
     <v-row

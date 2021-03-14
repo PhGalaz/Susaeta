@@ -1,7 +1,7 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute"
+    style="position:absolute;background-color:#707070;max-height:100vh;overflow-y:auto"
   >
     <v-row
       class="ma-0 pa-0"
