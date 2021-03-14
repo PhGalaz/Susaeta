@@ -306,23 +306,23 @@
       </v-row>
       <v-row
         class="ma-0 pa-0 d-sm-none"
-        style="width:100vw;height:100vh;background-color:#C1B7A8"
+        style="width:100vw;height:110vh;background-color:#C1B7A8"
         align="center"
       >
         <v-row
           class="ma-0 pa-0"
-          style="width:100%;height:50%"
+          style="width:100%"
           justify="center"
           align="center"
         >
-          <p class="ma-0 pa-0 parr" style="font-size:50px">¿Vamos por<br><span class="cafe">un buen café?</span></p>
+          <p class="ma-0 mx-16 pa-0 parr text-center" style="font-size:50px;line-height:90%">¿Vamos por<br><span>un buen café?</span></p>
         </v-row>
         <v-row
           class="ma-0 pa-0"
-          style="width:100%;height:50%"
+          style="width:100%"
         >
           <Form
-            class="ma-0 mx-16 pa-0"
+            class="ma-0 mx-8 pa-0"
           ></Form>
         </v-row>
 

@@ -51,7 +51,7 @@
               <router-link
                 to="/Work"
                 class="ma-0 pa-0 menu-item text-center text-decoration-none"
-                style="width:100vw;height:8vh"
+                style="width:100vw;height:8vh;font-size:15px"
                 align="center"
                 @click="$store.commit('header', false)"
               >
@@ -67,7 +67,7 @@
               <router-link
                 to="/"
                 class="ma-0 pa-0 menu-item text-center text-decoration-none"
-                style="width:100vw;height:8vh"
+                style="width:100vw;height:8vh;font-size:15px"
                 align="center"
                 @click="$store.commit('header', true)"
               >
@@ -84,7 +84,7 @@
               <v-spacer></v-spacer>
               <a
                 class="ma-0 mt-5 pa-0"
-                style="font-size:20px;color:#EDEDED !important"
+                style="font-size:15px;color:#EDEDED !important"
               >Instagram</a>
               <v-spacer></v-spacer>
 
@@ -98,7 +98,7 @@
               <v-spacer></v-spacer>
               <a
                 class="ma-0 mt-5 pa-0"
-                style="font-size:20px;color:#EDEDED !important"
+                style="font-size:15px;color:#EDEDED !important"
               >Whatsapp</a>
               <v-spacer></v-spacer>
             </v-row>
@@ -232,10 +232,6 @@ export default {
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
-
-  .pie
-    color: #EDEDED
-    line-height: 115%
 
   .header
     top: 5%
