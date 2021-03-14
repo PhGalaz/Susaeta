@@ -5,7 +5,7 @@
     <!-- Navegation drawer mobile only -->
     <v-row
       class="ma-0 pa-0 d-sm-none"
-      style="width:50vw;height:100vh;overflow-y:auto"
+      style="width:100vw;height:100vh"
     >
       <v-app-bar
         class="ma-0 pa-0"
