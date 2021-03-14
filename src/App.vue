@@ -1,9 +1,11 @@
 <template>
   <v-app
   >
+
+    <!-- Navegation drawer mobile only -->
     <v-row
       class="ma-0 pa-0 d-sm-none"
-      style="width:100vh"
+      style="width:50vw;height:100vh;overflow-y:auto"
     >
       <v-app-bar
         class="ma-0 pa-0"
@@ -104,6 +106,12 @@
         </v-list>
       </v-navigation-drawer>
     </v-row>
+
+
+
+
+
+
 
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"

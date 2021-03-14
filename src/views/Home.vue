@@ -28,8 +28,335 @@
 
           <v-img :src="photo" height="100%" eager/>
         </v-carousel-item>
-
       </v-carousel>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0"
+      style="background-color:#EAEAEA;width:100vw;top:1000px"
+    >
+      <v-row
+        class="ma-0 pa-0"
+        style="width:100vw;height:100vh"
+        align="center"
+      >
+        <p
+          class="ma-0 mx-16 pa-0 px-16 parr d-none d-sm-flex"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p
+          class="ma-0 mx-16 pa-0 mobileText d-sm-none"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+      </v-row>
+      <v-row
+        class="ma-0 pa-0"
+        style="width:100vw;background-color:#707070"
+      >
+        <v-col
+          class="ma-0 pa-0"
+          cols="12"
+          md="6"
+        >
+          <v-row
+            class="ma-0 pa-0"
+            style="max-height:50vh;min-height:50vh"
+          >
+            <router-link
+              :to="{ name: 'Workcase', params: {index: this.index0 } }"
+
+            >
+              <v-row
+                class="ma-0 pa-0 casa d-none d-sm-flex"
+                align="center"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index0].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index0].name }}
+                </v-row>
+              </v-row>
+            </router-link>
+
+
+            <v-img
+              :src="this.cabin0" :key="0" eager/>
+          </v-row>
+          <v-row
+            class="ma-0 pa-0"
+            style="max-height:50vh;min-height:50vh"
+          >
+            <router-link
+              :to="{ name: 'Workcase', params: {index: this.index1 } }"
+            >
+              <v-row
+                class="ma-0 pa-0 casa d-none d-sm-flex"
+                align="center"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index1].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index1].name }}
+                </v-row>
+              </v-row>
+            </router-link>
+
+
+            <v-img
+              style="max-height:50vh;min-height:50vh"
+              :src="this.cabin1" :key="1" eager/>
+          </v-row>
+
+
+
+
+        </v-col>
+        <v-col
+          class="ma-0 pa-0"
+          cols="12"
+          md="6"
+        >
+          <v-row
+            class="ma-0 pa-0"
+            style="max-height:50vh;min-height:50vh"
+          >
+            <router-link
+              :to="{ name: 'Workcase', params: {index: this.index2 } }"
+            >
+              <v-row
+                class="ma-0 pa-0 casa d-none d-sm-flex"
+                align="center"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index2].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index2].name }}
+                </v-row>
+              </v-row>
+            </router-link>
+
+
+            <v-img
+              style="max-height:50vh;min-height:50vh"
+              :src="this.cabin2" :key="2" eager/>
+          </v-row>
+          <v-row
+            class="ma-0 pa-0"
+            style="max-height:50vh;min-height:50vh"
+          >
+            <router-link
+              :to="{ name: 'Workcase', params: {index: this.index3 } }"
+            >
+              <v-row
+                class="ma-0 pa-0 casa d-none d-sm-flex"
+                align="center"
+              >
+                <v-row
+                  class="ma-0 pa-0 name"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index3].name }}
+                </v-row>
+              </v-row>
+              <v-row
+                class="ma-0 pa-0 casa mobile d-sm-none"
+                align="center"
+                style="width:100vw"
+              >
+                <v-row
+                  class="ma-0 pa-0 nameMobile"
+                  style="width:100%"
+                  justify="center"
+                  align="center"
+                >
+                  {{ $store.state.projects[this.index3].name }}
+                </v-row>
+              </v-row>
+            </router-link>
+
+
+            <v-img
+              style="max-height:50vh;min-height:50vh"
+              :src="this.cabin3" :key="3" eager/>
+          </v-row>
+        </v-col>
+      </v-row>
+      <v-row
+        class="ma-0 pa-0"
+        style="width:100vw"
+      >
+        <v-row
+          class="ma-0 pa-0"
+          style="width:100%;min-height:15vh;max-height:15vh"
+        >
+        </v-row>
+        <v-row
+          class="ma-0 pa-0"
+          :class="{'fotoEladio': $vuetify.breakpoint.xs,
+                    'fotoEladioSm': $vuetify.breakpoint.sm}"
+          style="width:100%"
+          align="center"
+        >
+          <v-col
+            class="ma-0 pa-0"
+            cols="12" sm="6"
+          >
+            <v-img
+              class="ma-0 pa-0"
+              :class="{'foto': $vuetify.breakpoint.xs,
+                        'fotoSm': $vuetify.breakpoint.sm}"
+              src="arquitecto_eladio_susaeta.png" eager/>
+          </v-col>
+          <v-col
+            class="ma-0 pa-0"
+            :class="{'foto': $vuetify.breakpoint.xs,
+                      'fotoSm': $vuetify.breakpoint.sm}"
+            cols="12" sm="6"
+            style="width:100vw"
+          >
+            <p
+              class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
+              style="font-size:40px !important"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <v-row
+              class="ma-0 pa-0 d-sm-none"
+              style="width:100vw;height:100vh"
+              align="center"
+            >
+              <p
+                class="ma-0 mx-16 pa-0 mobileText"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            </v-row>
+          </v-col>
+        </v-row>
+
+      </v-row>
+      <v-row
+        class="ma-0 pa-0 d-none d-sm-flex"
+        style="width:100vw;height:70vh;background-color:#C1B7A8"
+      >
+        <v-row
+          class="ma-0 pa-0 parr"
+          style="width:50vw;font-size:70px;line-height:100%"
+          align="center"
+        >
+          <p class="ma-0 ml-16 pa-0 pl-16">¿Vamos por<br><span class="cafe">un buen café?</span></p>
+        </v-row>
+        <v-row
+          class="ma-0 pa-0 parr"
+          style="width:50vw;font-size:70px;line-height:100%"
+          align="center"
+        >
+          <Form
+            class="ma-0 mr-16 pa-0 pr-16"
+          ></Form>
+        </v-row>
+      </v-row>
+      <v-row
+        class="ma-0 pa-0 d-sm-none"
+        style="width:100vw;height:100vh;background-color:#C1B7A8"
+        align="center"
+      >
+        <v-row
+          class="ma-0 pa-0"
+          style="width:100%;height:50%"
+          justify="center"
+          align="center"
+        >
+          <p class="ma-0 pa-0 parr" style="font-size:50px">¿Vamos por<br><span class="cafe">un buen café?</span></p>
+        </v-row>
+        <v-row
+          class="ma-0 pa-0"
+          style="width:100%;height:50%"
+        >
+          <Form
+            class="ma-0 mx-16 pa-0"
+          ></Form>
+        </v-row>
+
+      </v-row>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-none d-sm-flex"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-sm-none"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 text-center titulo d-none d-md-block"
+      style="font-size:110px;transform:scale(0.5)"
+      justify="center"
+      eager
+    >
+      <v-img class="shadowed" src="Asset 4.png" eager/>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 text-center titulo d-block d-md-none"
+      style="font-size:80px"
+      justify="center"
+      eager
+    >
+      <v-img class="shadowed" style="transform:scale(0.7)" src="Asset 4.png" eager/>
     </v-row>
 
 
