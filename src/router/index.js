@@ -46,7 +46,15 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  mode: 'history',
+  routes,
+  scrollBehavior: (to, from, savedPosition) => {
+    if (to.name == "Workcase" && from.name == "Home"){
+      return {x:0,y:0};
+    } else {
+      return savedPosition;
+    }
+  }
 })
 
 // This callback runs before every route change, including on page load.

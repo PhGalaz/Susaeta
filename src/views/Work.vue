@@ -20,8 +20,8 @@
 
 
       <v-row
-        class="ma-0 mt-4 pa-0 menu-item"
-        style="position:fixed;z-index:2000;top:45vh;color:#EDEDED"
+        class="ma-0 mt-4 pa-0 menu-item d-none"
+        style="position:fixed;top:45vh;color:#EDEDED"
         align="center"
       >
 
@@ -76,6 +76,9 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+
+.menu-item:hover
+  cursor: pointer
 
 </style>

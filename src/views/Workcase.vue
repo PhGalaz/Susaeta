@@ -16,7 +16,7 @@
       </v-row>
       <v-row
         class="ma-0 mt-4 pa-0 menu-item"
-        style="position:fixed;z-index:2000;top:45vh;color:#EDEDED"
+        style="position:fixed;z-index:1;top:45vh;color:#EDEDED"
         align="center"
       >
 
@@ -168,7 +168,6 @@ export default {
     },
     created(){
       this.$store.commit('header', false);
-      window.scrollTo(0,0);
       this.case = this.$store.state.projects[this.index];
 
     },
