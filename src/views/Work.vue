@@ -1,6 +1,7 @@
 <template>
   <v-row
     class="ma-0 pa-0"
+    style="position:absolute"
   >
     <v-row
       class="ma-0 pa-0"
@@ -18,7 +19,21 @@
       </v-row>
 
 
+      <v-row
+        class="ma-0 mt-4 pa-0 menu-item"
+        style="position:fixed;z-index:2000;top:45vh;color:#EDEDED"
+        align="center"
+      >
 
+        <v-icon
+          class="ma-0 mr-3 mb-4 pa-0"
+          medium
+          color= "#EDEDED"
+        >
+          mdi-arrow-collapse-left
+        </v-icon>
+        <p @click="$router.go(-1)">Volver</p>
+      </v-row>
 
 
 
@@ -56,7 +71,6 @@
   export default {
     created(){
       this.$store.commit('header', false);
-      window.scrollTo(0,0);
 
     }
   }

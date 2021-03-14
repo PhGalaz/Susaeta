@@ -136,6 +136,20 @@
       <span @click="siguiente()">Siguiente</span>
 
     </v-row>
+    <v-row
+      class="ma-0 pa-0 d-none d-sm-flex"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-sm-none"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
+    </v-row>
 
   </v-app>
 </template>
@@ -149,6 +163,9 @@ export default {
         case: []
       }
     },
+    components: {
+      'Footer': require('@/components/Footer.vue').default
+    },
     created(){
       this.$store.commit('header', false);
       window.scrollTo(0,0);
@@ -157,11 +174,9 @@ export default {
     },
     methods: {
       anterior(){
-        window.scrollTo(0,0);
         this.case = this.$store.state.projects[(this.case.id + this.$store.state.projects.length - 1) % this.$store.state.projects.length];
       },
       siguiente(){
-        window.scrollTo(0,0);
         this.case = this.$store.state.projects[(this.case.id + 1) % this.$store.state.projects.length];
       }
     }

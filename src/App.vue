@@ -1,5 +1,6 @@
 <template>
   <v-app
+    style="background-color:#707070;position:absolute"
   >
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -157,21 +158,13 @@
 
     </v-row>
 
-    <router-view></router-view>
-    <v-row
-      class="ma-0 pa-0 d-none d-sm-flex"
-      style="width:100vw;background-color:#91816A;height:100px"
-      align="center"
-    >
-      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
-    </v-row>
-    <v-row
-      class="ma-0 pa-0 d-sm-none"
-      style="width:100vw;background-color:#91816A;height:100px"
-      align="center"
-    >
-      <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
-    </v-row>
+    <transition
+        :name="transitionName"
+
+      >
+        <router-view/>
+    </transition>
+
 
 
   </v-app>
@@ -179,6 +172,7 @@
 
 <script>
 
+const DEFAULT_TRANSITION = 'fade';
 
 export default {
 
@@ -186,12 +180,23 @@ export default {
   data: () => ({
     isActive: true,
     drawer: false,
-    group: null
+    group: null,
+    transitionName: DEFAULT_TRANSITION
   }),
-  components: {
-    'Footer': require('@/components/Footer.vue').default
-  },
   created () {
+    this.$router.beforeEach((to, from, next) => {
+      let transitionName = to.meta.transitionName || from.meta.transitionName;
+
+      if (transitionName === 'slide') {
+        const toDepth = to.path.length;
+        const fromDepth = from.path.length;
+        transitionName = toDepth > fromDepth ? 'router' : 'router-left';
+      }
+
+      this.transitionName = transitionName || DEFAULT_TRANSITION;
+
+      next();
+    });
   },
   methods: {
     myFunction: function () {
@@ -236,7 +241,7 @@ export default {
     font-size: 20px
     font-weight: bold
     color: #EDEDED
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.2)
+    text-shadow: 3px 3px 3px rgba(113,113,113,.2)
   .menu-item span:hover
     cursor: pointer
   .menu-item .mobile :hover
@@ -244,5 +249,51 @@ export default {
 
   .mobile :hover
     cursor: pointer
+
+
+
+  .router-enter-active
+    animation: router-out .5s ease-in
+
+  .router-leave-active
+    animation: router-in .5s reverse ease-out
+
+  @keyframes router-in
+    0%
+      transform: translate(-100%, 0)
+
+    100%
+      transform: translate(0, 0)
+
+  @keyframes router-out
+    0%
+      transform: translate(100%, 0)
+
+    100%
+      transform: translate(0, 0)
+
+
+
+
+  .router-left-enter-active
+    animation: router-left-out .5s ease-in
+
+  .router-left-leave-active
+    animation: router-left-in .5s reverse ease-out
+
+  @keyframes router-left-in
+    0%
+      transform: translate(100%, 0)
+
+    100%
+      transform: translate(0, 0)
+
+  @keyframes router-left-out
+    0%
+      transform: translate(-100%, 0)
+
+    100%
+      transform: translate(0, 0)
+
 
 </style>

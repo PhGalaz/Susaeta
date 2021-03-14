@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="background-color:transparent"
+    style="background-color:transparent;position:absolute"
   >
 
     <v-row
@@ -329,6 +329,20 @@
 
         </v-row>
       </v-row>
+      <v-row
+        class="ma-0 pa-0 d-none d-sm-flex"
+        style="width:100vw;background-color:#91816A;height:100px"
+        align="center"
+      >
+        <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+      </v-row>
+      <v-row
+        class="ma-0 pa-0 d-sm-none"
+        style="width:100vw;background-color:#91816A;height:100px"
+        align="center"
+      >
+        <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
+      </v-row>
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-none d-md-block"
@@ -374,13 +388,13 @@ export default {
     last: null
   }),
   components: {
-    'Form': require('@/components/Form.vue').default
+    'Form': require('@/components/Form.vue').default,
+    'Footer': require('@/components/Footer.vue').default
   },
   beforeCreate(){
 
   },
   created(){
-    window.scrollTo(0,0);
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;

@@ -20,7 +20,8 @@ const routes = [
           property: 'og:description',
           content: 'Página profesional arquitecto Eladio Susaeta.'
         }
-      ]
+      ],
+      transitionName: 'slide'
     }
   },
   {
@@ -29,7 +30,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Work.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Work.vue'),
+    meta: { transitionName: 'slide' }
   },
   {
     path: '/workcase',
@@ -38,7 +40,8 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Workcase.vue'),
-    props: true
+    props: true,
+    meta: { transitionName: 'slide' }
   }
 ]
 
