@@ -1,7 +1,7 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="font-family:Montserrat"
+    style="font-family:Montserrat;height:100px"
     align="center"
   >
     <v-row

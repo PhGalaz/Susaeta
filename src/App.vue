@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="position:absolute;max-height:100vh;overflow-y:auto"
+    style="position:absolute"
   >
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -162,7 +162,8 @@
         :name="transitionName"
 
       >
-        <router-view/>
+      <keep-alive><router-view/></keep-alive>
+
     </transition>
 
 
