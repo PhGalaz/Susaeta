@@ -1,6 +1,5 @@
 <template>
   <v-app
-    style="position:absolute;max-width:100vh"
   >
     <v-row
       class="ma-0 pa-0 d-sm-none"
