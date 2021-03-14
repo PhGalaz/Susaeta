@@ -7,7 +7,11 @@ import router from './router'
 import store from './store'
 
 const myTransition = createSimpleTransition("my-transition");
+const myTransitionVertical = createSimpleTransition("my-transition-vertical");
+const myTransitionVerticalReverse = createSimpleTransition("my-transition-vertical-reverse");
 Vue.component("my-carousel", myTransition);
+Vue.component("my-carousel-vertical", myTransitionVertical);
+Vue.component("my-carousel-vertical-reverse", myTransitionVerticalReverse);
 Vue.use(VueRouter)
 
 

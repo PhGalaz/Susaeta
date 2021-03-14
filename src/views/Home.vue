@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="background-color:#707070;position:absolute;max-height:100vh;overflow-y:auto"
+    style="position:absolute;background-color:#707070;max-height:100vh;overflow-y:auto"
   >
 
     <v-row
@@ -327,22 +327,21 @@
           ></Form>
         </v-row>
 
-        </v-row>
       </v-row>
-      <v-row
-        class="ma-0 pa-0 d-none d-sm-flex"
-        style="width:100vw;background-color:#91816A;height:100px"
-        align="center"
-      >
-        <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
-      </v-row>
-      <v-row
-        class="ma-0 pa-0 d-sm-none"
-        style="width:100vw;background-color:#91816A;height:100px"
-        align="center"
-      >
-        <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
-      </v-row>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-none d-sm-flex"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-sm-none"
+      style="width:100vw;background-color:#91816A;height:100px"
+      align="center"
+    >
+      <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-none d-md-block"

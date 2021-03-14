@@ -162,7 +162,7 @@
         :name="transitionName"
 
       >
-      <keep-alive><router-view/></keep-alive>
+      <router-view/>
 
     </transition>
 
@@ -212,7 +212,7 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap')
   @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap')
 
-  body::-webkit-scrollbar
+  ::-webkit-scrollbar
     display: none
 
   .v-application a
@@ -274,13 +274,11 @@ export default {
       transform: translate(0, 0)
 
 
-
-
   .router-left-enter-active
     animation: router-left-out 5s ease-in
 
   .router-left-leave-active
-    animation: router-left-in 5s reverse ease-out
+    animation: router-left-in 5s reverse  ease-out
 
   @keyframes router-left-in
     0%
