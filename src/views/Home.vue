@@ -467,6 +467,7 @@ export default {
     color: #707070 !important
     font-family: Montserrat !important
     font-size: 20px !important
+    border-radius: 0px !important
 
   .fotoEladio
     height: 200vh !important

@@ -61,15 +61,16 @@
     color: red !important
     font-family: Montserrat !important
     font-size: 20px !important
+    border-radius: 0px !important
 
 
   .v-text-field--outlined fieldset
-    color: #707070 !important
+    color: #EDEDED !important
     border-radius: 0px !important
     opacity: .6 !important
 
   .v-text-field--outlined textarea
-    color: #707070 !important
+    color: #EDEDED !important
     border-radius: 0px !important
 
 
