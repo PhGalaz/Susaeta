@@ -70,7 +70,7 @@
     opacity: .6 !important
 
   .v-text-field--outlined textarea
-    color: #EDEDED !important
+    color: #707070 !important
     border-radius: 0px !important
 
 
