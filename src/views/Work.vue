@@ -14,8 +14,8 @@
       <v-carousel-item
         style="height:100vh; width:100vw"
         eager
-        transition="my-carousel-vertical"
-        reverse-transition="my-carousel-vertical-reverse"
+
+
 
 
         v-for="(item, index) in $store.state.projects" :key="index"
@@ -130,5 +130,7 @@
   .my-carousel-vertical-reverse-leave-to
 
     transform: translate(0, 100%)
+
+
 
 </style>
