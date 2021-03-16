@@ -347,7 +347,7 @@
       <v-row
         class="ma-0 pa-0"
       >
-        <Footer class="ma-0 pa-0" style="height:130px"></Footer>
+        <Footer class="ma-0 pa-0"></Footer>
       </v-row>
     </v-row>
     <v-row
