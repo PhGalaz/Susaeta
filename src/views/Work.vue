@@ -108,7 +108,8 @@
     },
     methods: {
       onSwipeUp: async function () {
-        window.scrollTo(1, 1)
+        var container = this.$el.querySelector("#container");
+        container.scrollTop = container.scrollHeight;
         if (this.blokeo == false){
           console.log('action')
           this.blokeo = true
