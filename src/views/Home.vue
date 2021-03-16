@@ -307,7 +307,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0 d-sm-none"
-        style="width:100vw;height:120vh;background-color:#C1B7A8"
+        style="width:100vw;height:100vh;background-color:#C1B7A8"
         align="center"
       >
         <v-row
