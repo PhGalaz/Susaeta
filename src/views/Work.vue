@@ -14,7 +14,7 @@
       :show-arrows="false"
       continuos
       :vertical="true"
-      :reverse="false"
+      :reverse="this.reverse"
       touchless
       v-model="model"
     >
@@ -93,6 +93,7 @@
     data: () => ({
       model: 4,
       blokeo: false,
+      reverse: false,
       lastScrollPosition: 0
     }),
     created(){
@@ -119,9 +120,11 @@
       },
       onSwipeDown: async function () {
         if (this.blokeo == false){
+          this.reverse = true
           this.blokeo = true
           this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
           await this.sleep(2000);
+          this.reverse = false
           this.blokeo = false
         }
       },
