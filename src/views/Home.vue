@@ -342,7 +342,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
-      style="width:100vw;background-color:#91816A;height:100px"
+      style="width:100vw;background-color:#91816A;height:120px"
       align="center"
     >
       <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
