@@ -108,7 +108,7 @@
     },
     methods: {
       onSwipeUp: async function () {
-        window.scrollTo(0, 100);
+        window.scrollTo(0, 1);
         if (this.blokeo == false){
           this.blokeo = true
           this.model = this.model + 1 % this.$store.state.projects.length
@@ -117,6 +117,7 @@
         }
       },
       onSwipeDown: async function () {
+        window.scrollTo(0, 1);
         if (this.blokeo == false){
           this.reverse = true
           this.blokeo = true
