@@ -1,7 +1,10 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:100vh + 1px;overflow-y:auto"
+    style="position:absolute;background-color:#707070;height:100vh;overflow-y:auto"
+    v-hammer:swipe.down="onSwipeDown"
+    v-hammer:swipe.up="onSwipeDown"
+
   >
     <v-carousel
       style="width:100vw"
@@ -25,7 +28,6 @@
         <v-row
           class="ma-0 pa-0 container"
           style="height:100vh !important;width:100vw;z-index:0"
-          v-hammer:swipe.down="onSwipeLeft"
         >
           <v-img
             style="max-height:100vh !important;min-height:100vh !important"
@@ -100,8 +102,12 @@
       window.removeEventListener('scroll', this.onScroll)
     },
     methods: {
-      onSwipeLeft: function () {
-        this.model--
+      onSwipeDown: function () {
+        console.log('down')
+        console.log(this.model)
+        console.log('doom')
+        this.model = this.model + 1 % this.$store.state.projects.length
+        console.log(this.model)
       },
       onScroll () {
         // Get the current scroll position
