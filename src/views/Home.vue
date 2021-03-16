@@ -342,7 +342,6 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
-      style="height:130px"
       align="center"
     >
       <v-row

@@ -1,12 +1,11 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;font-family:Montserrat;height:130px;width:100%;background-color:#91816A"
+    style="position:absolute;font-family:Montserrat;width:100%;background-color:#91816A"
     align="center"
   >
     <v-row
       class="ma-0 mx-sm-16 pa-0 px-sm-16 d-none d-sm-flex"
-      style="height:130px"
       align="center"
     >
       <v-row
@@ -32,7 +31,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="height:130px;width:100px"
+        style="width:100px"
         justify="end"
         align="center"
       >
@@ -45,8 +44,8 @@
       class="ma-0 pa-0 d-sm-none"
       justify="center"
     >
-      <v-img max-height="60px" max-width="60px" src="logo.png"/>
-      <p class="ma-0 mt-2 pa-0 pie text-center" style="width:100vw;font-size:12px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
+      <v-img class="ma-0 mb-2 pa-0" max-height="60px" max-width="60px" src="logo.png"/>
+      <p class="ma-0 pa-0 pie text-center" style="width:100vw;font-size:12px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
         <v-icon
           class="mr-1 mb-1"
           x-small
