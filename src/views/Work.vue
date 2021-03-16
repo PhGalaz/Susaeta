@@ -108,6 +108,7 @@
     },
     methods: {
       onSwipeUp: async function () {
+        window.scrollTo(1, 1)
         if (this.blokeo == false){
           console.log('action')
           this.blokeo = true
