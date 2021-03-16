@@ -67,10 +67,10 @@
           >
             <v-row
               class="ma-0 mt-4 pa-0 menu-item"
-              style="font-size:30px"
+              style="font-size:25px"
               align="center"
             >
-              <p class="text-right" style="line-height:25px">{{ item.name }}<br><span style="font-size:20px">{{ item.location }}, {{ item.year }}</span></p>
+              <p class="text-right" style="line-height:20px">{{ item.name }}<br><span style="font-size:15px">{{ item.location }}, {{ item.year }}</span></p>
               <v-icon
                 class="ma-0 ml-3 mb-3 pa-0"
                 medium
