@@ -3,7 +3,7 @@
   <v-row
     id="conte"
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:120vh;overflow-y:auto"
+    style="position:absolute;background-color:#707070;height:100vh;overflow-y:auto"
 
 
   >
@@ -109,6 +109,7 @@
     },
     methods: {
       onSwipeUp: async function () {
+        window.scrollTo(0, 1);
         if (this.blokeo == false){
           this.blokeo = true
           this.model = this.model + 1 % this.$store.state.projects.length
