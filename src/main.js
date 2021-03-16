@@ -14,6 +14,8 @@ Vue.component("my-carousel-vertical", myTransitionVertical);
 Vue.component("my-carousel-vertical-reverse", myTransitionVerticalReverse);
 Vue.use(VueRouter)
 
+import { VueHammer } from 'vue2-hammer'
+Vue.use(VueHammer)
 
 new Vue({
   vuetify,

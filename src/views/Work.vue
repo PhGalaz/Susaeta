@@ -1,27 +1,31 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;max-height:100vh;overflow-y:auto"
+    style="position:absolute;background-color:#707070;height:100vh + 1px;overflow-y:auto"
   >
     <v-carousel
       style="width:100vw"
       height="100vh"
       hide-delimiters
-      :show-arrows="true"
+      :show-arrows="false"
       continuos
       :vertical="true"
+      :reverse="false"
 
+      v-model="model"
     >
       <v-carousel-item
         style="height:100vh; width:100vw"
         eager
-        reverse-transition="my-carousel-vertical-reverse"
         transition="my-carousel-vertical"
+        reverse-transition="my-carousel-vertical-reverse"
         v-for="(item, index) in $store.state.projects" :key="index"
+
       >
         <v-row
-          class="ma-0 pa-0"
+          class="ma-0 pa-0 container"
           style="height:100vh !important;width:100vw;z-index:0"
+          v-hammer:swipe.down="onSwipeLeft"
         >
           <v-img
             style="max-height:100vh !important;min-height:100vh !important"
@@ -81,8 +85,35 @@
 
 <script>
   export default {
+    data: () => ({
+      model: 4,
+      lastScrollPosition: 0
+    }),
     created(){
       this.$store.commit('header', false);
+
+    },
+    mounted () {
+      const container = document.querySelector('.container');
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.onScroll)
+    },
+    methods: {
+      onSwipeLeft: function () {
+        this.model--
+      },
+      onScroll () {
+        // Get the current scroll position
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+        // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+        if (currentScrollPosition < 0) {
+          return
+        }
+        console.log(currentScrollPosition)
+        // Set the current scroll position as the last scroll position
+        this.lastScrollPosition = currentScrollPosition
+      },
 
     }
   }
