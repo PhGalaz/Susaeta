@@ -96,7 +96,7 @@
 
     },
     mounted () {
-      const container = document.querySelector('.container');
+
     },
     beforeDestroy () {
       window.removeEventListener('scroll', this.onScroll)
