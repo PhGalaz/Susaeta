@@ -106,10 +106,11 @@
     },
     methods: {
       onSwipeUp: function () {
-        this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
+        this.model = this.model + 1 % this.$store.state.projects.length
+
       },
       onSwipeDown: function () {
-        this.model = this.model + 1 % this.$store.state.projects.length
+        this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
       },
       onScroll () {
         // Get the current scroll position
