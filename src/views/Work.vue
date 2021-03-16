@@ -1,7 +1,8 @@
 <template>
 
   <v-row
-    class="ma-0 pa-0 conte"
+    id="conte"
+    class="ma-0 pa-0"
     style="position:absolute;background-color:#707070;height:100vh;overflow-y:auto"
 
 
@@ -108,8 +109,6 @@
     },
     methods: {
       onSwipeUp: async function () {
-        var container = this.$el.querySelector("#conte");
-        container.scrollTop = container.scrollHeight;
         if (this.blokeo == false){
           console.log('action')
           this.blokeo = true
