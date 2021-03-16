@@ -10,14 +10,13 @@
       :show-arrows="true"
       continuos
       :vertical="true"
+
     >
       <v-carousel-item
         style="height:100vh; width:100vw"
         eager
-
-
-
-
+        reverse-transition="my-carousel-vertical-reverse"
+        transition="my-carousel-vertical"
         v-for="(item, index) in $store.state.projects" :key="index"
       >
         <v-row

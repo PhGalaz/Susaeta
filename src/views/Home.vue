@@ -307,7 +307,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0 d-sm-none"
-        style="width:100vw;height:100vh;background-color:#C1B7A8"
+        style="width:100vw;height:120vh;background-color:#C1B7A8"
         align="center"
       >
         <v-row
@@ -316,7 +316,7 @@
           justify="center"
           align="center"
         >
-          <p class="ma-0 mt-4 mx-16 pa-0 parr text-center" style="font-size:50px;line-height:90%">¿Vamos por<br><span>un buen café?</span></p>
+          <p class="ma-0 mt-4 mx-16 pa-0 parrr text-center" style="font-size:50px;line-height:110%">¿Vamos por<br><span>un buen café?</span></p>
         </v-row>
         <v-row
           class="ma-0 pa-0"
@@ -334,7 +334,11 @@
       style="width:100vw;background-color:#91816A;height:100px"
       align="center"
     >
-      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+      <v-row
+        class="ma-0 mx-16 pa-0 px-16"
+      >
+        <Footer class="ma-0 pa-0"></Footer>
+      </v-row>
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -547,6 +551,13 @@ export default {
     letter-spacing: 1px
     color: #707070
     line-height: 120%
+
+  .parrr
+    font-size: 60px
+    font-family: Vollkorn
+    font: normal normal normal Vollkorn
+    letter-spacing: 1px
+    color: #707070
 
   .mobileText
     font-size: 30px

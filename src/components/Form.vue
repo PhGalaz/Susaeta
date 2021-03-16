@@ -41,7 +41,7 @@
     >
       <v-spacer></v-spacer>
       <v-btn
-        style="text-transform:none;font-size:15px;font-family:Montserrat"
+        style="text-transform:none;font-size:20px;font-family:Montserrat;letter-spacing: 0px"
         text
         color="#707070"
       >
