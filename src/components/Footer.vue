@@ -45,8 +45,8 @@
       class="ma-0 pa-0 d-sm-none"
       justify="center"
     >
-      <v-img max-height="50px" max-width="50px" src="logo.png"/>
-      <p class="ma-0 mt-2 pa-0 pie text-center" style="width:100vw;font-size:15px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
+      <v-img max-height="60px" max-width="60px" src="logo.png"/>
+      <p class="ma-0 mt-2 pa-0 pie text-center" style="width:100vw;font-size:12px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
         <v-icon
           class="mr-1 mb-1"
           x-small
@@ -54,11 +54,11 @@
         >
           mdi-copyright
         </v-icon>
-        <span style="font-size:15px">{{ new Date().getFullYear() }}</span><br>
-        <span style="font-size:10px">developed by
+        <span style="font-size:12px">{{ new Date().getFullYear() }}</span><br>
+        <span style="font-size:8px">developed by
           <a
             class="ma-0 pa-0 agency"
-            style="font-size:10px;color:#EDEDED !important"
+            style="font-size:8px;color:#EDEDED !important"
             @click="Salvador()"
           >Salvador</a>
         </span>

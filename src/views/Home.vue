@@ -347,9 +347,8 @@
     >
       <v-row
         class="ma-0 pa-0"
-        style="background-color:red"
       >
-        <Footer class="ma-0 pa-0" style="background-color:red;height:130px"></Footer>
+        <Footer class="ma-0 pa-0" style="height:130px"></Footer>
       </v-row>
     </v-row>
     <v-row
