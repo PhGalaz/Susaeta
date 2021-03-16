@@ -335,17 +335,22 @@
       align="center"
     >
       <v-row
-        class="ma-0 mx-16 pa-0 px-16"
+        class="ma-0 pa-0"
       >
         <Footer class="ma-0 pa-0"></Footer>
       </v-row>
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
-      style="width:100vw;background-color:#91816A;height:190px"
+      style="height:130px"
       align="center"
     >
-      <Footer class="ma-0 mx-5 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
+      <v-row
+        class="ma-0 pa-0"
+        style="background-color:red"
+      >
+        <Footer class="ma-0 pa-0" style="background-color:red;height:130px"></Footer>
+      </v-row>
     </v-row>
     <v-row
       class="ma-0 pa-0 text-center titulo d-none d-md-block"
