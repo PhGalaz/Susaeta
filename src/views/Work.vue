@@ -92,6 +92,7 @@
   export default {
     data: () => ({
       model: 4,
+      blokeo: false,
       lastScrollPosition: 0
     }),
     created(){
@@ -105,12 +106,26 @@
       window.removeEventListener('scroll', this.onScroll)
     },
     methods: {
-      onSwipeUp: function () {
-        this.model = this.model + 1 % this.$store.state.projects.length
-
+      onSwipeUp: async function () {
+        if (this.blokeo == false){
+          this.blokeo = true
+          this.model = this.model + 1 % this.$store.state.projects.length
+          await this.sleep(2000);
+          this.blokeo = false
+        }
       },
-      onSwipeDown: function () {
-        this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
+      onSwipeDown: async function () {
+        if (this.blokeo == false){
+          this.blokeo = true
+          this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
+          await this.sleep(2000);
+          this.blokeo = false
+        }
+      },
+      sleep(sec) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, sec);
+        });
       },
       onScroll () {
         // Get the current scroll position
