@@ -27,7 +27,7 @@
         >
 
 
-          <v-img :src="photo" height="100%" eager/>
+          <v-img :src="photo" height="100%" width="100%" eager/>
         </v-carousel-item>
       </v-carousel>
     </v-row>
