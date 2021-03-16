@@ -1,21 +1,21 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="font-family:Montserrat;height:120px"
+    style="font-family:Montserrat;height:130px"
     align="center"
   >
     <v-row
 
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="height:120px"
+      style="height:130px"
       align="center"
     >
       <v-row
         class="ma-0 pa-0"
-        style="height:120px"
+        style="height:130px"
         align="center"
       >
-        <p class="ma-0 pa-0 pie">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
+        <p class="ma-0 pa-0 pie" style="line-height:130%">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
           <v-icon
             class="mr-1 mb-1"
             x-small
@@ -33,7 +33,7 @@
       </v-row>
       <v-row
         class="ma-0 pa-0"
-        style="height:120px;width:100px"
+        style="height:130px;width:100px"
         justify="end"
         align="center"
       >
@@ -46,8 +46,8 @@
       class="ma-0 pa-0 d-sm-none"
       justify="center"
     >
-      <v-img max-height="40px" max-width="40px" src="logo.png"/>
-      <p class="ma-0 mt-2 pa-0 pie text-center" style="font-size:15px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
+      <v-img max-height="50px" max-width="50px" src="logo.png"/>
+      <p class="ma-0 mt-2 pa-0 pie text-center" style="width:100vw;font-size:15px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
         <v-icon
           class="mr-1 mb-1"
           x-small
@@ -82,5 +82,5 @@
     cursor: pointer
   .pie
     color: #EDEDED
-    line-height: 115%
+    line-height: 135%
 </style>
