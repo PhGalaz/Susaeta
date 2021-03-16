@@ -108,10 +108,13 @@
     methods: {
       onSwipeUp: async function () {
         if (this.blokeo == false){
+          console.log('action')
           this.blokeo = true
           this.model = this.model + 1 % this.$store.state.projects.length
+          console.log(this.blokeo)
           await this.sleep(2000);
           this.blokeo = false
+          console.log(this.blokeo)
         }
       },
       onSwipeDown: async function () {
