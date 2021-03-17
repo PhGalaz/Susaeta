@@ -1,7 +1,7 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;font-family:Montserrat;width:100%;background-color:#91816A"
+    style="font-family:Montserrat;width:100%;background-color:#91816A"
     align="center"
   >
     <v-row
