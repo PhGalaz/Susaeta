@@ -422,7 +422,7 @@ export default {
     this.index3 = this.random_set[3][1];
     this.init();
   },
-  mounted(){
+  mounted () {
     
   },
   methods: {
