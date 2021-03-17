@@ -331,7 +331,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="width:100vw;background-color:#91816A;height:120px"
+      style="width:100vw;background-color:#91816A;min-height:160px"
       align="center"
     >
       <v-row
@@ -342,6 +342,7 @@
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
+      style="min-height:190px;background-color:#91816A"
       align="center"
     >
       <v-row

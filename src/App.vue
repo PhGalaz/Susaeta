@@ -71,7 +71,7 @@
                 align="center"
                 @click="$store.commit('header', true)"
               >
-                <p class="ma-0 mt-6 pa-0"><span>Home</span></p>
+                <p class="ma-0 mt-5 pa-0"><span>Home</span></p>
               </router-link>
             </v-row>
 
@@ -80,11 +80,13 @@
               class="ma-0 pa-0 menu-item mobile"
               style="height:8vh"
               @click="myFunction()"
+              align="center"
             >
               <v-spacer></v-spacer>
               <a
                 class="ma-0 mt-5 pa-0"
-                style="font-size:15px;color:#EDEDED !important"
+                style="font-size:15px;color:#EDEDED !important;height:100%"
+                align="center"
               >Instagram</a>
               <v-spacer></v-spacer>
 
@@ -98,7 +100,7 @@
               <v-spacer></v-spacer>
               <a
                 class="ma-0 mt-5 pa-0"
-                style="font-size:15px;color:#EDEDED !important"
+                style="font-size:15px;color:#EDEDED !important;height:100%"
               >Whatsapp</a>
               <v-spacer></v-spacer>
             </v-row>
