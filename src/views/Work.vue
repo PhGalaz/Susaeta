@@ -2,7 +2,7 @@
 
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:100vh;overflow-y:auto"
+    style="position:absolute;background-color:#707070;height:100vh + 1px;overflow-y:auto"
 
 
   >
@@ -101,7 +101,8 @@
 
     },
     mounted () {
-
+      var elem = this.$el;
+      elem.scrollTop = elem.clientHeight;
     },
     beforeDestroy () {
       window.removeEventListener('scroll', this.onScroll)
