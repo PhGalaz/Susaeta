@@ -39,7 +39,7 @@
 
         <v-row
           class="ma-0 mt-4 pa-0 menu-item d-none"
-          style="position:fixed;top:45vh;color:#EDEDED"
+          style="position:fixed;top:75vh;color:#EDEDED"
           align="center"
         >
 
@@ -58,7 +58,7 @@
 
         <v-row
           class="ma-0 pa-0"
-          style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:45vh;letter-spacing:0px;line-height:90%;font-weight:bold"
+          style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:75vh;letter-spacing:0px;line-height:90%;font-weight:bold"
         >
           <v-spacer></v-spacer>
           <router-link

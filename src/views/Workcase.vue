@@ -2,7 +2,7 @@
   <v-row
     class="ma-0 pa-0"
     id='tee'
-    style="position:absolute;background-color:#707070;max-height:100vh;overflow-y:auto"
+    style="position:absolute;background-color:#EDEDED;max-height:100vh;max-width:100vw;overflow-y:auto;overflow-y:none"
   >
     <v-row
 
@@ -20,7 +20,7 @@
       </v-row>
       <v-row
         class="ma-0 mt-4 pa-0 menu-item"
-        style="position:fixed;z-index:1;top:45vh;color:#EDEDED"
+        style="position:fixed;z-index:1;top:75vh;color:#EDEDED"
         align="center"
       >
 
@@ -45,8 +45,8 @@
     </v-row>
 
     <v-row
-      class="ma-0 pa-0 d-none d-sm-flex"
-      style="height:75vh;width:100vw;z-index:0;background-color:#EDEDED"
+      class="ma-0 my-16 pa-0 py-8 d-none d-sm-flex"
+      style="width:100vw;z-index:0;background-color:#EDEDED"
       align="center"
     >
       <v-col
@@ -156,10 +156,10 @@
 
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="width:100vw;background-color:#91816A;height:100px"
+      style="width:100vw;background-color:#91816A;height:160px"
       align="center"
     >
-      <Footer class="ma-0 mx-16 pa-0 px-16"></Footer>
+      <Footer class="ma-0 pa-0"></Footer>
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -222,14 +222,14 @@ export default {
 
   .locations
     line-height: 110%
-    font-size: 30px
+    font-size: 20px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
 
   .contractors
     line-height: 110%
-    font-size: 30px
+    font-size: 20px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
