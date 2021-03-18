@@ -3,7 +3,7 @@
   <v-row
     class="ma-0 pa-0"
     style="position:absolute;background-color:#707070;height:100vh"
-
+    @wheel="handleWheel()"
 
   >
   <v-touch @swipeup="onSwipeUp" @swipedown="onSwipeDown">
@@ -107,7 +107,6 @@
     },
     methods: {
       onSwipeUp: async function () {
-        window.scrollTo(0, 1);
         if (this.blokeo == false){
           this.blokeo = true
           this.model = this.model + 1 % this.$store.state.projects.length
@@ -116,7 +115,6 @@
         }
       },
       onSwipeDown: async function () {
-        window.scrollTo(0, 1);
         if (this.blokeo == false){
           this.reverse = true
           this.blokeo = true
@@ -130,6 +128,15 @@
         return new Promise((resolve) => {
           setTimeout(resolve, sec);
         });
+      },
+      handleWheel: function () {
+        window.addEventListener('wheel', async function(event) {
+            if (event.deltaY < 0) {
+                this.onSwipeUp()
+            } else if (event.deltaY > 0) {
+                this.onSwipeDown()
+            }
+         })
       },
       onScroll () {
         // Get the current scroll position

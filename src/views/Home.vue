@@ -351,7 +351,7 @@
         <v-row
           class="ma-0 pa-0"
         >
-          <Footer class="ma-0 pa-0"></Footer>
+          <Footer class="ma-0 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
         </v-row>
       </v-row>
       <v-row
