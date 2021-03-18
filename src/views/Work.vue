@@ -2,7 +2,7 @@
 
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:100vh"
+    style="position:absolute;background-color:#707070;height:100vh;overflow-y:auto"
     @wheel="handleWheel()"
 
   >
@@ -103,7 +103,7 @@
     mounted () {
     },
     beforeDestroy () {
-      window.removeEventListener('scroll', this.onScroll)
+      this.$el.removeEventListener('scroll', this.onScroll)
     },
     methods: {
       onSwipeUp: async function () {
@@ -130,7 +130,7 @@
         });
       },
       handleWheel: function () {
-        window.addEventListener('wheel', async function(event) {
+        window.addEventListener('wheel', function(event) {
             if (event.deltaY < 0) {
                 this.onSwipeUp()
             } else if (event.deltaY > 0) {

@@ -3,7 +3,6 @@
     style="position:absolute;background-color:#707070;max-height:100vh;overflow-y:auto"
   >
     <v-row
-      id="test"
       class="ma-0 pa-0"
     >
       <v-row

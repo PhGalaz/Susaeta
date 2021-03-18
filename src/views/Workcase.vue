@@ -1,13 +1,10 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    id='tee'
-    style="position:absolute;background-color:#EDEDED;max-height:100vh;max-width:100vw;overflow-y:auto;overflow-y:none"
+    style="position:absolute;background-color:pink;max-height:100vh;overflow-y:auto;max-width:100vw !important"
   >
     <v-row
-
       class="ma-0 pa-0"
-      style="background-color:#EDEDED"
     >
       <v-row
         class="ma-0 pa-0 d-none d-sm-flex"
@@ -70,11 +67,11 @@
       align="center"
     >
       <v-row
-        class="ma-0 mt-16 mb-16 mx-16 pa-0"
+        class="ma-0 mt-16 mb-16 pa-0"
       >
-        <v-row class="ma-0 pa-0 names text-uppercase" style="max-width:80vw"><p>{{ this.case.name }}</p></v-row>
-        <v-row class="ma-0 pa-0 locations" style="width:100vw">{{ this.case.location }}, {{ this.case.year }}</v-row><br>
-        <v-row class="ma-0 pa-0 contractors" style="width:100vw">{{ this.case.contractor }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 names text-uppercase" style="max-width:80vw"><p>{{ this.case.name }}</p></v-row>
+        <v-row class="ma-0 ml-16 pa-0 locations">{{ this.case.location }}, {{ this.case.year }}</v-row><br>
+        <v-row class="ma-0 ml-16 pa-0 contractors">{{ this.case.contractor }}</v-row>
       </v-row>
 
 

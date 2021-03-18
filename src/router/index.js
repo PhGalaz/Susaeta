@@ -50,7 +50,7 @@ const router = new VueRouter({
   mode: 'history',
   routes,
   scrollBehavior: (to, from, savedPosition) => {
-    return savedPosition;
+    
   }
 })
 
