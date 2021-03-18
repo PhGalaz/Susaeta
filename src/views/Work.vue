@@ -110,7 +110,7 @@
         if (this.blokeo == false){
           this.blokeo = true
           this.model = this.model + 1 % this.$store.state.projects.length
-          await this.sleep(1000);
+          await this.sleep(2000);
           this.blokeo = false
         }
       },
@@ -119,7 +119,7 @@
           this.reverse = true
           this.blokeo = true
           this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
-          await this.sleep(1000);
+          await this.sleep(2000);
           this.reverse = false
           this.blokeo = false
         }
@@ -129,12 +129,13 @@
           setTimeout(resolve, sec);
         });
       },
-      handleWheel: function () {
-        window.addEventListener('wheel', function(event) {
+      handleWheel: async function () {
+        var temp = this;
+        window.addEventListener('wheel', async function(event) {
             if (event.deltaY < 0) {
-                this.onSwipeUp()
+                await temp.onSwipeDown()
             } else if (event.deltaY > 0) {
-                this.onSwipeDown()
+                await temp.onSwipeUp()
             }
          })
       },
@@ -170,7 +171,7 @@
     transition: 2s ease
 
   .my-carousel-vertical-move
-    transition: transform 6s
+    transition: transform 2s
 
   .my-carousel-vertical-enter
     transform: translate(0, 100%)
@@ -189,7 +190,7 @@
     transition: 2s ease
 
   .my-carousel-vertical-reverse-move
-    transition: transform 6s
+    transition: transform 2s
 
   .my-carousel-vertical-reverse-enter
     transform: translate(0, -100%)
