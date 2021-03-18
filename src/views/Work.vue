@@ -2,7 +2,7 @@
 
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:200vh"
+    style="position:absolute;background-color:#707070;height:100vh"
 
 
   >
@@ -101,7 +101,7 @@
 
     },
     mounted () {
-
+      window.requestFullscreen() 
     },
     beforeDestroy () {
       window.removeEventListener('scroll', this.onScroll)
