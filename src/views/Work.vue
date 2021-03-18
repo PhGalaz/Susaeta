@@ -2,7 +2,7 @@
 
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:101vh;overflow-y:auto"
+    style="position:absolute;background-color:#707070;height:100vh"
 
 
   >
@@ -101,7 +101,7 @@
 
     },
     mounted () {
-      window.scrollTo(0, 100);
+
     },
     beforeDestroy () {
       window.removeEventListener('scroll', this.onScroll)
