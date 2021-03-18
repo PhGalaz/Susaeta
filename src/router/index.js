@@ -48,10 +48,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  routes,
-  scrollBehavior: (to, from, savedPosition) => {
-    
-  }
+  routes
 })
 
 // This callback runs before every route change, including on page load.
