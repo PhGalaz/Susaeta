@@ -101,7 +101,6 @@
 
     },
     mounted () {
-      document.body.requestFullscreen()
     },
     beforeDestroy () {
       window.removeEventListener('scroll', this.onScroll)
