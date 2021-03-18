@@ -423,7 +423,7 @@ export default {
     this.init();
   },
   mounted () {
-    
+
   },
   methods: {
 

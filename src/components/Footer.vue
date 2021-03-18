@@ -54,7 +54,7 @@
       <v-img class="ma-0 mt-2 pa-0" max-height="70px" max-width="70px" src="logo.png"/>
       <p class="ma-0 mt-3 pa-0 pie text-center" style="width:100vw;font-size:15px">Arquitecto Eladio Susaeta<br>Puerto Varas, Región de Los Lagos, Chile<br>
         <v-icon
-          class="mr-1 mb-1"
+          class="mt-1 mr-1 mb-1"
           small
           color= "#EDEDED"
         >
