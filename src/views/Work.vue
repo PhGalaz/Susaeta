@@ -58,7 +58,7 @@
 
         <v-row
           class="ma-0 pa-0"
-          style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:75vh;letter-spacing:0px;line-height:90%;font-weight:bold"
+          style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:65vh;letter-spacing:0px;line-height:90%;font-weight:bold"
         >
           <v-spacer></v-spacer>
           <router-link
@@ -70,7 +70,7 @@
               style="font-size:25px"
               align="center"
             >
-              <p class="text-right" style="line-height:20px">{{ item.name }}<br><span style="font-size:15px">{{ item.location }}, {{ item.year }}</span></p>
+              <p class="text-right" style="line-height:20px">{{ item.name }}</p>
               <v-icon
                 class="ma-0 ml-3 mb-3 pa-0"
                 medium

@@ -1,7 +1,7 @@
 <template>
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:pink;max-height:100vh;overflow-y:auto;max-width:100vw !important"
+    style="position:absolute;background-color:#EDEDED;max-height:100vh;overflow-y:auto;max-width:100vw !important"
   >
     <v-row
       class="ma-0 pa-0"
@@ -17,7 +17,7 @@
       </v-row>
       <v-row
         class="ma-0 mt-4 pa-0 menu-item"
-        style="position:fixed;z-index:1;top:75vh;color:#EDEDED"
+        style="position:fixed;z-index:1;top:65vh;color:#EDEDED"
         align="center"
       >
 
