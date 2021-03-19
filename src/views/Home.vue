@@ -98,7 +98,7 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh"
+                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw;max-width:50vw;min-width:50vw"
                 :src="this.cabin0" :key="0" eager/>
             </v-row>
             <v-row
@@ -139,7 +139,7 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh"
+                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw"
                 :src="this.cabin1" :key="1" eager/>
             </v-row>
 
@@ -190,7 +190,7 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh"
+                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw"
                 :src="this.cabin2" :key="2" eager/>
             </v-row>
             <v-row
@@ -232,7 +232,7 @@
 
               <v-lazy-image
                 eager
-                style=";max-height:50vh;min-height:50vh"
+                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw"
                 :src="this.cabin3" :key="this.cabin3"/>
 
             </v-row>
@@ -479,7 +479,7 @@ export default {
 <style lang="sass">
 
   .v-lazy-image
-    filter: blur(10px)
+    filter: blur(5px)
     transition: filter .7s
 
   .v-lazy-image-loaded
