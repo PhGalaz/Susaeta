@@ -98,7 +98,7 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw;max-width:50vw;min-width:50vw"
+                style="max-height:50vh;min-height:50vh"
                 :src="this.cabin0" :key="0" eager/>
             </v-row>
             <v-row
@@ -139,7 +139,7 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw"
+                style="max-height:50vh;min-height:50vh"
                 :src="this.cabin1" :key="1" eager/>
             </v-row>
 
@@ -190,7 +190,7 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw"
+                style="max-height:50vh;min-height:50vh"
                 :src="this.cabin2" :key="2" eager/>
             </v-row>
             <v-row
@@ -231,9 +231,11 @@
 
 
               <v-lazy-image
-                eager
-                style="max-height:50vh;min-height:50vh;max-width:50vw;min-width:50vw"
-                :src="this.cabin3" :key="this.cabin3"/>
+
+                style="max-height:50vh;min-height:50vh"
+                :src="this.cabin3" :key="3" eager
+              />
+
 
             </v-row>
           </v-col>
@@ -425,6 +427,9 @@ export default {
     this.init();
   },
   mounted () {
+
+  },
+  beforeDestroy () {
 
   },
   methods: {
