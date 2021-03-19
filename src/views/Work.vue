@@ -31,7 +31,7 @@
           style="height:100vh !important;width:100vw;z-index:0"
         >
           <v-img
-            style="max-height:100vh !important;min-height:100vh !important"
+            style="max-height:100vh !important;min-height:100vh !important;min-width:100vw"
             :src="item.pictures[0]" eager/>
 
         </v-row>
@@ -160,6 +160,13 @@
     height: 100vh
   body
      height: 100%
+
+  .v-lazy-image
+   filter: blur(5px)
+   transition: filter .7s
+
+  .v-lazy-image-loaded
+   filter: blur(0)
 
   .menu-item:hover
     cursor: pointer

@@ -259,10 +259,10 @@ export default {
 
 
   .router-enter-active
-    animation: router-out .5s ease-in
+    animation: router-out 1s ease-in
 
   .router-leave-active
-    animation: router-in .5s reverse ease-out
+    animation: router-in 1s reverse ease-out
 
   @keyframes router-in
     0%
@@ -280,10 +280,10 @@ export default {
 
 
   .router-left-enter-active
-    animation: router-left-out .5s ease-in
+    animation: router-left-out 1s ease-in
 
   .router-left-leave-active
-    animation: router-left-in .5s reverse  ease-out
+    animation: router-left-in 1s reverse  ease-out
 
   @keyframes router-left-in
     0%
