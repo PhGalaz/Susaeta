@@ -97,7 +97,8 @@
               </router-link>
 
 
-              <v-img
+              <v-lazy-image
+                style="max-height:50vh;min-height:50vh"
                 :src="this.cabin0" :key="0" eager/>
             </v-row>
             <v-row
@@ -137,7 +138,7 @@
               </router-link>
 
 
-              <v-img
+              <v-lazy-image
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin1" :key="1" eager/>
             </v-row>
@@ -188,7 +189,7 @@
               </router-link>
 
 
-              <v-img
+              <v-lazy-image
                 style="max-height:50vh;min-height:50vh"
                 :src="this.cabin2" :key="2" eager/>
             </v-row>
@@ -229,9 +230,11 @@
               </router-link>
 
 
-              <v-img
-                style="max-height:50vh;min-height:50vh"
-                :src="this.cabin3" :key="3" eager/>
+              <v-lazy-image
+                eager
+                style=";max-height:50vh;min-height:50vh"
+                :src="this.cabin3" :key="this.cabin3"/>
+
             </v-row>
           </v-col>
         </v-row>
@@ -474,6 +477,14 @@ export default {
 </script>
 
 <style lang="sass">
+
+  .v-lazy-image
+    filter: blur(10px)
+    transition: filter .7s
+
+  .v-lazy-image-loaded
+    filter: blur(0)
+
 
   input
     color: #707070 !important
