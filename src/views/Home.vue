@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="position:absolute;background-color:#707070;max-height:100vh;overflow-y:auto"
+    style="position:absolute;background-color:#707070;max-height:100vh;max-width:100vw;overflow-y:auto"
   >
     <v-row
       class="ma-0 pa-0"
@@ -98,7 +98,8 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh"
+              :class="{'mob': $vuetify.breakpoint.xs}"
+                style="max-height:50vh;min-height:50vh;width:100vw"
                 :src="this.cabin0" :key="0" eager/>
             </v-row>
             <v-row
@@ -139,7 +140,8 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh"
+                :class="{'mob': $vuetify.breakpoint.xs}"
+                style="max-height:50vh;min-height:50vh;width:100vw"
                 :src="this.cabin1" :key="1" eager/>
             </v-row>
 
@@ -190,7 +192,8 @@
 
 
               <v-lazy-image
-                style="max-height:50vh;min-height:50vh"
+                :class="{'mob': $vuetify.breakpoint.xs}"
+                style="max-height:50vh;min-height:50vh;width:100vw"
                 :src="this.cabin2" :key="2" eager/>
             </v-row>
             <v-row
@@ -231,8 +234,8 @@
 
 
               <v-lazy-image
-
-                style="max-height:50vh;min-height:50vh"
+                :class="{'mob': $vuetify.breakpoint.xs}"
+                style="max-height:50vh;min-height:50vh;width:100vw"
                 :src="this.cabin3" :key="3" eager
               />
 
@@ -521,6 +524,9 @@ export default {
     font-size: 30px
     position: absolute
 
+  .mob
+    max-width: 100vw
+    min-width: 100vw
 
 
 
