@@ -435,13 +435,14 @@ export default {
     'Footer': require('@/components/Footer.vue').default
   },
   async mounted(){
+    console.log(this.$store.state.scroll);
+    this.$el.scrollTop = this.$store.state.scroll;
     this.$el.addEventListener('scroll', this.onScroll);
     this.$store.commit('burger', true);
     await this.sleep(1000);
     this.$store.commit('burger', false)
   },
   created(){
-
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
@@ -459,6 +460,9 @@ export default {
     this.index2 = this.random_set[2][1];
     this.index3 = this.random_set[3][1];
     this.init();
+  },
+  beforeDestroy () {
+    this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop );
   },
   methods: {
 
@@ -511,7 +515,6 @@ export default {
       });
     },
     onScroll: function () {
-      console.log('onScroll');
       const currentScrollPosition = this.$el.pageYOffset || this.$el.scrollTop;
       console.log(currentScrollPosition)
     }

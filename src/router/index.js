@@ -22,8 +22,7 @@ const routes = [
           content: 'Página profesional arquitecto Eladio Susaeta.'
         }
       ],
-      transitionName: 'slide',
-      lastScrollPosition: null
+      transitionName: 'slide'
     }
   },
   {

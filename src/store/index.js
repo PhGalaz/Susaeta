@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     isActive: null,
     burger: true,
+    scroll: null,
     cover: [
       "2/eladio-1.jpg",
       "4/eladio-1.jpg",
@@ -81,6 +82,9 @@ export default new Vuex.Store({
     },
     burger(state, res){
       state.burger = res;
+    },
+    scrolling(state, res){
+      state.scroll = res;
     }
   },
   actions: {
