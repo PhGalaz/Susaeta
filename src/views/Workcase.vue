@@ -22,13 +22,13 @@
       >
 
         <v-icon
-          class="ma-0 mr-3 mb-4 pa-0"
+          class="ma-0 mb-4 pa-0"
           medium
           color= "#EDEDED"
         >
-          mdi-arrow-collapse-left
+          mdi-chevron-double-left
         </v-icon>
-        <p @click="$router.go(-1)">Volver</p>
+        <p @click="$router.go(-1)" style="font-size:25px">Volver</p>
       </v-row>
       <v-row
         class="ma-0 pa-0 d-sm-none"
@@ -188,6 +188,11 @@ export default {
       this.case = this.$store.state.projects[this.index];
 
     },
+    async mounted () {
+      this.$store.commit('burger', true);
+      await this.sleep(1000);
+      this.$store.commit('burger', false)
+    },
     methods: {
       anterior(){
         this.$el.scrollTo(0,0);
@@ -196,6 +201,11 @@ export default {
       siguiente(){
         this.$el.scrollTo(0,0);
         this.case = this.$store.state.projects[(this.case.id + 1) % this.$store.state.projects.length];
+      },
+      sleep(sec) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, sec);
+        });
       }
     }
 }

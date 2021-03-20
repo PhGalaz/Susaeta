@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isActive: null,
+    burger: true,
     cover: [
       "2/eladio-1.jpg",
       "4/eladio-1.jpg",
@@ -77,6 +78,9 @@ export default new Vuex.Store({
   mutations: {
     header(state, res){
       state.isActive = res;
+    },
+    burger(state, res){
+      state.burger = res;
     }
   },
   actions: {

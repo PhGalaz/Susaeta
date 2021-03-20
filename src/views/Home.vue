@@ -97,10 +97,17 @@
               </router-link>
 
 
-              <v-lazy-image
-              :class="{'mob': $vuetify.breakpoint.xs}"
-                style="max-height:50vh;min-height:50vh;width:100vw"
-                :src="this.cabin0" :key="0" eager/>
+              <v-row
+                class="ma-0 pa-0"
+                style="max-height:50vh;min-height:50vh;max-width:100vw;overflow-x:hidden"
+              >
+                <v-lazy-image
+                  :class="{'mob': $vuetify.breakpoint.xs}"
+
+                  style="height:50vh;width:100vw"
+                  :src="this.cabin0" :key="0" eager
+                />
+              </v-row>
             </v-row>
             <v-row
               class="ma-0 pa-0"
@@ -139,10 +146,17 @@
               </router-link>
 
 
-              <v-lazy-image
-                :class="{'mob': $vuetify.breakpoint.xs}"
-                style="max-height:50vh;min-height:50vh;width:100vw"
-                :src="this.cabin1" :key="1" eager/>
+              <v-row
+                class="ma-0 pa-0"
+                style="max-height:50vh;min-height:50vh;max-width:100vw;overflow-x:hidden"
+              >
+                <v-lazy-image
+                  :class="{'mob': $vuetify.breakpoint.xs}"
+
+                  style="height:50vh;width:100vw"
+                  :src="this.cabin1" :key="1" eager
+                />
+              </v-row>
             </v-row>
 
 
@@ -191,16 +205,24 @@
               </router-link>
 
 
-              <v-lazy-image
-                :class="{'mob': $vuetify.breakpoint.xs}"
-                style="max-height:50vh;min-height:50vh;width:100vw"
-                :src="this.cabin2" :key="2" eager/>
+              <v-row
+                class="ma-0 pa-0"
+                style="max-height:50vh;min-height:50vh;max-width:100vw;overflow-x:hidden"
+              >
+                <v-lazy-image
+                  :class="{'mob': $vuetify.breakpoint.xs}"
+
+                  style="height:50vh;width:100vw"
+                  :src="this.cabin2" :key="2" eager
+                />
+              </v-row>
             </v-row>
             <v-row
               class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
             >
               <router-link
+
                 :to="{ name: 'Workcase', params: {index: this.index3 } }"
               >
                 <v-row
@@ -232,12 +254,17 @@
                 </v-row>
               </router-link>
 
+              <v-row
+                class="ma-0 pa-0"
+                style="max-height:50vh;min-height:50vh;max-width:100vw;overflow-x:hidden"
+              >
+                <v-lazy-image
+                  :class="{'mob': $vuetify.breakpoint.xs}"
+                  style="height:50vh;width:100vw"
+                  :src="this.cabin3" :key="3" eager
+                />
+              </v-row>
 
-              <v-lazy-image
-                :class="{'mob': $vuetify.breakpoint.xs}"
-                style="max-height:50vh;min-height:50vh;width:100vw"
-                :src="this.cabin3" :key="3" eager
-              />
 
 
             </v-row>
@@ -407,7 +434,11 @@ export default {
     'Form': require('@/components/Form.vue').default,
     'Footer': require('@/components/Footer.vue').default
   },
-  beforeCreate(){
+  async mounted(){
+    this.$el.addEventListener('scroll', this.onScroll);
+    this.$store.commit('burger', true);
+    await this.sleep(1000);
+    this.$store.commit('burger', false)
   },
   created(){
 
@@ -428,12 +459,6 @@ export default {
     this.index2 = this.random_set[2][1];
     this.index3 = this.random_set[3][1];
     this.init();
-  },
-  mounted () {
-
-  },
-  beforeDestroy () {
-
   },
   methods: {
 
@@ -473,12 +498,22 @@ export default {
         this.init()
       }
     },
+    sleep(sec) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, sec);
+      });
+    },
 
     random_sleep() {
       const randomlapse = Math.floor(Math.random() * 2000) + 3000;
       return new Promise((resolve) => {
         setTimeout(resolve, randomlapse);
       });
+    },
+    onScroll: function () {
+      console.log('onScroll');
+      const currentScrollPosition = this.$el.pageYOffset || this.$el.scrollTop;
+      console.log(currentScrollPosition)
     }
   }
 };
@@ -525,8 +560,8 @@ export default {
     position: absolute
 
   .mob
-    max-width: 100vw
-    min-width: 100vw
+    width: 50vw
+
 
 
 

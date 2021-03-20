@@ -1,7 +1,7 @@
 <template>
   <v-app
+    v-cloak
   >
-
     <!-- Navegation drawer mobile only -->
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -11,13 +11,17 @@
         class="ma-0 pa-0"
         style="position:fixed;background-color:transparent;z-index:1000;width:100vh"
         flat
-
       >
         <v-spacer></v-spacer>
-        <v-app-bar-nav-icon class="mt-5" color="#EDEDED" @click="drawer = true"></v-app-bar-nav-icon>
+        <transition
+          name="fade"
+        >
+        <v-app-bar-nav-icon style="transition: fade 4s ease" :class="{ 'd-none': this.$store.state.burger }" class="mt-5" color="#EDEDED" @click="drawer = true"></v-app-bar-nav-icon>
+      </transition>
         <v-spacer></v-spacer>
 
       </v-app-bar>
+
       <v-navigation-drawer
         v-model="drawer"
         style="z-index:1000;height:24vh;background-color:transparent"
@@ -28,10 +32,11 @@
       >
         <v-row
           class="ma-0 pa-0"
-          style="background-color:#707070;width:100vw;height:24vh;position:absolute;opacity:0.3"
+          style="background-color:#707070;width:100vw;position:absolute;opacity:0.3"
         >
 
         </v-row>
+
         <v-list
           class="ma-0 pa-0"
           nav
@@ -58,6 +63,7 @@
                 <p class="ma-0 mt-6 pa-0"><span>Work</span></p>
               </router-link>
             </v-row>
+
             <v-row
               class="ma-0 pa-0 menu-item"
               :class="{ 'd-none': $store.state.isActive }"
@@ -89,18 +95,17 @@
                 align="center"
               >Instagram</a>
               <v-spacer></v-spacer>
-
             </v-row>
 
             <v-row
               class="ma-0 pa-0 menu-item mobile"
-              style="height:8vh"
+              style="height:8vh !important"
               @click="myFunction()"
             >
               <v-spacer></v-spacer>
               <a
                 class="ma-0 mt-5 pa-0"
-                style="font-size:15px;color:#EDEDED !important;height:100%"
+                style="font-size:15px;color:#EDEDED !important"
               >Whatsapp</a>
               <v-spacer></v-spacer>
             </v-row>
@@ -108,10 +113,6 @@
         </v-list>
       </v-navigation-drawer>
     </v-row>
-
-
-
-
 
 
 
@@ -140,7 +141,6 @@
             to="/Work"
             class="text-decoration-none"
           ><span @click="$store.commit('header', false)">Work</span></router-link></p>
-
       </v-col>
       <v-col
         :class="{ 'd-none': $store.state.isActive }"
@@ -152,10 +152,8 @@
           <router-link
             to="/"
             class="text-decoration-none"
-
           ><span @click="$store.commit('header', true)">Home</span></router-link></p>
       </v-col>
-
       <v-col
         cols="5"
         style="background-color:transparent"
@@ -164,17 +162,13 @@
           class="menu-item text-left"
         ><span>Whatsapp</span></p>
       </v-col>
-
     </v-row>
 
     <transition
         :name="transitionName"
-
-      >
+    >
       <router-view/>
-
     </transition>
-
 
 
   </v-app>

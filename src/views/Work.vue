@@ -72,11 +72,11 @@
             >
               <p class="text-right" style="line-height:20px">{{ item.name }}</p>
               <v-icon
-                class="ma-0 ml-3 mb-3 pa-0"
+                class="ma-0 mb-4 pa-0"
                 medium
                 color= "#EDEDED"
               >
-                mdi-arrow-collapse-right
+                mdi-chevron-double-right
               </v-icon>
             </v-row>
           </router-link>
@@ -100,7 +100,10 @@
       this.$store.commit('header', false);
 
     },
-    mounted () {
+    async mounted () {
+      this.$store.commit('burger', true);
+      await this.sleep(1000);
+      this.$store.commit('burger', false)
     },
     beforeDestroy () {
       this.$el.removeEventListener('scroll', this.onScroll)
