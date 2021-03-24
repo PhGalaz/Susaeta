@@ -184,10 +184,18 @@ export default {
       'Footer': require('@/components/Footer.vue').default
     },
     created(){
-      this.$store.commit('header', false);
-      this.case = this.$store.state.projects[this.index];
 
+      this.$store.commit('header', false);
+
+
+      if (this.index !== undefined) {
+        this.case = this.$store.state.projects[this.index];
+        this.$store.commit('caseIndex', this.index);
+      } else {
+        this.case = this.$store.state.projects[this.$store.state.caseIndex];
+      }
     },
+
     async mounted () {
       this.$store.commit('burger', true);
       await this.sleep(1000);

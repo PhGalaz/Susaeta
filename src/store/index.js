@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
+
 
 Vue.use(Vuex)
 
@@ -7,6 +9,7 @@ export default new Vuex.Store({
   state: {
     isActive: null,
     burger: true,
+    caseIndex: 0,
     scroll: null,
     cover: [
       "2/eladio-1.jpg",
@@ -76,6 +79,7 @@ export default new Vuex.Store({
       }
     ]
   },
+  plugins: [createPersistedState()],
   mutations: {
     header(state, res){
       state.isActive = res;
@@ -85,6 +89,9 @@ export default new Vuex.Store({
     },
     scrolling(state, res){
       state.scroll = res;
+    },
+    caseIndex(state, res){
+      state.caseIndex = res;
     }
   },
   actions: {

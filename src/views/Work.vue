@@ -91,14 +91,19 @@
 <script>
   export default {
     data: () => ({
-      model: 4,
+      model: null,
       blokeo: false,
       reverse: false,
       lastScrollPosition: 0
     }),
     created(){
       this.$store.commit('header', false);
-
+      if (this.$store.state.caseIndex !== null) {
+        this.model = this.$store.state.caseIndex
+      } else {
+        this.model = this.getRandomInt(this.$store.state.projects.length)
+      }
+      console.log(this.model)
     },
     async mounted () {
       this.$store.commit('burger', true);
@@ -109,6 +114,9 @@
       this.$el.removeEventListener('scroll', this.onScroll)
     },
     methods: {
+      getRandomInt: function (max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      },
       onSwipeUp: async function () {
         if (this.blokeo == false){
           this.blokeo = true
@@ -149,7 +157,7 @@
         if (currentScrollPosition < 0) {
           return
         }
-        console.log(currentScrollPosition)
+        console.log(this.$el.scrollHeight)
         // Set the current scroll position as the last scroll position
         this.lastScrollPosition = currentScrollPosition
       },

@@ -1,9 +1,9 @@
 <template>
   <v-app
-    style="position:absolute;background-color:#707070;max-height:100vh;max-width:100vw;overflow-y:auto"
+    style="position:absolute;background-color:#707070;max-height:100vh;max-width:100vw;overflow-y:auto;scroll-behavior:smooth"
   >
     <v-row
-      class="ma-0 pa-0"
+      class="ma-0 pa-0 scr"
     >
       <v-row
         style="z-index:0"
@@ -34,7 +34,7 @@
         </v-carousel>
       </v-row>
       <v-row
-        class="ma-0 pa-0"
+        class="ma-0 pa-0 yeah"
         style="background-color:#EAEAEA;width:100vw;top:1000px"
       >
         <v-row
@@ -402,7 +402,7 @@
         justify="center"
         eager
       >
-        <v-img class="shadowed" style="transform:scale(0.7)" src="Asset 4.png" eager/>
+        <v-img class="shadowed" style="transform:scale(0.7)" src="logomovil.png" eager/>
       </v-row>
     </v-row>
   </v-app>
@@ -428,21 +428,23 @@ export default {
     index: 4,
     indexX: 4,
     indexY: 0,
-    last: null
+    last: null,
+    lastScrollPosition: 0,
+    block: false
   }),
   components: {
     'Form': require('@/components/Form.vue').default,
     'Footer': require('@/components/Footer.vue').default
   },
   async mounted(){
-    console.log(this.$store.state.scroll);
     this.$el.scrollTop = this.$store.state.scroll;
-    this.$el.addEventListener('scroll', this.onScroll);
     this.$store.commit('burger', true);
+    this.$el.addEventListener('scroll', this.onScroll);
     await this.sleep(1000);
     this.$store.commit('burger', false)
   },
   created(){
+    this.$store.commit('caseIndex', null);
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].pictures;
@@ -514,10 +516,6 @@ export default {
         setTimeout(resolve, randomlapse);
       });
     },
-    onScroll: function () {
-      const currentScrollPosition = this.$el.pageYOffset || this.$el.scrollTop;
-      console.log(currentScrollPosition)
-    }
   }
 };
 </script>

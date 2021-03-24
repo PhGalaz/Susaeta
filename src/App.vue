@@ -75,7 +75,7 @@
                 class="ma-0 pa-0 menu-item text-center text-decoration-none"
                 style="width:100vw;height:8vh;font-size:15px"
                 align="center"
-                @click="$store.commit('header', true)"
+                @click="ajust()"
               >
                 <p class="ma-0 mt-5 pa-0"><span>Home</span></p>
               </router-link>
@@ -152,7 +152,7 @@
           <router-link
             to="/"
             class="text-decoration-none"
-          ><span @click="$store.commit('header', true)">Home</span></router-link></p>
+          ><span @click="ajust()">Home</span></router-link></p>
       </v-col>
       <v-col
         cols="5"
@@ -205,6 +205,10 @@ export default {
   methods: {
     myFunction: function () {
       window.open("https://www.instagram.com/eladio_susaeta/?hl=en", "_blank");
+    },
+    ajust: function () {
+      this.$store.commit('header', true);
+      this.$store.commit('scrolling', 0)
     }
   }
 };
