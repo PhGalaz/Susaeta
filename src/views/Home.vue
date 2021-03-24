@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="position:absolute;background-color:#707070;max-height:100vh;max-width:100vw;overflow-y:auto;scroll-behavior:smooth"
+    style="position:absolute;background-color:#707070;max-height:100vh;max-width:100vw;overflow-y:auto"
   >
     <v-row
       class="ma-0 pa-0 scr"
@@ -68,7 +68,7 @@
 
               >
                 <v-row
-                  class="ma-0 pa-0 casa d-none d-sm-flex"
+                  class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
                 >
                   <v-row
@@ -81,7 +81,7 @@
                   </v-row>
                 </v-row>
                 <v-row
-                  class="ma-0 pa-0 casa mobile d-sm-none"
+                  class="ma-0 pa-0 casa mobile d-md-none"
                   align="center"
                   style="width:100vw"
                 >
@@ -117,7 +117,7 @@
                 :to="{ name: 'Workcase', params: {index: this.index1 } }"
               >
                 <v-row
-                  class="ma-0 pa-0 casa d-none d-sm-flex"
+                  class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
                 >
                   <v-row
@@ -130,7 +130,7 @@
                   </v-row>
                 </v-row>
                 <v-row
-                  class="ma-0 pa-0 casa mobile d-sm-none"
+                  class="ma-0 pa-0 casa mobile d-md-none"
                   align="center"
                   style="width:100vw"
                 >
@@ -176,7 +176,7 @@
                 :to="{ name: 'Workcase', params: {index: this.index2 } }"
               >
                 <v-row
-                  class="ma-0 pa-0 casa d-none d-sm-flex"
+                  class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
                 >
                   <v-row
@@ -189,7 +189,7 @@
                   </v-row>
                 </v-row>
                 <v-row
-                  class="ma-0 pa-0 casa mobile d-sm-none"
+                  class="ma-0 pa-0 casa mobile d-md-none"
                   align="center"
                   style="width:100vw"
                 >
@@ -226,7 +226,7 @@
                 :to="{ name: 'Workcase', params: {index: this.index3 } }"
               >
                 <v-row
-                  class="ma-0 pa-0 casa d-none d-sm-flex"
+                  class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
                 >
                   <v-row
@@ -239,7 +239,7 @@
                   </v-row>
                 </v-row>
                 <v-row
-                  class="ma-0 pa-0 casa mobile d-sm-none"
+                  class="ma-0 pa-0 casa mobile d-md-none"
                   align="center"
                   style="width:100vw"
                 >
@@ -394,7 +394,7 @@
         justify="center"
         eager
       >
-        <v-img class="shadowed" src="Asset 4.png" eager/>
+        <v-img class="shadowed" style="transform:scale(1.1)" src="Asset 4.png" eager/>
       </v-row>
       <v-row
         class="ma-0 pa-0 text-center titulo d-block d-md-none"
@@ -402,7 +402,7 @@
         justify="center"
         eager
       >
-        <v-img class="shadowed" style="transform:scale(0.7)" src="logomovil.png" eager/>
+        <v-img class="shadowed" style="transform:scale(0.6)" src="logomovil.png" eager/>
       </v-row>
     </v-row>
   </v-app>
