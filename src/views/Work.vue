@@ -76,7 +76,7 @@
                 medium
                 color= "#EDEDED"
               >
-                mdi-chevron-double-right
+                mdi-arrow-right
               </v-icon>
             </v-row>
           </router-link>

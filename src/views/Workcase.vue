@@ -26,7 +26,7 @@
           medium
           color= "#EDEDED"
         >
-          mdi-chevron-double-left
+          mdi-arrow-left
         </v-icon>
         <p @click="$router.go(-1)" style="font-size:25px">Volver</p>
       </v-row>
