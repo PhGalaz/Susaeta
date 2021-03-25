@@ -100,7 +100,7 @@
             <v-row
               class="ma-0 pa-0 menu-item mobile"
               style="height:8vh !important"
-              @click="myFunction()"
+              @click="whatsapp()"
             >
               <v-spacer></v-spacer>
               <a
@@ -160,6 +160,7 @@
       >
         <p
           class="menu-item text-left"
+          @click="whatsapp()"
         ><span>Whatsapp</span></p>
       </v-col>
     </v-row>
@@ -205,6 +206,9 @@ export default {
   methods: {
     myFunction: function () {
       window.open("https://www.instagram.com/eladio_susaeta/?hl=en", "_blank");
+    },
+    whatsapp: function () {
+      window.open("https://wa.me/+56994998436", "_blank");
     },
     ajust: function () {
       this.$store.commit('header', true);

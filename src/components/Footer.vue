@@ -29,7 +29,7 @@
             class="ma-0 pa-0 agency"
             style="font-size:10px;color:#EDEDED !important"
             @click="Salvador()"
-          >Salvador</a></span>
+          >pink dog</a></span>
         </p>
       </v-row>
       <v-row
@@ -66,7 +66,7 @@
             class="ma-0 pa-0 agency"
             style="font-size:10px;color:#EDEDED !important"
             @click="Salvador()"
-          >Salvador</a>
+          >pink dog</a>
         </span>
       </p>
     </v-row>
@@ -79,7 +79,7 @@
   export default {
     methods: {
       Salvador: function () {
-        window.open("https://www.lossalvadores.com", "_blank");
+        window.open("https://www.pinkdogstudio.com", "_blank");
       }
     }
   }

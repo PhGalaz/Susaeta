@@ -6,6 +6,9 @@ import { createSimpleTransition } from "vuetify/lib/components/transitions/creat
 import router from './router'
 import store from './store'
 import { VLazyImagePlugin } from "v-lazy-image";
+import VueSocialChat from 'vue-social-chat'
+
+Vue.use(VueSocialChat)
 
 
 const myTransition = createSimpleTransition("my-transition");
