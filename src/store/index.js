@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import createPersistedState from 'vuex-persistedstate'
+
 
 
 Vue.use(Vuex)
@@ -19,67 +19,141 @@ export default new Vuex.Store({
     projects: [
       {
           id: 0,
-          name: "Nombre 0",
-          location: "Ciudad 0",
-          year: "Año 0",
+          name: "Casa cristal Ortega",
+          location: "Playa Hermosa, Puerto Varas",
           pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
-          contractor: "Constructora 0",
+          display: ["display/1/eladio50_1.jpg","display/1/eladio50_2.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 1,
-          name: "Nombre 1",
-          location: "Ciudad 1",
-          year: "Año 1",
+          name: "Casa Fuji",
+          location: "Puerto Varas",
           pictures: ["2/eladio-1.jpg","2/eladio-2.jpg","2/eladio-3.jpg","2/eladio-4.jpg"],
-          contractor: "Constructora 1",
+          display: ["display/2/eladio50_1.jpg","display/2/eladio50_2.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 2,
-          name: "Nombre 2",
-          location: "Ciudad 2",
-          year: "Año 2",
+          name: "Casa Galería",
+          location: "Puerto Varas",
           pictures: ["3/eladio-1.jpg","3/eladio-2.jpg","3/eladio-3.jpg","3/eladio-4.jpg","3/eladio-5.jpg"],
-          contractor: "Constructora 2",
+          display: ["display/3/eladio-1.jpg","display/3/eladio-2.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 3,
-          name: "Nombre 3",
-          location: "Ciudad 3",
-          year: "Año 3",
+          name: "Cabaña Almabosque",
+          location: "Puerto Varas",
           pictures: ["4/eladio-1.jpg","4/eladio-2.jpg","4/eladio-3.jpg","4/eladio-4.jpg","4/eladio-5.jpg","4/eladio-6.jpg","4/eladio-7.jpg","4/eladio-8.jpg"],
-          contractor: "Constructora 3",
+          display: ["display/4/eladio50-1.jpg","display/4/eladio50-2.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 4,
-          name: "Casa Riscos",
-          location: "Ciudad 4",
-          year: "Año 4",
+          name: "Hotel Kalfu",
+          location: "Puerto Varas",
           pictures: ["5/eladio-1.jpg","5/eladio-2.jpg","5/eladio-3.jpg","5/eladio-4.jpg","5/eladio-5.jpg","5/eladio-6.jpg"],
-          contractor: "Constructora 4",
+          display: ["display/5/eladio50-1.jpg","display/5/eladio50-2.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
           id: 5,
-          name: "Nombre 5",
-          location: "Ciudad 5",
-          year: "Año 5",
+          name: "Casa Riscos",
+          location: "Puerto Varas",
           pictures: ["6/eladio-1.jpg","6/eladio-2.jpg","6/eladio-3.jpg","6/eladio-4.jpg","6/eladio-5.jpg"],
-          contractor: "Constructora 5",
+          display: ["display/6/eladio50-1.jpg","display/6/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 6,
+          name: "Espacio Recepción",
+          location: "Parque Nacional Vicente Pérez Rosales, Saltos del Petrohué",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/7/eladio50-1.jpg","display/7/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 7,
+          name: "Casa Marina",
+          location: "Zapallar",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/8/eladio50-1.jpg","display/8/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 8,
+          name: "Museo Familia Schirmer",
+          location: "Saltos del Petrohué",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/9/eladio50-1.jpg","display/9/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 9,
+          name: "Casa Jofré",
+          location: "Molino Viejo, Llanquihue",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/10/eladio50-1.jpg","display/10/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 10,
+          name: "Clínica Alemana, Ala Sur",
+          location: "Puerto Varas (Asociado a G. Greene Arquitecto)",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/11/eladio50-1.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 11,
+          name: "Casa Cangrejo",
+          location: "Parque Ivian, Puerto Varas",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/12/eladio50-1.jpg","display/12/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 12,
+          name: "Casa Cea",
+          location: "Sector La Fábrica, Puerto Varas",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/13/eladio50-1.jpg","display/13/eladio50-2.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 13,
+          name: "Casa J. Ackarson",
+          location: "Puerto Varas",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/14/eladio50-1.jpg"],
+          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          id: 14,
+          name: "Dibujos",
+          pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
+          display: ["display/15/eladio50-1.jpg","display/15/eladio50-2.jpg"],
           description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
     ]
   },
-  plugins: [createPersistedState()],
+
   mutations: {
     header(state, res){
       state.isActive = res;

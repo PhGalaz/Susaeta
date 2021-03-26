@@ -447,7 +447,8 @@ export default {
     this.$store.commit('caseIndex', null);
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
-      var pictures = this.$store.state.projects[i].pictures;
+      console.log(this.$store.state.projects[i])
+      var pictures = this.$store.state.projects[i].display;
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
 
       this.random_set.push([pictures, i])
