@@ -87,7 +87,7 @@
                   style="width:100vw"
                 >
                   <v-row
-                    class="ma-0 pa-0 nameMobile"
+                    class="ma-0 pa-0 nameMobile text-center"
                     style="width:100%"
                     justify="center"
                     align="center"
@@ -106,7 +106,7 @@
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
                   style="height:50vh;width:100vw"
-                  :src="this.cabin0" :key="0" eager
+                  :src="this.cabin0" :key="0" 
                 />
               </v-row>
             </v-row>
@@ -558,7 +558,7 @@ export default {
     opacity: 0
 
   .nameMobile
-    font-size: 30px
+    font-size: 20px
     position: absolute
 
   .mob
