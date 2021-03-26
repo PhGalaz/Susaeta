@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 
 
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -19,7 +20,7 @@ export default new Vuex.Store({
     projects: [
       {
           id: 0,
-          name: "Casa cristal Ortega",
+          name: "Casa Cristal Ortega",
           location: "Playa Hermosa, Puerto Varas",
           pictures: ["1/eladio-1.jpg","1/eladio-2.jpg","1/eladio-3.jpg","1/eladio-4.jpg"],
           display: ["display/1/eladio50_1.jpg","display/1/eladio50_2.jpg"],

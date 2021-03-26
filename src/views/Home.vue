@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="position:absolute;background-color:#707070;max-height:100vh;max-width:100vw;overflow-y:auto"
+    style="position:absolute;background-color:#EDEDED;max-height:100vh;max-width:100vw;overflow-y:auto"
   >
     <v-row
       class="ma-0 pa-0 scr"
@@ -44,6 +44,7 @@
         >
           <p
             class="ma-0 mx-16 pa-0 px-16 parr d-none d-sm-flex"
+            style="font-size:40px !important"
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p
             class="ma-0 mx-16 pa-0 mobileText d-sm-none"
@@ -52,7 +53,7 @@
         </v-row>
         <v-row
           class="ma-0 pa-0"
-          style="width:100vw;background-color:#707070"
+          style="width:100vw;background-color:#EDEDED"
         >
           <v-col
             class="ma-0 pa-0"
@@ -447,7 +448,6 @@ export default {
     this.$store.commit('caseIndex', null);
     this.$store.commit('header', true);
     for (var i = 0; i < this.$store.state.projects.length; i++){
-      console.log(this.$store.state.projects[i])
       var pictures = this.$store.state.projects[i].display;
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
 
