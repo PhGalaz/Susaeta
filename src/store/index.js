@@ -12,6 +12,8 @@ export default new Vuex.Store({
     burger: true,
     caseIndex: 0,
     scroll: null,
+    text1: "Experiencia arquitectónica gratificante.",
+    text2: "",
     cover: [
       "2/eladio-1.jpg",
       "4/eladio-1.jpg",

@@ -45,10 +45,10 @@
           <p
             class="ma-0 mx-16 pa-0 px-16 parr d-none d-sm-flex"
             style="font-size:40px !important"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          >{{$store.state.text1}}</p>
           <p
             class="ma-0 mx-16 pa-0 mobileText d-sm-none"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          >{{$store.state.text1}}</p>
 
         </v-row>
         <v-row
