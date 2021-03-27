@@ -114,7 +114,7 @@ export default new Vuex.Store({
       },
       {
           id: 10,
-          name: "Clínica Alemana, Ala Sur",
+          name: "Ala Sur Clínica Alemana",
           location: "Puerto Varas (Asociado a G. Greene Arquitecto)",
           pictures: ["11/eladio-1.jpg","11/eladio-2.jpg","11/eladio-3.jpg","11/eladio-4.jpg"],
           display: ["display/11/eladio50-1.jpg"],

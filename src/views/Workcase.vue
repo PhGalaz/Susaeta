@@ -85,7 +85,7 @@
     <!-- Central images loop -->
     <v-row
       class="ma-0 pa-0"
-      v-for="(item,i) in this.case.pictures" :key="i"
+      v-for="(item,i) in this.pics" :key="i"
     >
       <v-row
         class="ma-0 pa-0 d-none d-sm-flex"
@@ -133,7 +133,7 @@
     >
       <v-img
         style="max-height:100vh !important;min-height:100vh !important"
-        :src="this.case.pictures[0]" eager/>
+        :src="this.case.pictures[this.case.pictures.length - 2]" eager/>
 
     </v-row>
     <v-row
@@ -176,7 +176,9 @@ export default {
     props: ["index"],
     data() {
       return {
-        case: []
+        case: [],
+        pics: [],
+        indexer: null
       }
     },
     components: {
@@ -186,13 +188,15 @@ export default {
 
       this.$store.commit('header', false);
 
-
       if (this.index !== undefined) {
         this.case = this.$store.state.projects[this.index];
         this.$store.commit('caseIndex', this.index);
+        this.indexer = this.index
       } else {
         this.case = this.$store.state.projects[this.$store.state.caseIndex];
+        this.indexer = this.$store.state.caseIndex
       }
+      this.fixer();
     },
 
     async mounted () {
@@ -201,13 +205,27 @@ export default {
       this.$store.commit('burger', false)
     },
     methods: {
+      fixer(){
+        this.pics = []
+        var temp = this.$store.state.projects[this.indexer].pictures
+        var length = temp.length
+        for (var i = 0; i < length - 2; i++) {
+          this.pics.push(temp[i])
+        }
+      },
       anterior(){
         this.$el.scrollTo(0,0);
         this.case = this.$store.state.projects[(this.case.id + this.$store.state.projects.length - 1) % this.$store.state.projects.length];
+        this.indexer = this.case.id
+        this.$store.commit('caseIndex', this.indexer);
+        this.fixer()
       },
       siguiente(){
         this.$el.scrollTo(0,0);
         this.case = this.$store.state.projects[(this.case.id + 1) % this.$store.state.projects.length];
+        this.indexer = this.case.id
+        this.$store.commit('caseIndex', this.indexer);
+        this.fixer()
       },
       sleep(sec) {
         return new Promise((resolve) => {
@@ -257,7 +275,7 @@ export default {
 
   .descripcion2
     line-height: 110%
-    font-size: 60px
+    font-size: 40px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
