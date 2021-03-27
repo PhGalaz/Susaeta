@@ -16,7 +16,7 @@
           cycle
           :show-arrows="false"
           continuos="false"
-          interval=7000
+          interval=5500
           touchless
         >
           <v-carousel-item
@@ -106,7 +106,7 @@
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
                   style="height:50vh;width:100vw"
-                  :src="this.cabin0" :key="0" 
+                  :src="this.cabin0" :key="0"
                 />
               </v-row>
             </v-row>
@@ -416,6 +416,7 @@ export default {
 
   name: 'App',
   data: () => ({
+    covers: null,
     cabin0: null,
     cabin1: null,
     cabin2: null,
@@ -447,6 +448,10 @@ export default {
   created(){
     this.$store.commit('caseIndex', null);
     this.$store.commit('header', true);
+
+    var covers = this.$store.state.cover;
+    this.cover = covers.sort(function() {return 0.5 - Math.random()});
+
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].display;
       pictures = pictures.sort(function() {return 0.5 - Math.random()});

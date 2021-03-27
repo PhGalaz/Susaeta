@@ -2,7 +2,7 @@
 
   <v-row
     class="ma-0 pa-0"
-    style="position:absolute;background-color:#707070;height:100vh;overflow-y:auto"
+    style="position:absolute;background-color:#EDEDED;height:100vh;overflow-y:auto"
     @wheel="handleWheel()"
 
   >
@@ -58,7 +58,7 @@
 
         <v-row
           class="ma-0 pa-0"
-          style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:65vh;letter-spacing:0px;line-height:90%;font-weight:bold"
+          style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:64vh;letter-spacing:0px;line-height:90%;font-weight:bold"
         >
           <v-spacer></v-spacer>
           <router-link
@@ -70,9 +70,9 @@
               style="font-size:25px"
               align="center"
             >
-              <p class="text-right" style="line-height:20px">{{ item.name }}</p>
+              <p class="mr-2 text-right" style="line-height:20px">{{ item.name }}</p>
               <v-icon
-                class="ma-0 mb-4 pa-0"
+                class="ma-0 mr-4 mb-4 pa-0"
                 medium
                 color= "#EDEDED"
               >

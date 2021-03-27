@@ -4,6 +4,21 @@
     style="position:absolute;background-color:#EDEDED;max-height:100vh;overflow-y:auto;max-width:100vw !important"
   >
     <v-row
+      class="ma-0 mt-4 pa-0 menu-item"
+      style="position:fixed;z-index:1;top:63.2vh;color:#EDEDED"
+      align="center"
+    >
+
+      <v-icon
+        class="ma-0 ml-4 mb-4 pa-0"
+        medium
+        color= "#EDEDED"
+      >
+        mdi-arrow-left
+      </v-icon>
+      <p class="ml-2" @click="$router.go(-1)" style="font-size:25px">Volver</p>
+    </v-row>
+    <v-row
       class="ma-0 pa-0"
     >
       <v-row
@@ -15,21 +30,7 @@
           :src="this.case.pictures[this.case.pictures.length - 1]" eager/>
 
       </v-row>
-      <v-row
-        class="ma-0 mt-4 pa-0 menu-item"
-        style="position:fixed;z-index:1;top:60vh;color:#EDEDED"
-        align="center"
-      >
 
-        <v-icon
-          class="ma-0 mb-4 pa-0"
-          medium
-          color= "#EDEDED"
-        >
-          mdi-arrow-left
-        </v-icon>
-        <p @click="$router.go(-1)" style="font-size:25px">Volver</p>
-      </v-row>
       <v-row
         class="ma-0 pa-0 d-sm-none"
         style="height:50vh !important;width:100vw;z-index:0"
@@ -49,8 +50,7 @@
       <v-col
       >
         <v-row class="ma-0 ml-16 pa-0 pl-16 names text-uppercase">{{ this.case.name }}</v-row>
-        <v-row class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.case.location }}, {{ this.case.year }}</v-row>
-        <v-row class="ma-0 ml-16 pa-0 pl-16 contractors">{{ this.case.contractor }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.case.location }}</v-row>
 
       </v-col>
       <v-col
@@ -70,8 +70,7 @@
         class="ma-0 mt-16 mb-16 pa-0"
       >
         <v-row class="ma-0 ml-16 pa-0 names text-uppercase" style="max-width:80vw"><p>{{ this.case.name }}</p></v-row>
-        <v-row class="ma-0 ml-16 pa-0 locations">{{ this.case.location }}, {{ this.case.year }}</v-row><br>
-        <v-row class="ma-0 ml-16 pa-0 contractors">{{ this.case.contractor }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 locations">{{ this.case.location }}</v-row><br>
       </v-row>
 
 
