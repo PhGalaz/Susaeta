@@ -71,6 +71,8 @@
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @mouseover="ober(1)"
+                  @mouseleave="leave()"
                 >
                   <v-row
                     class="ma-0 pa-0 name"
@@ -120,6 +122,8 @@
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @mouseover="ober(2)"
+                  @mouseleave="leave()"
                 >
                   <v-row
                     class="ma-0 pa-0 name"
@@ -179,6 +183,8 @@
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @mouseover="ober(3)"
+                  @mouseleave="leave()"
                 >
                   <v-row
                     class="ma-0 pa-0 name"
@@ -229,6 +235,8 @@
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @mouseover="ober(4)"
+                  @mouseleave="leave()"
                 >
                   <v-row
                     class="ma-0 pa-0 name"
@@ -416,6 +424,7 @@ export default {
 
   name: 'App',
   data: () => ({
+    over: undefined,
     covers: null,
     cabin0: null,
     cabin1: null,
@@ -473,7 +482,12 @@ export default {
     this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop );
   },
   methods: {
-
+    ober: function (number) {
+      this.over = number
+    },
+    leave: function () {
+      this.over = undefined
+    },
     async init() {
       if(this.position.length){
         var r = Math.floor( Math.random() * this.position.length );
@@ -481,29 +495,32 @@ export default {
           r = Math.floor( Math.random() * this.position.length );
         }
         this.last = this.position[r];
+        console.log(this.last)
         var photo = (this.indexY) % (this.random_set[this.indexX][0].length);
-        if(this.position[r] == 1){
-          this.cabin0 = this.random_set[this.indexX][0][photo];
-          this.index0 = this.random_set[this.indexX][1];
-        } else if (this.position[r] == 2) {
-          this.cabin1 = this.random_set[this.indexX][0][photo];
-          this.index1 = this.random_set[this.indexX][1];
-        } else if (this.position[r] == 3) {
-          this.cabin2 = this.random_set[this.indexX][0][photo];
-          this.index2 = this.random_set[this.indexX][1];
-        } else if (this.position[r] == 4) {
-          this.cabin3 = this.random_set[this.indexX][0][photo];
-          this.index3 = this.random_set[this.indexX][1];
-        } else {
-          console.log('Error')
+        if (this.last != this.over) {
+          if(this.position[r] == 1){
+            this.cabin0 = this.random_set[this.indexX][0][photo];
+            this.index0 = this.random_set[this.indexX][1];
+          } else if (this.position[r] == 2) {
+            this.cabin1 = this.random_set[this.indexX][0][photo];
+            this.index1 = this.random_set[this.indexX][1];
+          } else if (this.position[r] == 3) {
+            this.cabin2 = this.random_set[this.indexX][0][photo];
+            this.index2 = this.random_set[this.indexX][1];
+          } else if (this.position[r] == 4) {
+            this.cabin3 = this.random_set[this.indexX][0][photo];
+            this.index3 = this.random_set[this.indexX][1];
+          } else {
+            console.log('Error')
+          }
+          this.index = this.index + 1;
+          this.indexX = (this.index) % this.random_set.length;
+          if ((this.index >= this.random_set.length) && (this.index) % this.random_set.length == 0){
+            this.indexY = this.indexY + 1;
+          }
+          await this.random_sleep();
         }
         this.position.splice(r, 1);
-        this.index = this.index + 1;
-        this.indexX = (this.index) % this.random_set.length;
-        if ((this.index >= this.random_set.length) && (this.index) % this.random_set.length == 0){
-          this.indexY = this.indexY + 1;
-        }
-        await this.random_sleep();
         this.init()
       } else {
         this.position = [1,2,3,4];

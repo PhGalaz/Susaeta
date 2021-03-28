@@ -168,7 +168,8 @@
     <transition
         :name="transitionName"
     >
-      <router-view/>
+      <keep-alive><router-view/></keep-alive>
+
     </transition>
 
 
@@ -225,6 +226,10 @@ export default {
 
   ::-webkit-scrollbar
     display: none
+
+  [v-cloak]
+    display: none
+
 
   .v-application a
     color: #EDEDED !important
