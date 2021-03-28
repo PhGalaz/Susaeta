@@ -52,7 +52,7 @@
           class="submit"
           :width="this.width"
           v-bind:style="{ color: computedColor }"
-          style="text-transform:none;font-size:20px;font-family:Montserrat;letter-spacing: 0px;transition: ease 1s"
+          style="text-transform:none;font-size:20px;font-family:Montserrat;letter-spacing: 0px;transition: ease .5s"
           :text="this.text"
           color="#EDEDED"
           @click="sendEmail()"

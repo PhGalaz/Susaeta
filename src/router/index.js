@@ -36,7 +36,7 @@ const routes = [
     meta: { transitionName: 'slide' }
   },
   {
-    path: '/workcase',
+    path: '/workcase/:id',
     name: 'Workcase',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

@@ -495,7 +495,6 @@ export default {
           r = Math.floor( Math.random() * this.position.length );
         }
         this.last = this.position[r];
-        console.log(this.last)
         var photo = (this.indexY) % (this.random_set[this.indexX][0].length);
         if (this.last != this.over) {
           if(this.position[r] == 1){

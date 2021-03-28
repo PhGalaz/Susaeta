@@ -168,7 +168,7 @@
     <transition
         :name="transitionName"
     >
-      <keep-alive><router-view/></keep-alive>
+      <router-view/>
 
     </transition>
 

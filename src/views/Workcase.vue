@@ -185,6 +185,7 @@ export default {
       'Footer': require('@/components/Footer.vue').default
     },
     created(){
+      console.log(this.index)
 
       this.$store.commit('header', false);
 
@@ -200,6 +201,7 @@ export default {
     },
 
     async mounted () {
+      console.log('mounted')
       this.$store.commit('burger', true);
       await this.sleep(1000);
       this.$store.commit('burger', false)
