@@ -39,16 +39,16 @@
       >
         <v-row
           class="ma-0 pa-0"
-          style="width:100vw;height:100vh"
+          style="width:100vw"
           align="center"
         >
           <p
-            class="ma-0 mx-16 pa-0 px-16 parr d-none d-sm-flex"
+            class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 px-16 parr d-none d-sm-flex"
             style="font-size:40px !important"
-          >{{$store.state.text1}}</p>
+          >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
           <p
-            class="ma-0 mx-16 pa-0 mobileText d-sm-none"
-          >{{$store.state.text1}}</p>
+            class="ma-0 mx-16 pa-0 mobileText d-sm-none text-center"
+          >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
 
         </v-row>
         <v-row
@@ -303,17 +303,19 @@
               style="width:100vw"
             >
               <p
-                class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex"
+                class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex text-left"
                 style="font-size:40px !important"
-              >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              >
+                {{ $store.state.text3 }}
+              </p>
               <v-row
-                class="ma-0 pa-0 d-sm-none"
+                class="ma-0 pa-0 d-sm-none text-center"
                 style="width:100vw;height:100vh"
                 align="center"
               >
                 <p
                   class="ma-0 mx-16 pa-0 mobileText"
-                >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                >{{ $store.state.text3 }}</p>
 
               </v-row>
             </v-col>
@@ -329,7 +331,7 @@
             style="width:50vw;font-size:70px;line-height:100%"
             align="center"
           >
-            <p class="ma-0 ml-16 pa-0 pl-16">¿Vamos por<br><span class="cafe">un buen café?</span></p>
+            <p class="ma-0 ml-16 pa-0 pl-16">Convérsemos!</p>
           </v-row>
           <v-row
             class="ma-0 pa-0 parr"
@@ -352,7 +354,7 @@
             justify="center"
             align="center"
           >
-            <p class="ma-0 mt-4 mx-16 pa-0 parrr text-center" style="font-size:50px;line-height:110%">¿Vamos por<br><span>un buen café?</span></p>
+            <p class="ma-0 mt-4 mx-16 pa-0 parrr text-center" style="font-size:50px;line-height:110%">Convérsemos!</p>
           </v-row>
           <v-row
             class="ma-0 pa-0"
@@ -638,7 +640,7 @@ export default {
     color: #707070
 
   .mobileText
-    font-size: 30px
+    font-size: 20px
     font-family: Vollkorn
     font: normal normal normal Vollkorn
     letter-spacing: 1px
