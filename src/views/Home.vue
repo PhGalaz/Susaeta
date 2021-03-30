@@ -63,14 +63,13 @@
             <v-row
               class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
-            >
-              <router-link
-                :to="{ name: 'Workcase', params: {index: this.index0 } }"
 
-              >
+            >
+
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @click="router(index0)"
                   @mouseover="ober(1)"
                   @mouseleave="leave()"
                 >
@@ -97,7 +96,7 @@
                     {{ $store.state.projects[this.index0].name }}
                   </v-row>
                 </v-row>
-              </router-link>
+
 
 
               <v-row
@@ -116,12 +115,10 @@
               class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
             >
-              <router-link
-                :to="{ name: 'Workcase', params: {index: this.index1 } }"
-              >
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @click="router(index1)"
                   @mouseover="ober(2)"
                   @mouseleave="leave()"
                 >
@@ -148,7 +145,6 @@
                     {{ $store.state.projects[this.index1].name }}
                   </v-row>
                 </v-row>
-              </router-link>
 
 
               <v-row
@@ -177,12 +173,10 @@
               class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
             >
-              <router-link
-                :to="{ name: 'Workcase', params: {index: this.index2 } }"
-              >
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @click="router(index2)"
                   @mouseover="ober(3)"
                   @mouseleave="leave()"
                 >
@@ -209,7 +203,6 @@
                     {{ $store.state.projects[this.index2].name }}
                   </v-row>
                 </v-row>
-              </router-link>
 
 
               <v-row
@@ -228,13 +221,10 @@
               class="ma-0 pa-0"
               style="max-height:50vh;min-height:50vh"
             >
-              <router-link
-
-                :to="{ name: 'Workcase', params: {index: this.index3 } }"
-              >
                 <v-row
                   class="ma-0 pa-0 casa d-none d-md-flex"
                   align="center"
+                  @click="router(index3)"
                   @mouseover="ober(4)"
                   @mouseleave="leave()"
                 >
@@ -261,7 +251,6 @@
                     {{ $store.state.projects[this.index3].name }}
                   </v-row>
                 </v-row>
-              </router-link>
 
               <v-row
                 class="ma-0 pa-0"
@@ -455,6 +444,7 @@ export default {
     this.$store.commit('burger', false)
   },
   created(){
+
     this.$store.commit('caseIndex', null);
     this.$store.commit('header', true);
 
@@ -473,6 +463,7 @@ export default {
     this.cabin2 = this.random_set[2][0][0];
     this.cabin3 = this.random_set[3][0][0];
     this.index0 = this.random_set[0][1];
+    console.log(this.index0)
     this.index1 = this.random_set[1][1];
     this.index2 = this.random_set[2][1];
     this.index3 = this.random_set[3][1];
@@ -482,6 +473,11 @@ export default {
     this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop );
   },
   methods: {
+    router: function (number) {
+      console.log(number)
+      this.$store.commit('caseIndex', number);
+      this.$router.push({ name: 'Workcase' })
+    },
     ober: function (number) {
       this.over = number
     },

@@ -103,7 +103,6 @@
       } else {
         this.model = this.getRandomInt(this.$store.state.projects.length)
       }
-      console.log(this.model)
     },
     async mounted () {
       this.$store.commit('burger', true);
@@ -157,7 +156,6 @@
         if (currentScrollPosition < 0) {
           return
         }
-        console.log(this.$el.scrollHeight)
         // Set the current scroll position as the last scroll position
         this.lastScrollPosition = currentScrollPosition
       },

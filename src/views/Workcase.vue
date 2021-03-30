@@ -27,7 +27,7 @@
       >
         <v-img
           style="max-height:100vh !important;min-height:100vh !important"
-          :src="this.case.pictures[this.case.pictures.length - 1]" eager/>
+          :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 1]" eager/>
 
       </v-row>
 
@@ -37,7 +37,7 @@
       >
         <v-img
           style="max-height:50vh !important;min-height:50vh !important"
-          :src="this.case.pictures[this.case.pictures.length - 1]" eager/>
+          :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 1]" eager/>
 
       </v-row>
     </v-row>
@@ -49,15 +49,15 @@
     >
       <v-col
       >
-        <v-row class="ma-0 ml-16 pa-0 pl-16 names text-uppercase">{{ this.case.name }}</v-row>
-        <v-row class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.case.location }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 pl-16 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</v-row>
+        <v-row class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</v-row>
 
       </v-col>
       <v-col
         class="ma-0 pa-0"
       >
-        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.case.description1 }}</p><br>
-        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.case.description2 }}</p>
+        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
+        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
 
       </v-col>
     </v-row>
@@ -69,16 +69,16 @@
       <v-row
         class="ma-0 mt-16 mb-16 pa-0"
       >
-        <v-row class="ma-0 ml-16 pa-0 names text-uppercase" style="max-width:80vw"><p>{{ this.case.name }}</p></v-row>
-        <v-row class="ma-0 ml-16 pa-0 locations">{{ this.case.location }}</v-row><br>
+        <v-row class="ma-0 ml-16 pa-0 names text-uppercase" style="max-width:80vw"><p>{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</p></v-row>
+        <v-row class="ma-0 ml-16 pa-0 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</v-row><br>
       </v-row>
 
 
       <v-row
         class="ma-0 mt-8 mb-16 mx-16 pa-0"
       >
-        <p class="ma-0 pa-0 descripcion1">{{ this.case.description1 }}</p><br>
-        <p class="ma-0 mb-16 pa-0 descripcion1">{{ this.case.description2 }}</p>
+        <p class="ma-0 pa-0 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
+        <p class="ma-0 mb-16 pa-0 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
       </v-row>
     </v-row>
 
@@ -114,7 +114,7 @@
       style="height:100vh;background-color:#EDEDED"
       align="center"
     >
-      <p class="mx-16 px-16 descripcion2">{{ this.case.description1 }}<br><br>{{ this.case.description2 }}</p>
+      <p class="mx-16 px-16 descripcion2">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
 
     </v-row>
     <v-row
@@ -122,7 +122,7 @@
       style="width:100vw;background-color:#EDEDED"
       align="center"
     >
-      <p class="ma-16 my-16 py-8 descripcion1">{{ this.case.description1 }}<br><br>{{ this.case.description2 }}</p>
+      <p class="ma-16 my-16 py-8 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
 
     </v-row>
 
@@ -133,7 +133,7 @@
     >
       <v-img
         style="max-height:100vh !important;min-height:100vh !important"
-        :src="this.case.pictures[this.case.pictures.length - 2]" eager/>
+        :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 2]" eager/>
 
     </v-row>
     <v-row
@@ -185,23 +185,18 @@ export default {
       'Footer': require('@/components/Footer.vue').default
     },
     created(){
-      console.log(this.index)
-
+      console.log(this.$store.state.caseIndex)
       this.$store.commit('header', false);
 
-      if (this.index !== undefined) {
-        this.case = this.$store.state.projects[this.index];
-        this.$store.commit('caseIndex', this.index);
-        this.indexer = this.index
-      } else {
-        this.case = this.$store.state.projects[this.$store.state.caseIndex];
-        this.indexer = this.$store.state.caseIndex
-      }
+
+
+
       this.fixer();
     },
-
+    beforeDestroy () {
+      console.log('destroy')
+    },
     async mounted () {
-      console.log('mounted')
       this.$store.commit('burger', true);
       await this.sleep(1000);
       this.$store.commit('burger', false)
@@ -209,24 +204,25 @@ export default {
     methods: {
       fixer(){
         this.pics = []
-        var temp = this.$store.state.projects[this.indexer].pictures
+        var temp = this.$store.state.projects[this.$store.state.caseIndex].pictures
         var length = temp.length
         for (var i = 0; i < length - 2; i++) {
           this.pics.push(temp[i])
         }
+
       },
       anterior(){
         this.$el.scrollTo(0,0);
-        this.case = this.$store.state.projects[(this.case.id + this.$store.state.projects.length - 1) % this.$store.state.projects.length];
-        this.indexer = this.case.id
-        this.$store.commit('caseIndex', this.indexer);
+        this.case = this.$store.state.projects[(this.$store.state.projects[this.$store.state.caseIndex].id + this.$store.state.projects.length - 1) % this.$store.state.projects.length];
+        this.$store.state.caseIndex = this.case.id
+        this.$store.commit('caseIndex', this.$store.state.caseIndex);
         this.fixer()
       },
       siguiente(){
         this.$el.scrollTo(0,0);
-        this.case = this.$store.state.projects[(this.case.id + 1) % this.$store.state.projects.length];
-        this.indexer = this.case.id
-        this.$store.commit('caseIndex', this.indexer);
+        this.case = this.$store.state.projects[(this.$store.state.projects[this.$store.state.caseIndex].id + 1) % this.$store.state.projects.length];
+        this.$store.state.caseIndex = this.case.id
+        this.$store.commit('caseIndex', this.$store.state.caseIndex);
         this.fixer()
       },
       sleep(sec) {

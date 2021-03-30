@@ -168,10 +168,11 @@
     <transition
         :name="transitionName"
     >
-      <router-view/>
 
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
     </transition>
-
 
   </v-app>
 </template>
