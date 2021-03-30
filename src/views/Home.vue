@@ -106,7 +106,7 @@
                 <v-lazy-image
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
-                  style="height:50vh;width:100vw"
+                  style="height:50vh;width:100%"
                   :src="this.cabin0" :key="0"
                 />
               </v-row>
@@ -152,9 +152,10 @@
                 style="max-height:50vh;min-height:50vh;max-width:100vw;overflow-x:hidden"
               >
                 <v-lazy-image
+                  class=""
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
-                  style="height:50vh;width:50vw"
+                  style="height:50vh;width:100vw"
                   :src="this.cabin1" :key="1" eager
                 />
               </v-row>
