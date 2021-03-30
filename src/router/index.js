@@ -10,6 +10,9 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    beforeRouteEnter () {
+      console.log('loco')
+    },
     meta: {
       title: 'Eladio Susaeta - Arquitectura',
       metaTags: [
@@ -56,6 +59,8 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
+
+
 
 // This callback runs before every route change, including on page load.
 router.beforeEach((to, from, next) => {

@@ -16,7 +16,7 @@
       >
         mdi-arrow-left
       </v-icon>
-      <p class="ml-2" @click="$router.go(-1)" style="font-size:25px">Volver</p>
+      <p class="ml-2" @click="route()" style="font-size:25px">Volver</p>
     </v-row>
     <v-row
       class="ma-0 pa-0"
@@ -185,7 +185,6 @@ export default {
       'Footer': require('@/components/Footer.vue').default
     },
     created(){
-      console.log(this.$store.state.caseIndex)
       this.$store.commit('header', false);
 
 
@@ -202,6 +201,9 @@ export default {
       this.$store.commit('burger', false)
     },
     methods: {
+      route: function () {
+        this.$router.go(-1)
+      },
       fixer(){
         this.pics = []
         var temp = this.$store.state.projects[this.$store.state.caseIndex].pictures

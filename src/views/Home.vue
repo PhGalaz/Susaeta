@@ -154,7 +154,7 @@
                 <v-lazy-image
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
-                  style="height:50vh;width:100vw"
+                  style="height:50vh;width:50vw"
                   :src="this.cabin1" :key="1" eager
                 />
               </v-row>
@@ -437,9 +437,7 @@ export default {
     'Footer': require('@/components/Footer.vue').default
   },
   async mounted(){
-    this.$el.scrollTop = this.$store.state.scroll;
     this.$store.commit('burger', true);
-    this.$el.addEventListener('scroll', this.onScroll);
     await this.sleep(1000);
     this.$store.commit('burger', false)
   },
@@ -463,19 +461,15 @@ export default {
     this.cabin2 = this.random_set[2][0][0];
     this.cabin3 = this.random_set[3][0][0];
     this.index0 = this.random_set[0][1];
-    console.log(this.index0)
     this.index1 = this.random_set[1][1];
     this.index2 = this.random_set[2][1];
     this.index3 = this.random_set[3][1];
     this.init();
   },
-  beforeDestroy () {
-    this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop );
-  },
   methods: {
     router: function (number) {
-      console.log(number)
       this.$store.commit('caseIndex', number);
+      this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop )
       this.$router.push({ name: 'Workcase' })
     },
     ober: function (number) {
