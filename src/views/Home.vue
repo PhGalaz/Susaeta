@@ -155,7 +155,7 @@
                   class=""
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
-                  style="height:50vh;width:100vw"
+                  style="height:50vh;width:100%"
                   :src="this.cabin1" :key="1" eager
                 />
               </v-row>
@@ -213,7 +213,7 @@
                 <v-lazy-image
                   :class="{'mob': $vuetify.breakpoint.xs}"
 
-                  style="height:50vh;width:100vw"
+                  style="height:50vh;width:100%"
                   :src="this.cabin2" :key="2" eager
                 />
               </v-row>
@@ -259,7 +259,7 @@
               >
                 <v-lazy-image
                   :class="{'mob': $vuetify.breakpoint.xs}"
-                  style="height:50vh;width:100vw"
+                  style="height:50vh;width:100%"
                   :src="this.cabin3" :key="3" eager
                 />
               </v-row>
