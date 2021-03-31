@@ -438,7 +438,8 @@ export default {
     block: false
   }),
   components: {
-    'Form': require('@/components/Form.vue').default,
+
+
     'Footer': require('@/components/Footer.vue').default
   },
   async mounted(){
