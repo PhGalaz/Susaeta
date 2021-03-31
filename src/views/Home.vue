@@ -47,7 +47,7 @@
             style="font-size:40px !important"
           >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
           <p
-            class="ma-0 mx-16 pa-0 mobileText d-sm-none text-center"
+            class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText d-sm-none text-center"
           >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
 
         </v-row>
