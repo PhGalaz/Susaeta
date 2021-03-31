@@ -314,7 +314,7 @@
                 align="center"
               >
                 <p
-                  class="ma-0 mx-16 pa-0 mobileText"
+                  class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText"
                 >{{ $store.state.text3 }}</p>
 
               </v-row>
@@ -338,9 +338,10 @@
             style="width:50vw;font-size:70px;line-height:100%"
             align="center"
           >
-            <Form
+            <!-- <Form
               class="ma-0 mr-16 pa-0 pr-16"
-            ></Form>
+            ></Form> -->
+
           </v-row>
         </v-row>
         <v-row
@@ -360,9 +361,10 @@
             class="ma-0 pa-0"
             style="width:100%"
           >
-            <Form
-              class="ma-0 mx-8 pa-0"
-            ></Form>
+          <!-- <Form
+            class="ma-0 mx-8 pa-0"
+          ></Form> -->
+
           </v-row>
 
         </v-row>
@@ -572,7 +574,7 @@ export default {
     opacity: 0
 
   .nameMobile
-    font-size: 20px
+    font-size: 25px
     position: absolute
 
   .mob
