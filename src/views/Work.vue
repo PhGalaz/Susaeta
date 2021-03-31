@@ -16,7 +16,7 @@
       :vertical="true"
       :reverse="this.reverse"
       touchless
-      v-model="model"
+      v-model="this.model"
     >
       <v-carousel-item
         style="height:100vh; width:100vw"
@@ -125,7 +125,7 @@
         return Math.floor(Math.random() * Math.floor(max));
       },
       onSwipeUp: async function () {
-        if (this.blokeo == false){
+        if (this.blokeo == false && this.$route.name == "Work"){
           this.blokeo = true
           this.model = this.model + 1 % this.$store.state.projects.length
           await this.sleep(2000);
@@ -133,7 +133,7 @@
         }
       },
       onSwipeDown: async function () {
-        if (this.blokeo == false){
+        if (this.blokeo == false && this.$route.name == "Work"){
           this.reverse = true
           this.blokeo = true
           this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length

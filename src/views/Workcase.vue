@@ -37,7 +37,7 @@
       >
         <v-img
           style="max-height:75vh !important;min-height:75vh !important"
-          :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 1]" eager/>
+          :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[1]" eager/>
 
       </v-row>
     </v-row>
@@ -59,8 +59,8 @@
       class="ma-0 pa-0 d-none d-sm-flex"
       v-if="this.$store.state.projects[this.$store.state.caseIndex].description1"
     >
-      <p class="ma-0 mt-16 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
-      <p class="ma-0 pb-16 mx-16 pa-0 px-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+      <p class="ma-0 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
+      <p class="ma-0 mb-16 mx-16 pa-0 px-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
     </v-row>
 
     <v-row
@@ -105,7 +105,7 @@
           :src="item" eager/>
       </v-row>
       <v-row
-        class="ma-0 pa-0 d-sm-none"
+        class="ma-0 mt-3 pa-0 d-sm-none"
         style="height:50vh !important;width:100vw;z-index:0"
       >
         <v-img
@@ -122,7 +122,7 @@
 
 
     <v-row
-      class="ma-0 pa-0"
+      class="ma-0 mt-3 mt-sm-0 pa-0"
       style="height:100vh !important;width:100vw;z-index:0"
     >
       <v-img
@@ -193,7 +193,12 @@ export default {
     },
     computed: {
       set: function () {
-        return this.$store.state.projects[this.$store.state.caseIndex].pictures
+        var tempset = []
+        for (var i = 2; i < this.$store.state.projects[this.$store.state.caseIndex].pictures.length; i++) {
+          tempset.push(this.$store.state.projects[this.$store.state.caseIndex].pictures[i])
+        }
+        console.log(tempset)
+        return tempset
       }
     },
     methods: {

@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -63,7 +61,7 @@ export default new Vuex.Store({
           location: "Puerto Varas",
           pictures: ["5/eladio-1.jpg","5/eladio-2.jpg","5/eladio-3.jpg"],
           display: ["display/5/eladio50-1.jpg","display/5/eladio50-2.jpg"],
-          description1: "Resultado de la recuperación de una casa histórica alemana a la cual fue adicionada una lúdica torre de muros en diagonal que configuran un diseño piramidal, alivianando el volúmen y ofreciendo una lectura estructural refinada.",
+          description1: "Resultado de la recuperación de una casa histórica alemana a la cual fue adicionada una lúdica torre de muros en diagonal que configuran un diseño piramidal, alivianando el volúmen y entregando una lectura estructural refinada.",
           description2: ""
       },
       {

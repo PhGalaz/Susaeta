@@ -192,7 +192,9 @@ export default {
   }),
   created () {
     this.$router.beforeEach((to, from, next) => {
-    
+
+      console.log(to)
+
       let transitionName = to.meta.transitionName || from.meta.transitionName;
 
       if (transitionName === 'slide') {
