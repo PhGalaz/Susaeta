@@ -84,6 +84,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
+                  @click="router(index0)"
                   align="center"
                   style="width:100vw"
                 >
@@ -133,6 +134,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
+                  @click="router(index0)"
                   align="center"
                   style="width:100vw"
                 >
@@ -192,6 +194,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
+                  @click="router(index0)"
                   align="center"
                   style="width:100vw"
                 >
@@ -240,6 +243,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
+                  @click="router(index0)"
                   align="center"
                   style="width:100vw"
                 >
@@ -315,7 +319,7 @@
               >
                 <p
                   class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText"
-                >{{ $store.state.text3 }}</p>
+                >{{ $store.state.text3 }}<br><br>E.S.</p>
 
               </v-row>
             </v-col>
@@ -323,16 +327,59 @@
 
         </v-row>
         <v-row
-          class="ma-0 pa-0 d-none d-sm-flex"
-          style="width:100vw;height:70vh;background-color:#C1B7A8"
+          class="ma-0 pa-0 d-none d-sm-flex parr text-center"
+          style="width:100vw;background-color:#C1B7A8;font-size:70px;line-height:70%;color:#EDEDED"
+          justify="center"
         >
-          <v-row
-            class="ma-0 pa-0 parr"
-            style="width:50vw;font-size:70px;line-height:100%"
-            align="center"
-          >
-            <p class="ma-0 ml-16 pa-0 pl-16">Convérsemos!</p>
-          </v-row>
+            <p class="ma-0 mt-16 pt-8 pa-0" style="width:100vw">¡Conversemos!
+
+
+            <br><br> <a href="tel:56994998436" class="ma-0 pa-0 font-weight-bold" style="width:100vw;font-size:90px;text-decoration:none">+56 9 9499 8436</a></p>
+            <v-row
+              class="ma-0 mt-16 pa-0"
+              style="font-family:Montserrat;width:100%;height:130px"
+            >
+
+
+
+
+              <v-row
+                class="ma-0 mx-sm-16 pa-0 px-sm-16 d-none d-sm-flex text-left"
+                align="center"
+              >
+                <v-row
+                  class="ma-0 pa-0"
+                  align="center"
+                >
+                  <p class="ma-0 mt-2 pa-0 pie" style="line-height:130%;font-family:Montserrat;font-size:17px;letter-spacing:0px;color:#707070">Arquitecto Eladio Susaeta, Chile<br>
+                    <v-icon
+                      class="mr-1 mt-1 mb-1"
+                      small
+                      color= "#707070"
+                    >
+                      mdi-copyright
+                    </v-icon>
+                    <span style="font-size:15px">{{ new Date().getFullYear() }}</span><br>
+                    <span style="font-size:10px">developed by <a
+                      class="ma-0 pa-0 agency"
+                      style="font-size:10px;color:#EDEDED !important"
+                      @click="Salvador()"
+                    >pink dog</a></span>
+                  </p>
+                </v-row>
+                <v-row
+                  class="ma-0 pa-0"
+                  style="width:100px"
+                  justify="end"
+                  align="center"
+                >
+
+                  <v-img style="filter: invert(43%) sepia(0%) saturate(7495%) hue-rotate(145deg) brightness(97%) contrast(81%)" max-height="100px" max-width="100px" src="timbre-ESsmall.png"/>
+                </v-row>
+
+              </v-row>
+
+            </v-row>
           <v-row
             class="ma-0 pa-0 parr"
             style="width:50vw;font-size:70px;line-height:100%"
@@ -346,7 +393,7 @@
         </v-row>
         <v-row
           class="ma-0 pa-0 d-sm-none"
-          style="width:100vw;height:100vh;background-color:#C1B7A8"
+          style="width:100vw;height:60vh;background-color:#C1B7A8"
           align="center"
         >
           <v-row
@@ -355,7 +402,42 @@
             justify="center"
             align="center"
           >
-            <p class="ma-0 mt-4 mx-16 pa-0 parrr text-center" style="font-size:40px;line-height:110%">Convérsemos!</p>
+            <p class="ma-0 mt-10 mx-16 pa-0 parrr text-center" style="font-size:40px;line-height:110%;color:#EDEDED">¡Conversemos!
+            <br><br> <a href="tel:56994998436" class="ma-0 pa-0 font-weight-bold" style="width:100vw;font-size:60px;text-decoration:none">+56 9 9499 8436</a></p>
+            <v-row
+              class="ma-0 mt-16 pa-0"
+              style="font-family:Montserrat;width:100%;height:130px"
+            >
+
+
+
+              <v-row
+                class="ma-0 pa-0 d-sm-none"
+                justify="center"
+              >
+                <v-img style="filter: invert(43%) sepia(0%) saturate(7495%) hue-rotate(145deg) brightness(97%) contrast(81%)" class="ma-0 mt-2 pa-0" max-height="70px" max-width="70px" src="timbre-ESsmall.png"/>
+                <p class="ma-0 mt-3 pa-0 pie text-center" style="width:100vw;font-size:15px;color:#707070">Arquitecto Eladio Susaeta, Chile<br>
+                  <v-icon
+                    class="mt-1 mr-1 mb-1"
+                    small
+                    color= "#707070"
+                  >
+                    mdi-copyright
+                  </v-icon>
+                  <span style="font-size:15px">{{ new Date().getFullYear() }}</span><br>
+                  <span style="font-size:10px">developed by
+                    <a
+                      class="ma-0 pa-0 agency"
+                      style="font-size:10px;color:#EDEDED !important"
+                      @click="Salvador()"
+                    >pink dog</a>
+                  </span>
+                </p>
+              </v-row>
+
+
+
+            </v-row>
           </v-row>
           <v-row
             class="ma-0 pa-0"
@@ -369,28 +451,7 @@
 
         </v-row>
       </v-row>
-      <v-row
-        class="ma-0 pa-0 d-none d-sm-flex"
-        style="width:100vw;background-color:#91816A;min-height:160px"
-        align="center"
-      >
-        <v-row
-          class="ma-0 pa-0"
-        >
-          <Footer class="ma-0 pa-0"></Footer>
-        </v-row>
-      </v-row>
-      <v-row
-        class="ma-0 pa-0 d-sm-none"
-        style="min-height:190px;background-color:#91816A"
-        align="center"
-      >
-        <v-row
-          class="ma-0 pa-0"
-        >
-          <Footer class="ma-0 pa-0" style="transform:scale(0.8);transform-origen:left"></Footer>
-        </v-row>
-      </v-row>
+
       <v-row
         class="ma-0 pa-0 text-center titulo d-none d-md-block"
         style="font-size:110px;transform:scale(0.5)"
@@ -440,7 +501,7 @@ export default {
   components: {
 
 
-    'Footer': require('@/components/Footer.vue').default
+
   },
   async mounted(){
     this.$store.commit('burger', true);
@@ -473,7 +534,11 @@ export default {
     this.init();
   },
   methods: {
+    Salvador: function () {
+      window.open("https://www.pinkdogstudio.com", "_blank");
+    },
     router: function (number) {
+      console.log('yes')
       this.$store.commit('caseIndex', number);
       this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop )
       this.$router.push({ name: 'Workcase' })
@@ -539,6 +604,12 @@ export default {
 </script>
 
 <style lang="sass">
+
+  .agency:hover
+    cursor: pointer
+  .pie
+    color: #EDEDED
+    line-height: 140%
 
   .v-lazy-image
     filter: blur(5px)
@@ -648,7 +719,7 @@ export default {
     font: normal normal normal Vollkorn
     letter-spacing: 1px
     color: #707070
-    line-height: 100%
+    line-height: 120%
 
 
   .v-carousel .v-window-item

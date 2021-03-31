@@ -13,7 +13,7 @@ export default new Vuex.Store({
     scroll: null,
     text1: "Las obras de Eladio surgen de un profundo conocimiento de las necesidades, expectativas y comprensión de los sueños que persiguen las personas que habitarán el espacio. Un proceso hiperpersonalizado que da como resultado diseños de inconfundible personalidad escénica.",
     text2: "Características de su trabajo son el aprovechamiento máximo de las virtudes del lugar de emplazamiento, la orientación que pone en escena la luz natural. Una estética que busca el placer de habitar.",
-    text3: "“Tomo cada proyecto como si fuese un sastre, un proyecto a medida. La exactitud de un sastre en el diseño de un espacio” E.S.",
+    text3: "“Tomo cada proyecto como si fuese un sastre, un proyecto a medida. La exactitud de un sastre en el diseño de un espacio”",
     cover: [
       "6/eladio-1.jpg",
       "4/eladio-4.jpg",
@@ -42,7 +42,7 @@ export default new Vuex.Store({
       },
       {
           id: 2,
-          name: "Casa Galería",
+          name: "Casa Spaguetti",
           location: "Puerto Varas",
           pictures: ["3/eladio-3.jpg","3/eladio-1.jpg","3/eladio-2.jpg","3/eladio-4.jpg","3/eladio-5.jpg"],
           display: ["display/3/eladio-1.jpg","display/3/eladio-2.jpg"],
