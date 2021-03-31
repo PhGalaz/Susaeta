@@ -47,7 +47,7 @@
             style="font-size:40px !important"
           >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
           <p
-            class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText d-sm-none text-center"
+            class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText d-sm-none text-left"
           >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
 
         </v-row>
@@ -309,7 +309,7 @@
                 {{ $store.state.text3 }}
               </p>
               <v-row
-                class="ma-0 pa-0 d-sm-none text-center"
+                class="ma-0 pa-0 d-sm-none text-left"
                 style="width:100vw;height:100vh"
                 align="center"
               >
@@ -355,7 +355,7 @@
             justify="center"
             align="center"
           >
-            <p class="ma-0 mt-4 mx-16 pa-0 parrr text-center" style="font-size:50px;line-height:110%">Convérsemos!</p>
+            <p class="ma-0 mt-4 mx-16 pa-0 parrr text-center" style="font-size:40px;line-height:110%">Convérsemos!</p>
           </v-row>
           <v-row
             class="ma-0 pa-0"
