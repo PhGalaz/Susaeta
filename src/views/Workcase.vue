@@ -23,106 +23,102 @@
     >
       <v-row
         class="ma-0 pa-0 d-none d-sm-flex"
-        style="height:75vh !important;width:100vw;z-index:0"
+        style="max-height:75vh !important;min-height:75vh;width:100vw;z-index:0"
       >
         <v-img
-          style="max-height:100vh !important;min-height:100vh !important"
-          :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 1]" eager/>
+          style="max-height:75vh !important;min-height:75vh !important"
+          :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[1]" eager/>
 
       </v-row>
 
       <v-row
         class="ma-0 pa-0 d-sm-none"
-        style="height:50vh !important;width:100vw;z-index:0"
+        style="height:65vh !important;width:100vw;z-index:0"
       >
         <v-img
-          style="max-height:50vh !important;min-height:50vh !important"
+          style="max-height:75vh !important;min-height:75vh !important"
           :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 1]" eager/>
 
       </v-row>
     </v-row>
-
-    <v-row
-      class="ma-0 my-8 pa-0 py-8 d-none d-sm-flex"
-      style="width:100vw;z-index:0;background-color:#EDEDED"
-
-    >
-
-      <v-row style="width:100vw" class="ma-0 mt-9 ml-16 pa-0 pl-16 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</v-row>
-      <v-row style="width:100vw" class="ma-0 mt-2 ml-16 pa-0 pl-16 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</v-row>
-      <p class="ma-0 mt-16 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
-      <p class="ma-0 mx-16 pa-0 px-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
-
-
-
-    </v-row>
-    <v-row
-      class="ma-0 pa-0 d-sm-none"
-      style="width:100vw;z-index:0;background-color:#EDEDED"
-      align="center"
-    >
-      <v-row
-        class="ma-0 mt-16 mb-16 pa-0"
-      >
-        <v-row class="ma-0 ml-16 pa-0 names text-uppercase" style="max-width:80vw"><p>{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</p></v-row>
-        <v-row class="ma-0 ml-16 pa-0 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</v-row><br>
-      </v-row>
-
-
-      <v-row
-        class="ma-0 mt-8 mb-16 mx-16 pa-0"
-      >
-        <p class="ma-0 pa-0 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
-        <p class="ma-0 mb-16 pa-0 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
-      </v-row>
-    </v-row>
-
-    <!-- Central images loop -->
-    <v-row
-      class="ma-0 pa-0"
-      v-for="(item,i) in this.$store.state.projects[this.$store.state.caseIndex].pictures" :key="i"
-
-    >
-      <v-row
-        class="ma-0 pa-0 d-none d-sm-flex"
-        style="height:100vh !important;width:100vw;z-index:0"
-
-        v-if="i != 0 && i != 1"
-      >
-        <v-img
-          style="max-height:100vh !important;min-height:100vh !important"
-          :src="item" eager/>
-
-      </v-row>
-      <v-row
-        class="ma-0 pa-0 d-sm-none"
-        style="height:50vh !important;width:100vw;z-index:0"
-      >
-        <v-img
-          style="max-height:50vh !important;min-height:50vh !important"
-          :src="item" eager/>
-
-      </v-row>
-    </v-row>
-
-
 
     <v-row
       class="ma-0 pa-0 d-none d-sm-flex"
-      style="height:100vh;background-color:#EDEDED"
+      style="width:100vw;min-height:25vh !important;max-height:25vh !important;z-index:0;background-color:#EDEDED"
       align="center"
     >
-      <p class="mx-16 px-16 descripcion2">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+      <v-row
+        class="ma-0 pa-0"
+        style="width:140px"
+      >
+        <p style="width:100vw" class="ma-0 ml-16 pa-0 pl-16 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</p>
+        <p style="width:100vw" class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</p>
+      </v-row>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0 d-none d-sm-flex"
+      v-if="this.$store.state.projects[this.$store.state.caseIndex].description1"
+    >
+      <p class="ma-0 mt-16 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
+      <p class="ma-0 pb-16 mx-16 pa-0 px-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+    </v-row>
+
+    <v-row
+      class="ma-0 pa-0 d-sm-none"
+      style="width:100vw;z-index:0;background-color:#EDEDED;min-height:35vh;max-height:35vh"
+      align="center"
+    >
+    <v-row
+      class="ma-0 pa-0"
+      style="width:140px"
+    >
+      <p style="width:100vw" class="ma-0 ml-16 pa-0 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</p>
+      <p style="width:100vw" class="ma-0 ml-16 pa-0 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</p>
+    </v-row>
+
+
 
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
       style="width:100vw;background-color:#EDEDED"
       align="center"
+      v-if="this.$store.state.projects[this.$store.state.caseIndex].description1"
     >
-      <p class="ma-16 my-16 py-8 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+      <p class="ma-0 mt-8 mx-16 mb-16 pb-8 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
 
     </v-row>
+
+    <!-- Central images loop -->
+    <v-row
+      class="ma-0 pa-0"
+      v-for="(item,i) in this.set" :key="i"
+
+    >
+      <v-row
+        class="ma-0 pa-0 d-none d-sm-flex"
+        style="height:100vh !important;width:100vw;z-index:0"
+      >
+
+        <v-img
+          style="max-height:100vh !important;min-height:100vh !important"
+          :src="item" eager/>
+      </v-row>
+      <v-row
+        class="ma-0 pa-0 d-sm-none"
+        style="height:50vh !important;width:100vw;z-index:0"
+      >
+        <v-img
+          style="max-height:50vh !important;min-height:50vh !important"
+          :src="item" eager/>
+
+      </v-row>
+    </v-row>
+
+
+
+
+
 
 
     <v-row
@@ -131,7 +127,7 @@
     >
       <v-img
         style="max-height:100vh !important;min-height:100vh !important"
-        :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[this.$store.state.projects[this.$store.state.caseIndex].pictures.length - 2]" eager/>
+        :src="this.$store.state.projects[this.$store.state.caseIndex].pictures[0]" eager/>
 
     </v-row>
     <v-row
@@ -194,6 +190,11 @@ export default {
       this.$store.commit('burger', true);
       await this.sleep(1000);
       this.$store.commit('burger', false)
+    },
+    computed: {
+      set: function () {
+        return this.$store.state.projects[this.$store.state.caseIndex].pictures
+      }
     },
     methods: {
       route: function () {

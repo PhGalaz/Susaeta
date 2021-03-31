@@ -61,15 +61,15 @@
           style="width:100vw;position:absolute;font-family:Montserrat;font-size:35px;color:#EDEDED;top:64vh;letter-spacing:0px;line-height:90%;font-weight:bold"
         >
           <v-spacer></v-spacer>
-          <router-link
-            class="ma-0 pa-0 text-decoration-none"
-            :to="{ name: 'Workcase', params: {index: index} }"
-          >
+
             <v-row
               class="ma-0 mt-4 pa-0 menu-item"
               style="font-size:25px"
-              align="center"
+
+              @click="router(index)"
             >
+              <v-spacer></v-spacer>
+
               <p class="mr-2 text-right" style="line-height:20px">{{ item.name }}</p>
               <v-icon
                 class="ma-0 mr-4 mb-4 pa-0"
@@ -79,7 +79,7 @@
                 mdi-arrow-right
               </v-icon>
             </v-row>
-          </router-link>
+
         </v-row>
       </v-carousel-item>
     </v-carousel>
@@ -112,7 +112,15 @@
     beforeDestroy () {
       this.$el.removeEventListener('scroll', this.onScroll)
     },
+    computed: {
+
+    },
     methods: {
+      router: function (number) {
+        console.log(number)
+        this.$store.commit('caseIndex', number);
+        this.$router.push({ name: 'Workcase' })
+      },
       getRandomInt: function (max) {
         return Math.floor(Math.random() * Math.floor(max));
       },

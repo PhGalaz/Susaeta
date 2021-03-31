@@ -50,7 +50,7 @@ export default new Vuex.Store({
       },
       {
           id: 3,
-          name: "Cabaña Almabosque",
+          name: "Cabaña Alma Bosque",
           location: "Puerto Varas",
           pictures: ["4/eladio-1.jpg","4/eladio-2.jpg","4/eladio-3.jpg","4/eladio-4.jpg","4/eladio-5.jpg","4/eladio-6.jpg","4/eladio-7.jpg","4/eladio-8.jpg"],
           display: ["display/4/eladio50-1.jpg","display/4/eladio50-2.jpg"],
@@ -90,7 +90,7 @@ export default new Vuex.Store({
           location: "Zapallar",
           pictures: ["8/eladio-1.jpg","8/eladio-2.jpg","8/eladio-3.jpg","8/eladio-4.jpg","8/eladio-5.jpg","8/eladio-6.jpg","8/eladio-7.jpg","8/eladio-8.jpg"],
           display: ["display/8/eladio50-1.jpg","display/8/eladio50-2.jpg"],
-          description1: "Incorporada al hábitat natural de la roca, imitando su color, y con forma de almeja sujeta a la roca costera, contempla el paisaje eterno del golpe del romper de las olas con una curvatura que asemeja el puente de mando de barco.",
+          description1: "Incorporada al hábitat natural de la roca, imitando su color, y con forma de almeja sujetada a la roca costera, contempla el eterno romper de las olas. Su curvatura asemeja el puente de mando de un barco.",
           description2: ""
       },
       {
