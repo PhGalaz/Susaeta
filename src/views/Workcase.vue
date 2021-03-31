@@ -23,7 +23,7 @@
     >
       <v-row
         class="ma-0 pa-0 d-none d-sm-flex"
-        style="height:100vh !important;width:100vw;z-index:0"
+        style="height:75vh !important;width:100vw;z-index:0"
       >
         <v-img
           style="max-height:100vh !important;min-height:100vh !important"
@@ -43,23 +43,18 @@
     </v-row>
 
     <v-row
-      class="ma-0 my-16 pa-0 py-8 d-none d-sm-flex"
+      class="ma-0 my-8 pa-0 py-8 d-none d-sm-flex"
       style="width:100vw;z-index:0;background-color:#EDEDED"
-      align="center"
+
     >
-      <v-col
-      >
-        <v-row class="ma-0 ml-16 pa-0 pl-16 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</v-row>
-        <v-row class="ma-0 ml-16 pa-0 pl-16 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</v-row>
 
-      </v-col>
-      <v-col
-        class="ma-0 pa-0"
-      >
-        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
-        <p class="ma-0 mr-16 pa-0 pr-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+      <v-row style="width:100vw" class="ma-0 mt-9 ml-16 pa-0 pl-16 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</v-row>
+      <v-row style="width:100vw" class="ma-0 mt-2 ml-16 pa-0 pl-16 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</v-row>
+      <p class="ma-0 mt-16 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
+      <p class="ma-0 mx-16 pa-0 px-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
 
-      </v-col>
+
+
     </v-row>
     <v-row
       class="ma-0 pa-0 d-sm-none"
@@ -85,11 +80,14 @@
     <!-- Central images loop -->
     <v-row
       class="ma-0 pa-0"
-      v-for="(item,i) in this.pics" :key="i"
+      v-for="(item,i) in this.$store.state.projects[this.$store.state.caseIndex].pictures" :key="i"
+
     >
       <v-row
         class="ma-0 pa-0 d-none d-sm-flex"
         style="height:100vh !important;width:100vw;z-index:0"
+
+        v-if="i != 0 && i != 1"
       >
         <v-img
           style="max-height:100vh !important;min-height:100vh !important"
@@ -185,11 +183,8 @@ export default {
       'Footer': require('@/components/Footer.vue').default
     },
     created(){
+
       this.$store.commit('header', false);
-
-
-
-
       this.fixer();
     },
     beforeDestroy () {
@@ -268,12 +263,19 @@ export default {
 
   .descripcion1
     line-height: 110%
-    font-size: 40px
+    font-size: 20px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px
 
   .descripcion2
+    line-height: 110%
+    font-size: 20px
+    font-family: Vollkorn
+    color: #707070
+    letter-spacing: 1px
+
+  .descripcion3
     line-height: 110%
     font-size: 40px
     font-family: Vollkorn

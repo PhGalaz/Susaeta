@@ -134,7 +134,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
-                  @click="router(index0)"
+                  @click="router(index1)"
                   align="center"
                   style="width:100vw"
                 >
@@ -194,7 +194,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
-                  @click="router(index0)"
+                  @click="router(index2)"
                   align="center"
                   style="width:100vw"
                 >
@@ -243,7 +243,7 @@
                 </v-row>
                 <v-row
                   class="ma-0 pa-0 casa mobile d-md-none"
-                  @click="router(index0)"
+                  @click="router(index3)"
                   align="center"
                   style="width:100vw"
                 >
@@ -538,7 +538,6 @@ export default {
       window.open("https://www.pinkdogstudio.com", "_blank");
     },
     router: function (number) {
-      console.log('yes')
       this.$store.commit('caseIndex', number);
       this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop )
       this.$router.push({ name: 'Workcase' })
