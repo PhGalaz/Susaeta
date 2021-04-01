@@ -1,6 +1,5 @@
 <template>
   <v-app
-    v-cloak
   >
     <!-- Navegation drawer mobile only -->
     <v-row
@@ -171,7 +170,9 @@
     >
 
       <keep-alive>
-        <router-view/>
+        <router-view
+          v-cloak
+        ></router-view>
       </keep-alive>
     </transition>
 

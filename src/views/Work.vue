@@ -121,8 +121,8 @@
       onSwipeUp: async function () {
         if (this.blokeo == false && this.$route.name == "Work"){
           this.blokeo = true
-          this.model = this.model + 1 % this.$store.state.projects.length
-          await this.sleep(2000);
+          this.model = (this.model + 1) % (this.$store.state.projects.length)
+          await this.sleep(1000);
           this.blokeo = false
         }
       },
@@ -131,7 +131,7 @@
           this.reverse = true
           this.blokeo = true
           this.model = (this.model + this.$store.state.projects.length - 1) % this.$store.state.projects.length
-          await this.sleep(2000);
+          await this.sleep(1000);
           this.reverse = false
           this.blokeo = false
         }
@@ -183,13 +183,13 @@
     cursor: pointer
 
   .my-carousel-vertical-enter-active
-    transition: 2s ease
+    transition: 1s ease
 
   .my-carousel-vertical-leave-active
-    transition: 2s ease
+    transition: 1s ease
 
   .my-carousel-vertical-move
-    transition: transform 2s
+    transition: transform 1s
 
   .my-carousel-vertical-enter
     transform: translate(0, 100%)
@@ -202,13 +202,13 @@
     transform: translate(0, -100%)
 
   .my-carousel-vertical-reverse-enter-active
-    transition: 2s ease
+    transition: 1s ease
 
   .my-carousel-vertical-reverse-leave-active
-    transition: 2s ease
+    transition: 1s ease
 
   .my-carousel-vertical-reverse-move
-    transition: transform 2s
+    transition: transform 1s
 
   .my-carousel-vertical-reverse-enter
     transform: translate(0, -100%)
