@@ -312,7 +312,7 @@
                 class="ma-0 mx-16 pa-0 pr-16 parr d-none d-sm-flex text-left"
                 style="font-size:40px !important"
               >
-                {{ $store.state.text3 }}
+                {{ $store.state.text3 }}<br><br>E.S.
               </p>
               <v-row
                 class="ma-0 pa-0 d-sm-none text-left"
