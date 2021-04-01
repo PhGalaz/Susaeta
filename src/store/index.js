@@ -96,7 +96,7 @@ export default new Vuex.Store({
           pictures: ["8/eladio-1.jpg","8/eladio-2.jpg","8/eladio-3.jpg","8/eladio-4.jpg","8/eladio-5.jpg","8/eladio-6.jpg","8/eladio-7.jpg","8/eladio-8.jpg"],
           display: ["display/8/eladio50-1.jpg","display/8/eladio50-2.jpg"],
           display2: ["display/8/cube/eladio-1.jpg"],
-          description1: "Incorporada al hábitat natural de la roca, imitando su color, y con forma de almeja sujetada a la roca costera, contempla el eterno romper de las olas. Su curvatura asemeja el puente de mando de un barco.",
+          description1: "Incorporada al hábitat natural de la roca, imitando su color, y con forma de almeja sujetada a su sustrato costero, su curvatura asemeja el puente de mando de un barco.",
           description2: ""
       },
       {
