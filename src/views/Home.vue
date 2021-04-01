@@ -492,6 +492,7 @@ export default {
     index2: null,
     index3: null,
     random_set: [],
+    random_set2: [],
     position: [1,2,3,4],
     index: 4,
     indexX: 4,
@@ -516,11 +517,19 @@ export default {
 
     for (var i = 0; i < this.$store.state.projects.length; i++){
       var pictures = this.$store.state.projects[i].display;
+      var pictures2 = this.$store.state.projects[i].display2;
       pictures = pictures.sort(function() {return 0.5 - Math.random()});
+      pictures2 = pictures2.sort(function() {return 0.5 - Math.random()});
 
       this.random_set.push([pictures, i])
+      this.random_set2.push([pictures2, i])
     }
-    this.random_set = this.random_set.sort(function() {return 0.5 - Math.random()});
+
+    if (this.$vuetify.breakpoint.xs) {
+      this.random_set = this.random_set2.sort(function() {return 0.5 - Math.random()});
+    } else {
+      this.random_set = this.random_set.sort(function() {return 0.5 - Math.random()});
+    }
     this.cabin0 = this.random_set[0][0][0];
     this.cabin1 = this.random_set[1][0][0];
     this.cabin2 = this.random_set[2][0][0];
