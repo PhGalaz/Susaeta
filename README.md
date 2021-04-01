@@ -1,4 +1,4 @@
-# Eladio Susaeta professional website. Live at https://eladiosusaeta.cl
+# Live at https://eladiosusaeta.cl
 
 ## Project setup
 ```
