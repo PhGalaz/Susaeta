@@ -60,7 +60,7 @@
       v-if="this.$store.state.projects[this.$store.state.caseIndex].description1"
     >
       <p class="ma-0 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}</p><br>
-      <p class="ma-0 mb-16 mx-16 pa-0 px-16 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+      <p class="ma-0 mt-4 mb-16 mx-16 pa-0 px-16 descripcion3">{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
     </v-row>
 
     <v-row

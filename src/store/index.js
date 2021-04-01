@@ -136,8 +136,8 @@ export default new Vuex.Store({
           pictures: ["12/eladio-1.jpg","12/eladio-2.jpg","12/eladio-3.jpg","12/eladio-4.jpg"],
           display: ["display/12/eladio50-1.jpg","display/12/eladio50-2.jpg"],
           display2: ["display/12/cube/eladio-1.jpg"],
-          description1: "El diseño de estas casas surge espontáneamente. Su forma de cangrejo logra salientes de vista sorpresivas que ofrecen distintos ángulos del Lago Llanquihue y vistas laterales al volcán Calbuco.",
-          description2: "Consiste en dos unidades habitacionales distintas, que unidas a un volumen común permite la optimización de la habitabilidad del terreno."
+          description1: "El diseño de estas casas surge espontáneamente. Su forma de cangrejo logra sorpresivos salientes de vista que ofrecen distintos ángulos del Lago Llanquihue y vistas laterales del volcán Calbuco.",
+          description2: "Consiste en dos unidades habitacionales independientes, que unidas a un volumen común permite optimizar al máximo la habitabilidad del terreno en donde se emplazan."
       },
       {
           id: 12,
@@ -165,8 +165,8 @@ export default new Vuex.Store({
           pictures: ["15/eladio-1.jpg","15/eladio-2.jpg","15/eladio-3.jpg","15/eladio-4.jpg","15/eladio-5.jpg","15/eladio-6.jpg","15/eladio-7.jpg","15/eladio-8.jpg","15/eladio-9.jpg"],
           display: ["display/15/eladio50-1.jpg","display/15/eladio50-2.jpg"],
           display2: ["display/15/cube/eladio-1.jpg"],
-          description1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          description2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          description1: "",
+          description2: ""
       }
     ]
   },
