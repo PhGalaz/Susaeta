@@ -245,7 +245,7 @@ export default {
   ::-webkit-scrollbar
     display: none
 
-  [v-cloak]
+  v-cloak
     display: none
 
 

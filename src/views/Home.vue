@@ -37,11 +37,11 @@
       </v-row>
       <v-row
         class="ma-0 pa-0 yeah"
-        style="background-color:#EAEAEA;width:100vw;top:1000px"
+        style="background-color:#EAEAEA;width:100vw;top:1000px;min-height:100vh"
       >
         <v-row
           class="ma-0 pa-0"
-          style="width:100vw"
+          style="width:100vw;min-height:100vh"
           align="center"
         >
           <p
