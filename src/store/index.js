@@ -16,7 +16,6 @@ export default new Vuex.Store({
       "6/eladio-1.jpg",
       "4/eladio-4.jpg",
       "8/eladio-3.jpg",
-      "10/eladio-3.jpg",
       "13/eladio-2.jpg"
     ],
     projects: [
