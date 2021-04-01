@@ -10,9 +10,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    beforeRouteEnter () {
-      console.log('loco')
-    },
     meta: {
       title: 'Eladio Susaeta - Arquitectura',
       metaTags: [

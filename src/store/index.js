@@ -10,7 +10,7 @@ export default new Vuex.Store({
     caseIndex: 0,
     scroll: null,
     text1: "Las obras de Eladio surgen de un profundo conocimiento de las necesidades, expectativas y comprensión de los sueños que persiguen las personas que habitarán el espacio. Un proceso hiperpersonalizado que da como resultado diseños de inconfundible personalidad escénica.",
-    text2: "Características de su trabajo son el aprovechamiento máximo de las virtudes del lugar de emplazamiento, la orientación que pone en escena la luz natural. Una estética que busca el placer de habitar.",
+    text2: "Características de su trabajo son el aprovechamiento máximo de las virtudes del lugar de emplazamiento y la puesta en escena de la luz natural en una estética que busca el placer de habitar.",
     text3: "“Tomo cada proyecto como si fuese un sastre, un proyecto a medida. La exactitud de un sastre en el diseño de un espacio”",
     cover: [
       "6/eladio-1.jpg",

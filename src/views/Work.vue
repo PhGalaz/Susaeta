@@ -104,11 +104,6 @@
         this.model = this.getRandomInt(this.$store.state.projects.length)
       }
     },
-    async mounted () {
-      this.$store.commit('burger', true);
-      await this.sleep(1000);
-      this.$store.commit('burger', false)
-    },
     beforeDestroy () {
       this.$el.removeEventListener('scroll', this.onScroll)
     },
@@ -117,7 +112,6 @@
     },
     methods: {
       router: function (number) {
-        console.log(number)
         this.$store.commit('caseIndex', number);
         this.$router.push({ name: 'Workcase' })
       },

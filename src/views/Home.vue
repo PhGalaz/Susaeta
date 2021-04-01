@@ -1,8 +1,10 @@
 <template>
   <v-app
+
     style="position:absolute;background-color:#EDEDED;max-height:100vh;max-width:100vw;overflow-y:auto"
   >
     <v-row
+
       class="ma-0 pa-0 scr"
     >
       <v-row
@@ -503,11 +505,7 @@ export default {
 
 
   },
-  async mounted(){
-    this.$store.commit('burger', true);
-    await this.sleep(1000);
-    this.$store.commit('burger', false)
-  },
+
   created(){
 
     this.$store.commit('caseIndex', null);
@@ -539,6 +537,7 @@ export default {
     },
     router: function (number) {
       this.$store.commit('caseIndex', number);
+      this.$store.commit('header', false)
       this.$store.commit( 'scrolling', this.$el.pageYOffset || this.$el.scrollTop )
       this.$router.push({ name: 'Workcase' })
     },

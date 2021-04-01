@@ -186,18 +186,12 @@ export default {
     beforeDestroy () {
       console.log('destroy')
     },
-    async mounted () {
-      this.$store.commit('burger', true);
-      await this.sleep(1000);
-      this.$store.commit('burger', false)
-    },
     computed: {
       set: function () {
         var tempset = []
         for (var i = 2; i < this.$store.state.projects[this.$store.state.caseIndex].pictures.length; i++) {
           tempset.push(this.$store.state.projects[this.$store.state.caseIndex].pictures[i])
         }
-        console.log(tempset)
         return tempset
       }
     },

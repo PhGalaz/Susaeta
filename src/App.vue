@@ -52,13 +52,13 @@
               :class="{ 'd-none': !$store.state.isActive }"
               style="height:8vh"
               align="center"
+              @click="$store.commit('header', false)"
             >
               <router-link
                 to="/Work"
                 class="ma-0 pa-0 menu-item text-center text-decoration-none"
                 style="width:100vw;height:8vh;font-size:15px"
                 align="center"
-                @click="$store.commit('header', false)"
               >
                 <p class="ma-0 mt-6 pa-0"><span>Work</span></p>
               </router-link>
@@ -69,13 +69,14 @@
               :class="{ 'd-none': $store.state.isActive }"
               style="height:8vh"
               align="center"
+              @click="ajust()"
             >
               <router-link
                 to="/"
                 class="ma-0 pa-0 menu-item text-center text-decoration-none"
                 style="width:100vw;height:8vh;font-size:15px"
                 align="center"
-                @click="ajust()"
+
               >
                 <p class="ma-0 mt-5 pa-0"><span>Home</span></p>
               </router-link>
@@ -191,10 +192,12 @@ export default {
     transitionName: DEFAULT_TRANSITION
   }),
   created () {
+    this.log()
     this.$router.beforeEach((to, from, next) => {
-
-      console.log(to)
-
+      if (to.name == "Home") {
+        this.$store.commit('header', true);
+      }
+      this.log()
       let transitionName = to.meta.transitionName || from.meta.transitionName;
 
       if (transitionName === 'slide') {
@@ -209,6 +212,11 @@ export default {
     });
   },
   methods: {
+    log: async function () {
+      this.$store.commit('burger', true);
+      await this.sleep(1000);
+      this.$store.commit('burger', false)
+    },
     myFunction: function () {
       window.open("https://www.instagram.com/eladio_susaeta/?hl=en", "_blank");
     },
@@ -218,6 +226,11 @@ export default {
     ajust: function () {
       this.$store.commit('header', true);
       this.$store.commit('scrolling', 0)
+    },
+    sleep(sec) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, sec);
+      });
     }
   }
 };
