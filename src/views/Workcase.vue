@@ -72,8 +72,8 @@
       class="ma-0 pa-0"
       style="width:140px"
     >
-      <p style="width:100vw" class="ma-0 ml-16 pa-0 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</p>
-      <p style="width:100vw" class="ma-0 ml-16 pa-0 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</p>
+      <p style="width:100vw" class="ma-0 mx-10 pa-0 names text-uppercase">{{ this.$store.state.projects[this.$store.state.caseIndex].name }}</p>
+      <p style="width:100vw" class="ma-0 mx-10 pa-0 locations">{{ this.$store.state.projects[this.$store.state.caseIndex].location }}</p>
     </v-row>
 
 
@@ -85,7 +85,7 @@
       align="center"
       v-if="this.$store.state.projects[this.$store.state.caseIndex].description1"
     >
-      <p class="ma-0 mt-8 mx-16 mb-16 pb-8 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
+      <p class="ma-0 mt-8 mx-10 mb-16 pb-8 descripcion1">{{ this.$store.state.projects[this.$store.state.caseIndex].description1 }}<br><br>{{ this.$store.state.projects[this.$store.state.caseIndex].description2 }}</p>
 
     </v-row>
 
@@ -263,7 +263,7 @@ export default {
 
   .descripcion1
     line-height: 110%
-    font-size: 20px
+    font-size: 25px
     font-family: Vollkorn
     color: #707070
     letter-spacing: 1px

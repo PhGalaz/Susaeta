@@ -49,7 +49,7 @@
             style="font-size:40px !important"
           >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
           <p
-            class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText d-sm-none text-left"
+            class="ma-0 mt-16 py-16 mb-16 mx-10 pa-0 mobileText d-sm-none text-left"
           >{{$store.state.text1}}<br><br>{{$store.state.text2}}</p>
 
         </v-row>
@@ -320,7 +320,7 @@
                 align="center"
               >
                 <p
-                  class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-16 pa-0 mobileText"
+                  class="ma-0 mt-16 pt-16 mb-16 pb-16 mx-10 pa-0 mobileText"
                 >{{ $store.state.text3 }}<br><br>E.S.</p>
 
               </v-row>
@@ -721,7 +721,7 @@ export default {
     color: #707070
 
   .mobileText
-    font-size: 20px
+    font-size: 25px
     font-family: Vollkorn
     font: normal normal normal Vollkorn
     letter-spacing: 1px
