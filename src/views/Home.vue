@@ -525,7 +525,7 @@ export default {
       this.random_set2.push([pictures2, i])
     }
 
-    if (this.$vuetify.breakpoint.xs) {
+    if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.md ) {
       this.random_set = this.random_set2.sort(function() {return 0.5 - Math.random()});
     } else {
       this.random_set = this.random_set.sort(function() {return 0.5 - Math.random()});
