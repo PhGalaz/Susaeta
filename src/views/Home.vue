@@ -330,13 +330,13 @@
         </v-row>
         <v-row
           class="ma-0 pa-0 d-none d-sm-flex parr text-center"
-          style="width:100vw;background-color:#C1B7A8;font-size:70px;line-height:70%;color:#EDEDED"
+          style="width:100vw;background-color:#C1B7A8;font-size:55px;line-height:70%;color:#EDEDED"
           justify="center"
         >
             <p class="ma-0 mt-16 pt-8 pa-0" style="width:100vw">¡Conversemos!
 
 
-            <br><br> <a href="tel:+56994998436" class="ma-0 pa-0 font-weight-medium" style="width:100vw;font-size:90px;text-decoration:none">+56 9 9499 8436</a></p>
+            <br><br> <a href="tel:+56994998436" class="ma-0 pa-0 font-weight-medium" style="width:100vw;font-size:70px;text-decoration:none">+56 9 9499 8436</a></p>
             <v-row
               class="ma-0 mt-16 pa-0"
               style="font-family:Montserrat;width:100%;height:130px"
@@ -470,6 +470,11 @@
       >
         <v-img class="shadowed" style="transform:scale(0.6)" src="logomovil.png" eager/>
       </v-row>
+    </v-row>
+    <v-row
+      class="ma-0 pa-0"
+      style="background-color:#91816A;width:100vw;min-height:10px;max-height:10px;color:#91816A"
+    >
     </v-row>
   </v-app>
 </template>
