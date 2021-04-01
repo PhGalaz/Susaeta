@@ -405,7 +405,7 @@
             align="center"
           >
             <p class="ma-0 mt-8 mx-16 pa-0 parrr text-center" style="font-size:40px;line-height:110%;color:#EDEDED">¡Conversemos!
-            <br><br> <a href="tel:56994998436" class="ma-0 pa-0 font-weight-medium" style="width:100vw;font-size:60px;text-decoration:none">+56 9 9499 8436</a></p>
+            <br><br> <a href="tel:+56994998436" class="ma-0 pa-0 font-weight-medium" style="width:100vw;font-size:60px;text-decoration:none">+56 9 9499 8436</a></p>
             <v-row
               class="ma-0 mt-16 pa-0"
               style="font-family:Montserrat;width:100%;height:130px"
