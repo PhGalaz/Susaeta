@@ -137,7 +137,7 @@ export default new Vuex.Store({
           display: ["display/12/eladio50-1.jpg","display/12/eladio50-2.jpg"],
           display2: ["display/12/cube/eladio-1.jpg"],
           description1: "El diseño de estas casas surge espontáneamente. Su forma de cangrejo logra sorpresivos salientes de vista que ofrecen distintos ángulos del lago Llanquihue y vistas laterales del volcán Calbuco.",
-          description2: "Consiste en dos unidades habitacionales independientes, que unidas a un volumen común permite optimizar al máximo la habitabilidad del terreno en donde se emplazan."
+          description2: "Consiste en dos unidades habitacionales independientes, que unidas a un volumen común permiten optimizar al máximo la habitabilidad del terreno en donde se emplazan."
       },
       {
           id: 12,
